@@ -1,0 +1,26 @@
+// misc styles
+
+.redline{
+    border: red 1px solid;
+}
+
+.blueline{
+    border: cornflowerblue 1px solid;
+}
+
+.greenline{
+    border: limegreen 1px solid;
+}
+
+// line separator for sections
+.separator-h{
+    display: block;
+    height: 1px;
+    width: auto;
+    background: $blockAboutColor;
+}
+
+// Instagram container
+.ig-widget{
+    background: var(--body-bg-color);
+}

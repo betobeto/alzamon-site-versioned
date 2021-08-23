@@ -1,0 +1,59 @@
+---
+layout: default
+title: Comics - Alzamon
+permalink: /comics/
+---
+{% assign cm = site.comics %}
+
+<div class="container portfolio-category">
+    <div class="row">
+        <div class="col py-3">
+            <h2 class="text-center">Comics</h2>
+            <p class="text-center portfolio-category-description">My takes on sequential art, for better or else.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Portfolio Masonry -->
+            <div class="portfolio-masonry">
+
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
+
+                {% for item in cm %}
+                    <!-- masonry item -->
+                    <div class="portfolio-masonry-item">
+                        <a href="{{item.url}}">
+                            <div class="pm-overlay">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
+                            <!-- <div class="portfolio-masonry-title">
+                                <p class="text-center">{{item.pretty_title}}</p>
+                            </div> -->
+                        </a>
+                        <p><strong>{{item.pretty_title}}</strong> / {{item.pretty_category}}</p>
+                    </div>
+                    <!-- /masonry item -->
+                {% endfor %}
+            </div>
+            <!-- End Masonry -->
+        </div>
+    </div>
+
+    <!-- separator -->
+    <div class="row">
+        <div class="col separator-h">
+        </div>
+    </div>
+
+<!-- 
+    <div class="row">
+        <div class="col">
+            <p>{{cd.size}} items in this category</p>
+        </div>
+    </div> -->
+
+    {% include ig-lightwidget.html %}
+</div>

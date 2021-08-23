@@ -1,0 +1,94 @@
+// SCSS Variables
+
+//Bootstrap: override defaults
+// ===================================
+$body-default-bg: rgb(27, 12, 17);
+$body-light-bg: rgb(255, 255, 255);
+$body-default-color: rgb(255, 255, 255);
+$body-light-color: rgb(255, 255, 255);
+$theme-colors: ("primary": rgb(75, 68, 67),
+    "secondary": rgb(13, 57, 34),
+    "danger": rgb(216, 106, 124));
+
+// custom color variables
+// ===================================
+$headerColor: rgb(236, 34, 159);
+$borderColor: rgb(174, 82, 11);
+$linkColor: rgb(221, 24, 100);
+$linkUnderlineColor: rgba(173,24,86,0.67);
+$linkVisitedColor:rgb(139, 88, 88);
+$footerLinkColor: lighten($linkColor, 40%);
+$btnDarkColor: darken($linkColor,40%);
+$btnDarkColorHover: lighten($linkColor,20%);
+$jtGradientStartColor:rgba(41, 24, 32, 0.85);
+$jtGradientEndColor: rgba(14, 3, 10, 1);
+
+// Navbar Variables
+//====================================
+$navbarBgColor: $jtGradientEndColor;
+$navbar-link-color: rgb(163, 151, 151);
+$navbar-link-hover-color: rgba(163, 151, 151,0.7);
+
+// block element variables
+// ===================================
+$masonryBoxShadow: rgba(71,57,59,0.85);
+$blogBoxShadowColor: rgba(41,8,20,0.61);
+$blockAboutColor: $linkColor;
+$footerContainerBgColor: $navbarBgColor;
+
+// gradient colors - previous-next mixins
+$prevDeg: 45deg;
+$prevColor0:rgba(173,24,86,1) 0%;
+$prevColor1:rgba(173,24,86,0.67) 30%;
+$prevColor2:rgba(209,43,103,0.5) 45%;
+$prevColor3: rgba(244,61,119,0.36) 60%;
+$prevColor4: rgba(247,96,146,0) 100%;
+$prevTransition: 0.5s;
+
+$nextDeg: 45deg;
+$nextColor0:rgba(244,61,119,0) 0%;
+$nextColor1:rgba(247,96,146,0.5) 50%;
+$nextColor2:rgba(203,53,110,1) 75%;
+$nextColor3:rgba(173,24,86,1) 100%;
+$nextTransition: $prevTransition;
+
+// portfolio variables
+// ===================================
+
+// Basic
+$portfolioMasonryItemPadding: 0.5rem;
+$portfolioMasonryColumnGap: 20px;
+$portfolioMasonryTitleColor:rgb(255, 255, 255);
+$portfolioPageBgSize: 200%;
+
+// colors
+$portfolioOverlayBgColor:  rgb(70, 0, 27);
+$portfolioItemBgColor: rgb(75, 43, 53);
+$portfolioItemLinkColor: $linkColor;
+$portfolioHeaderColor: $linkColor;
+$portfolioHeaderCategoryColor: rgba(189, 189, 189, 0.9);
+
+// portfolio page background - gradient colors
+$pfGradientStart:rgba(26, 5, 21, 0.8);
+$pfGradientMiddle:rgba(28,5,21,0.9);
+$pfGradientEnd:rgba(8, 1, 6,1);
+
+// portfolio masonry item background - gradient colors
+$masonryItemGrad1: rgba(81,16,45,1) 13%;
+$masonryItemGrad2: rgba(117,37,72,1) 31%;
+$masonryItemGrad3: rgba(206,39,108,1) 54%;
+$masonryItemGrad4: rgba(247,111,156,1) 75%;
+
+// blog post grid - gradient colors
+$bpgColor1: rgba(203,96,179,0) 0%;
+$bpgColor2: rgba(193,70,161,0.20) 25%;
+$bpgColor3: rgba(186,54,134,0.40) 50%;
+$bpgColor4:  rgba(173,24,86,0.80) 80%;
+$bpgColor5: rgba(173,24,86,1) 100%;
+
+
+// blog variables
+// ===================================
+
+$blogHeaderColor: $linkColor;
+$blogTextColor: rgb(31, 16, 21);

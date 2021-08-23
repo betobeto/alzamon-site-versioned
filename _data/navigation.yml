@@ -1,0 +1,17 @@
+- text: Portfolio
+  url: /
+
+#- text: Artwork
+#  url: /portfolio/
+
+- text: Comics
+  url: /comics/
+
+- text: Sketchbook
+  url: /sketchbook/
+
+- text: Blog
+  url: /blog/
+
+- text: About
+  url: /about/

@@ -1,0 +1,22 @@
+// ALZAMON.ART - CUSTOM SCSS STYLES
+// Updated: 06/03/2021
+// ================================
+
+// Load style blocks - breakpoints, variables, mixins and animations
+@import 'breakpoints';
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'aspect-ratios';
+@import 'fonts';
+@import 'animations';
+
+// load style blocks - structure
+@import 'core';
+@import 'navbar';
+@import 'forms';
+@import 'portfolio';
+@import 'blog';
+@import 'pageblocks';
+@import 'footer';
+@import 'misc';

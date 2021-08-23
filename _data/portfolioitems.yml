@@ -1,0 +1,64 @@
+# alzamon.art portfolio data YML
+  - p-title: New Year 2020
+    p-image: /assets/images/portfolio/2020-02-17-new-year2020-final.jpg
+    p-link: /page1.html
+# --- entry    
+  - p-title: Love is a Balancing Act
+    p-image: /assets/images/portfolio/Love-is-a-balancing-act-portfolio-768x1115.gif
+    p-link: /page2.html
+# --- entry    
+  - p-title: Off and Away
+    p-image: /assets/images/portfolio/2020-02-17-Off_And_Away_Fan_Art.jpg
+    p-link: /page4.html
+# --- entry    
+  - p-title: Shirley - Book Cover
+    p-image: /assets/images/portfolio/2020-02-17-libro-portada-sketch-highRes.jpg
+    p-link: /page5.html  
+# --- entry   
+  - p-title: Busted!
+    p-image: /assets/images/portfolio/2020-02-17-Busted-Instagram.png
+    p-link: /page7.html
+# --- entry    
+  - p-title: Totoro Parody Fan Art
+    p-image: /assets/images/portfolio/2020-02-17-Totoro-Daniel-Parody.jpg
+    p-link: /page3.html
+# --- entry    
+  - p-title: Still Life with Plant Pots
+    p-image: /assets/images/portfolio/2020-02-17-Bodegón_Con_Macetas_hr.jpg
+    p-link: /page8.html  
+# --- entry    
+  - p-title: KidLit 4 Climate Poster
+    p-image: /assets/images/portfolio/2019-03-17-Kidlit4climate-final.jpg
+    p-link: /page9.html
+# --- entry    
+  - p-title: Petit Prince Revisited
+    p-image: /assets/images/portfolio/2018-04-16-Petit-Prince-Revised.jpg
+    p-link: /page10.html 
+# --- entry    
+  - p-title: Daniel & Elias
+    p-image: /assets/images/portfolio/2018-01-27--Daniel-and-Elias-New-Design.png
+    p-link: /page11.html
+# --- entry    
+ # - p-title: Team Dani Campaign
+ #   p-image: /assets/images/portfolio/2017-06-14-Team-Dani-Campaign--Dani-03-Playing-Games---flat.jpg
+ #   p-link: /page12.html
+# --- entry    
+  - p-title: It's a Small World
+    p-image: /assets/images/portfolio/2017-06-14-It's-a-small-world-after-all-alzamon.jpg
+    p-link: /page13.html
+# --- entry    
+  - p-title: Speed Paintings
+    p-image: /assets/images/portfolio/2016-09-30-Speed Painting-02.jpg
+    p-link: /page14.html
+# --- entry    
+  - p-title: Daniel - Facebook Cover
+    p-image: /assets/images/portfolio/2016-01-13-emsd-facebook-cover-300dpi-flat.jpg
+    p-link: /page15.html
+# --- entry    
+  - p-title: Looking For Adventure
+    p-image: /assets/images/portfolio/2015-06-06-camino-version2-final.jpg
+    p-link: /page16.html
+# --- entry    
+  - p-title: Mono Relojero
+    p-image: /assets/images/portfolio/2012-08-26-MonoRelojero-gears-final-01.gif
+    p-link: /page17.html

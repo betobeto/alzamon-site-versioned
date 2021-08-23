@@ -1,0 +1,60 @@
+# alzamon.art config.yml file
+# ==============================
+
+#jekyll seo tag values
+title: Alzamon - Children's Illustration Portfolio, All-Ages Comics and Sketchbook by Alberto Gonzalez
+description: Illustration portfolio and blog focused on kids-oriented illustration, character design, all-ages comics and related subjects for entertainment and educative purposes by Costa Rica-based illustrator Alberto Gonzalez (Alzamon).
+author:
+  name: Alzamon (Alberto Gonzalez)
+  twitter: alzamonart
+  image: /assets/images/azm-avatar-twitter.png
+twitter:
+  username: alzamonart  
+social:
+  name: Alzamon - Alberto Gonzalez, Children's Illustrator and Character Designer
+  links:
+    - https://twitter.com/alzamonart
+    - https://instagram.com/alzamonart
+    - https://deviantart.com/alzamonart
+    - https://behance.net/alzamon
+
+# base URL values - use 'bundle exec jekyll build' (not serve) to generate correct canonical URLs for upload
+url: "https://alzamon.art"
+baseurl: "/"
+encoding: UTF-8
+
+#include generated htaccess file for remote hosting
+#include: 
+#  - .htaccess
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+#portfolio categories
+category-list: [homepage,illustration,characterdesign,comics,sketchbook]
+
+#gather all collections under /portfolio
+#collections_dir: portfolio
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+  comics:
+    output: true
+    permalink: /:collection/:name
+  sketchbook:
+    output: true
+    permalink: pretty
+    # permalink: /portfolio/:path
+
+# build settings
+permalink: pretty
+
+#used site plugins
+
+#plugins:
+# - jekyll-seo-tag

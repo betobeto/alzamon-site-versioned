@@ -1,0 +1,40 @@
+---
+layout: default
+title: Sketchbook - Alzamon
+permalink: /sketchbook/
+---
+{% assign sk = site.data.data_sketchbook %}
+
+<div class="container portfolio-category">
+    <div class="row">
+        <div class="col py-3">
+            <h2 class="text-center">Sketchbook</h2>
+            <p class="text-center portfolio-category-description">Items rescued from paper scraps here and there.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="sketchbook-grid" class="col posts-grid">
+            <!-- Portfolio Grid -->
+                <ul>
+                    {% for item in sk %}
+                      <li>
+                        <a href="{{ item.sk_full }}">
+                          <img src="{{item.sk_thumb}}" alt="{{item.sk_name}}">
+                       <h6>
+                         {{ item.sk_name }}
+                       </h6>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+            <!-- End Portfolio Grid -->
+        </div>
+    </div>
+    <!-- separator -->
+    <div class="row">
+        <div class="col separator-h">
+        </div>
+    </div>
+
+    {% include ig-lightwidget.html %}
+</div>

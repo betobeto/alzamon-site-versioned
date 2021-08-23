@@ -1,0 +1,22 @@
+// Forms SCSS styles
+// ====================
+
+.btn{
+    @include textCondensed;
+    &-light{
+        background: $btnDarkColor;
+        color:white;
+        border:none;
+        &:hover{
+            background: $btnDarkColorHover;
+        }
+    }
+    &-dark{
+        background: lighten($linkColor, 10%);
+        color:white;
+        border:none;
+        &:hover{
+            background:darken($linkColor,20%);
+        }
+    }
+}

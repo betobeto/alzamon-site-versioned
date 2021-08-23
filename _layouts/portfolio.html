@@ -1,0 +1,109 @@
+---
+layout: default
+---
+<!-- variable to filter content from MD line breaks  -->
+{% assign pageContent = page.content | strip_newlines %}
+
+<div id="portfolio-item" class="container">
+    <!-- title -->
+    <div class="row">
+        <div class="col">
+            <h2 class="my-3 text-center"><span>{{page.pretty_category}} /</span> {{page.pretty_title}}</h2>
+        </div>
+    </div>
+
+    <!-- details + image -->
+    <div class="row portfolio-item-image">
+        <div class="col d-flex justify-content-center">
+            <!-- full size image -->
+            <img src="{{page.fullsizeimage}}" alt="{{page.title}}" class="img-fluid">
+        </div>
+        <!-- previous/next links -->
+        {% include previous-next.html %}
+    </div>
+    <div class="row">
+        <div class="col">
+                <h3 class="my-3">Work Details</h3>
+                <ul>
+                    {% for item in page.work_details %}
+                    <li>{{item}}</li>
+                    {% endfor %}
+                </ul>  
+        </div>
+    </div>
+
+    {% include row-separator.html %}
+
+<!-- Print content if Markdown content is not empty -->
+{% if pageContent != '' %}
+    <div class="row portfolio-item-content my-4">
+        <div class="col">
+            {{content}}
+        </div>
+    </div>
+    {% include row-separator.html %}
+{% elsif page.additionalContent %}
+<h4>Additional Images</h4>
+<!-- display additional images if any -->
+    <div id="comicPages" class="row my-4">
+        {% for item in page.additionalContent %}
+        <a href="{{item.ac_full}}">
+            <img src="{{item.ac_thumb}}" alt="{{item.ac_name}}">
+        <div class="thumbnailOverlay">
+            <i class="fas fa-search"></i>
+        </div>
+        <span>{{item.ac_name}}</span>
+        </a>
+        {% endfor %}
+    </div>
+    {% include row-separator.html %}
+{% endif %}
+<!-- /end content if content -->
+
+<!-- Start additional images -->
+<!-- to enable section remove the comment/endcomment Liquid tags around the code -->
+
+{% comment %}
+{% if page.extraimages %}
+<div class="row portfolio-item-extras">
+    <div class="col">
+        <h2>Related images</h2>
+    </div>
+</div>
+<div class="row d-flex my-4">
+    <!-- adjust col-md value according to number of present extraimages -->
+    {% for item in page.extraimages %}
+        <div class="col{% if forloop.length == 1 %}-md-6 offset-md-3 d-flex justify-content-center{% elsif forloop.length == 2 %}-md-4 d-flex justify-content-center{%elsif forloop.length == 3%}-md-4 d-flex justify-content-center{%elsif forloop.length > 3%}-md-3 d-flex justify-content-center{% endif %}">
+            <img src="{{item}}" alt="Image">
+        </div>     
+    {% endfor %}
+</div>
+{% include row-separator.html %}
+{% endif %}
+{% endcomment %}
+
+<!-- /end additional images -->
+
+<!-- previous-next former placeholder -->
+
+<!-- Links to other categories -->
+
+{%- comment -%}
+    <div class="row my-4">
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <p><a href="{{site.url}}/illustration">Illustration</a></p>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <p><a href="{{site.url}}/characterdesign">Character Design</a></p>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <p><a href="{{site.url}}/comics">Comics</a></p>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <p><a href="{{site.url}}/sketchbook">Sketchbook</a></p>
+        </div>
+    </div>
+{%- endcomment -%}
+
+
+</div>

@@ -1,0 +1,49 @@
+// Home Page Blocks
+
+.block{
+    &-about{
+        background-color: $blockAboutColor;
+        color:white;
+        h2{
+            font-weight:800;
+            font-size: 3rem;
+            @include respond-between(sm,md){
+            font-size:2.5rem;
+            margin-bottom:1rem;
+            }
+            @include respond-below(sm){
+                text-align: center;
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+                letter-spacing: -0.05rem;
+            }
+        }
+        p, strong{
+            @include textCondensed;
+        }
+
+        a{
+            color: $footerLinkColor;
+        }
+        &-image{
+                display: block;
+                background-image: url('../images/alzamon-avatar.png');
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+                background-size: 100%;
+                min-height:50vh;
+                @include respond-above(lg){
+                    background-size: 70%;
+                }
+                @include respond-between(sm,md){
+                    background-position: 85% 100%;
+                    background-size: 140%;
+                }
+                @include respond-below(sm){
+                    background-position-y:15%;
+                    background-size: cover;
+                }
+            }
+            // block-about breakpoints
+        }
+    }

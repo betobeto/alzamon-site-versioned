@@ -1,0 +1,109 @@
+---
+layout: default
+title: Illustrations by Alzamon - Children's Illustration, Comics and Design
+permalink: /portfolio/
+description: Portfolio of original children's illustrations, character design, fan art and more from Alberto Gonzalez (Alzamon), an illustrator from Heredia, Costa Rica.
+image: /assets/images/azm-masonry-presentation-2020.jpg
+---
+{% comment %}
+=======================================================================
+Portfolio page: set source variable and conditions on Assign tag below
+=======================================================================
+{% endcomment %}
+
+
+{% comment %}
+    {% assign pf = site.portfolio | sort: "sort_number" | reverse %}
+{% endcomment %}
+
+
+{% assign pf = site.portfolio | sort: "sort_number" | reverse %}
+
+
+<div class="container portfolio-category">
+    <div class="row">
+        <div class="col py-3">
+            <h2 class="text-center">Artwork</h2>
+            <p class="text-center portfolio-category-description">Original illustrations, character design, fan art and everything in between.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mb-5 d-flex align-items-center justify-content-center portfolio-category-selector">
+
+{% comment %}
+=======================================================================
+Portfolio page: set item category class on data-filters for Isotope
+=======================================================================
+{% endcomment %}
+
+            <ul class="d-flex">
+                <li><a href="#" data-filter=".pmi-illustration">Illustration</a></li>
+                <li><a href="#" data-filter=".pmi-characterdesign">Character Design</a></li>
+                <li><a href="#" data-filter=".pmi-fanart">Fan Art</a></li>
+                <li><a href="#" data-filter="*">Show All</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Illustration Portfolio Masonry -->
+            <div class="portfolio-masonry">
+
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
+
+{% comment %}
+====================================================
+Optional: set limit on number of displayed items
+ex:  --for item in illos limit:40--
+====================================================
+{% endcomment %}
+
+                {% for item in pf %}       
+                <!-- set categories display scope here -->
+
+                {%- comment -%}
+                    if item.categories contains "illustration" or item.categories contains "characterdesign"
+                {%- endcomment -%}
+
+                <!-- masonry item -->
+                <div class="portfolio-masonry-item {% if item.categories contains "illustration"%}pmi-illustration{% endif%}{%if item.categories contains "characterdesign"%}pmi-characterdesign{%endif%}{%if item.categories contains "fanart"%}pmi-fanart{%endif%}">
+                    <a href="{{item.url}}">
+                        <div class="pm-overlay">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
+                        <!-- <div class="portfolio-masonry-title">
+                            <p class="text-center">{{item.pretty_title}}</p>
+                        </div> -->
+                    </a>
+
+                    <p><strong>{{item.pretty_title}}</strong> / {{item.pretty_category}}</p>
+                </div>
+                <!-- /masonry item -->
+                {%- comment -%}
+                    {% endif %}
+                {%- endcomment -%}
+
+                {% endfor %}
+            </div>
+            <!-- /End Masonry -->
+        </div>
+    </div>
+
+    <!-- separator -->
+    <div class="row">
+        <div class="col separator-h">
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col">
+            <p>{{illos.size}} items in this category</p>
+        </div>
+    </div> -->
+
+    {% include ig-lightwidget.html %}
+</div>

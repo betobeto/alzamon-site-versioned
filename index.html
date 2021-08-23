@@ -1,0 +1,89 @@
+---
+layout: default
+title: Alzamon — Children's Illustration, Comics and Sketchbook Portfolio by Alberto Gonzalez
+# FB and Jekyll SEO Tag values
+description:  Portfolio and blog site showcasing Costa Rican illustrator Alberto Gonzalez (Alzamon) work on children's illustration, book illustration, kids-oriented comics and articles on related matters.
+image: /assets/images/azm-masonry-presentation-2020.jpg
+# End FB and Jekyll SEO Tag values
+---
+
+{% comment %}
+=======================================================================
+Portfolio page: set source variable and conditions on Assign tag below
+=======================================================================
+
+{% assign pf = site.portfolio | sort: "sort_number" | reverse %}
+{% endcomment %}
+
+
+<div class="container">
+
+    <!-- <div class="row d-md-none">
+        <div class="col text-center py-0">
+            <h3>Children's Illustration & Character Design</h3>
+            <p class="my-2">If this is what you are looking for, I welcome you to know my work and about me further below.</p>
+        </div>
+    </div> -->
+
+    <!-- <div class="row">
+        <div class="col">
+            <pre style="color:white">{{ site.portfolio | sort: "sort_number" | inspect }}</pre> 
+        </div>
+    </div> -->
+
+
+    <!-- Portfolio category selecrtor -->
+    <div class="row portfolio-category-container">
+        <div class="col portfolio-category-selector py-xs-2 py-sm-4">
+            <ul class="d-flex">
+                <li><a href="#" data-filter=".pmi-illustration">Illustration</a></li>
+                <li><a href="#" data-filter=".pmi-characterdesign">Character Design</a></li>
+                <li><a href="#" data-filter=".pmi-fanart">Fan Art</a></li>
+                <li><a href="#" data-filter="*">Show All</a></li>
+            </ul> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Portfolio Masonry -->
+            <div class="portfolio-masonry">
+                <!-- Show *only* items matching the "homepage" category and sort by the "sort_number" variable-->
+                <!-- use reverse switch to display latest (in number) posts -->
+
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
+
+                {% assign hp = site.portfolio | where:"categories", "homepage" | sort: "sort_number" | reverse %}
+                {% for item in hp %}
+
+                {%- comment -%}
+                Optional: set limit: XX to restrict homepage display to that number
+                ex: {% for item in hp limit:32 %}{% endfor %}
+                {%- endcomment -%}
+
+                <!-- masonry item -->
+                <div class="portfolio-masonry-item {% if item.categories contains "illustration"%}pmi-illustration{% endif%}{%if item.categories contains "characterdesign"%}pmi-characterdesign{%endif%}{%if item.categories contains "fanart"%}pmi-fanart{%endif%}">
+                    <a href="{{item.url}}">
+                        <div class="pm-overlay d-flex flex-column">
+                            <i class="fas fa-search"></i>
+                           <strong class="text-center">{{item.pretty_title}}</strong> <span>{{item.pretty_category}}</span>
+                        </div>
+                        <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
+                        
+                    </a>
+
+                    <!-- <p><strong>{{item.pretty_title}}</strong> / {{item.pretty_category}}</p> -->
+                </div>
+                <!-- /masonry item -->
+                {% endfor %}
+            </div>
+            <!-- /End Masonry -->
+
+        </div>
+    </div>
+</div>
+
+{% include block-about.html %}
+
+{% include ig-lightwidget.html %}

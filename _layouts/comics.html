@@ -1,0 +1,83 @@
+---
+layout: default
+title: Comics - Alzamon Illustration & Design
+description: Online portfolio with samples of my all-ages comics and sequential art work.
+---
+<!-- variable to filter content from MD line breaks  -->
+{% assign pageContent = page.content | strip_newlines %}
+
+<div id="comics-item" class="container">
+    <!-- title -->
+    <div class="row">
+        <div class="col">
+            <h2 class="my-3 text-center"><span>{{page.pretty_category}} /</span> {{page.pretty_title}}</h2>
+        </div>
+    </div>
+    <!-- details + image -->
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <!-- full size image -->
+            <img src="{{page.fullsizeimage}}" alt="{{page.title}}" class="img-fluid">
+            <!-- previous/next links -->
+            {% include previous-next.html %}
+        </div>
+    </div>
+
+    {% include row-separator.html %}
+
+    <!-- show thumbnails grid-->
+
+        {% if page.comicpages %}
+        <h2>Comic Pages</h2>
+        <div id="comicPages" class="row my-4">
+            {% for item in page.comicpages %}
+            <a href="{{item.cp_full}}" title="{{item.cp_name}}">
+                <img src="{{item.cp_thumb}}" alt="{{item.cp_name}}">
+            <div class="thumbnailOverlay">
+                <i class="fas fa-search"></i>
+            </div>
+            <span>{{item.cp_name}}</span>
+            </a>
+            {% endfor %}
+        </div>
+        {% include row-separator.html %}
+        {% endif %}
+
+<!-- end thumbnails grid -->
+
+<!-- Print content if Markdown content is not empty -->
+{% if pageContent != '' %}
+    <div class="row portfolio-item-content my-4">
+        <div class="col">
+            {{content}}
+        </div>
+    </div>
+    {% include row-separator.html %}
+{% endif %}
+<!-- /end content if content -->
+
+<!-- Start additional images -->
+<!-- to enable section remove the comment/endcomment Liquid tags around the code -->
+
+{% comment %}
+{% if page.extraimages %}
+<div class="row portfolio-item-extras">
+    <div class="col">
+        <h2>Related images</h2>
+    </div>
+</div>
+<div class="row d-flex my-4">
+    <!-- adjust col-md value according to number of present extraimages -->
+    {% for item in page.extraimages %}
+        <div class="col{% if forloop.length == 1 %}-md-6 offset-md-3 d-flex justify-content-center{% elsif forloop.length == 2 %}-md-4 d-flex justify-content-center{%elsif forloop.length == 3%}-md-4 d-flex justify-content-center{%elsif forloop.length > 3%}-md-3 d-flex justify-content-center{% endif %}">
+            <img src="{{item}}" alt="Image">
+        </div>     
+    {% endfor %}
+</div>
+{% include row-separator.html %}
+{% endif %}
+{% endcomment %}
+
+<!-- /end additional images -->
+
+</div>

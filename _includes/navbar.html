@@ -1,0 +1,78 @@
+<!-- Jumbotron -->
+{% assign jt = site.data.bg_jumbotron | sample: 8 %}
+
+<!-- Light/Dark toggle switch -->
+    <!-- Controller Row -->
+    <div class="controller-row">
+        <i class="fas fa-moon"></i>
+        <label class="switch" title="Toggle Light/Dark styles">
+            <input id="toggler" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <i class="far fa-moon"></i>
+    </div>
+    <!-- End of controller row -->
+
+<!-- <div class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center blueline" style="background-image: linear-gradient(to bottom, rgba(41, 24, 32, 0.7) 0%, rgba(14, 3, 10, 1) 90%), 
+url('{{ jt [0] }}');"> -->
+<div class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center">
+        <a href="/"><h1 class="display-4"><span>Alzamon.com</span></h1></a>
+</div>
+
+<!-- Navbar -->
+<nav class="d-sm-flex flex-sm-column navbar navbar-expand-md sticky-top">
+<!-- <nav class="d-sm-flex flex-sm-column navbar navbar-expand-md navbar-dark sticky-top"> -->
+    <!-- navbar brand - tablet & under -->
+    <a href="/" class="navbar-brand d-block d-sm-none"><span>Alzamon.art - Children's Illustration portfolio of Alberto Gonzalez, Costa Rica</span></a>
+    <!-- toggler button - tablet & under -->
+    <button class="navbar-toggler" data-target="#azmNav" data-toggle="collapse" aria-controls="my-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="azmNav" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav mr-auto">
+            <!-- nav loop -->
+    {% for nav in site.data.navigation %}
+        {% if nav.url == page.url %}
+    <li class="nav-item active"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
+        {% else %}
+    <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>   
+        {% endif %}
+    {% endfor %}
+    <!-- end navbar loop -->
+
+            <!-- item 2 - two level dropdown -->
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="submenu-portfolio" href="#"
+                    tabindex="1" aria-disabled="true"><i class="far fa-images"></i> Portfolio <span class="caret"></span></a>
+                <div class="dropdown-menu" aria-labelledby="submenu-portfolio">
+                    <a href="{{site.url}}/portfolio-illustration" class="dropdown-item">Illustrations</a>
+                    <a href="{{site.url}}/portfolio-characterdesign" class="dropdown-item">Character Design</a>
+                    <div class="dropdown-divider"></div> 
+                    <a href="{{site.url}}/portfolio-comics" class="dropdown-item">Comics</a>
+                </div>
+            </li> -->
+            
+            <!-- social media links - tablet and above only -->
+            {% for sm in site.data.socialmedia %}
+            <li class="nav-item">
+                <a class="nav-link social" href="{{sm.url}}" target="_blank" title="{{sm.textDesc}}"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <!-- social links - mobile only -->
+<ul class="nav-link-social-mobile my-2 py-3">
+        <!-- social media loop -->
+        {% for sm in site.data.socialmedia %}
+            <li>
+                <a href="{{sm.url}}" title="{{sm.text}}" target="_blank"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
+            </li>
+        {% endfor %}
+        <!-- end social media loop -->
+</ul>
+
+    </div>
+</nav>

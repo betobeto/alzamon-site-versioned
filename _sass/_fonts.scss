@@ -1,0 +1,120 @@
+// @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800|Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400&display=swap');
+
+// Font Mixins
+// ===================
+
+@mixin textCondensed{
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+@mixin textCondensedLabel{
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+h1, h2, h3, h4{
+    font-weight: 700;
+}
+
+p, strong, ul, ol, li{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--body-text-color);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.portfolio-previous,
+.portfolio-next,
+.portfolio-previous>span>strong,
+.portfolio-next>span>strong,
+.pm-overlay>span,
+.lg-sub-html,
+.portfolio-grid-item,
+.posts-grid span,
+#comicPages a span
+{
+    // font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+// navbar
+
+#azmNav ul li, .portfolio-category-selector ul li{
+    font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+}
+
+//blog font styles
+.post{
+    &-content{
+        p, span, ul li{
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+    }
+}
+
+// non-blog header styles
+.container{
+    .row{
+            h1, h2, h3{
+                color: $linkColor;
+                background-image: none;
+            }
+            h2, h3{
+                margin: 1.2rem 0;
+            }
+            p{
+                margin: 1rem 0;
+               
+            }
+            p,strong{
+                @include textCondensed;
+            }
+
+            a{
+                color: $linkColor;
+                // font-weight: bold;
+                &:hover{
+                    text-decoration: underline;
+                }
+                &:visited{
+                    color:$linkVisitedColor;
+                }
+            }
+            .form-group{
+                label{
+                    @include textCondensedLabel;
+                }
+        }
+        @include respond-below(sm){
+            h1{
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+//footer-container overrides
+.footer-container{
+    h1,h2,h3{
+        color:white !important;
+    }
+    ul li{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        a{
+            color:$footerLinkColor !important;
+            &:hover{
+                color: $linkColor !important;
+                text-decoration: underline;
+            }
+        }
+    }
+    p{
+        font-size: 1rem !important;
+        color: var(--footer-text-color);
+    }
+}

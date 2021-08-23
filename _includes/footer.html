@@ -1,0 +1,51 @@
+<footer class="py-0 px-0 pb-3-md px-2-md">
+    <div class="container footer-scroll">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-container">
+                    
+                    <h3>Menu</h3>
+    <ul>
+        <!-- nav loop -->
+        {% for nav in site.data.navigation %}
+        {% if nav.url == page.url %}
+        <li class="active"><a href="{{ nav.url }}"><i class="fas fa-palette"></i> {{ nav.text }}</a></li>
+        {% else %}
+        <li class="nav-item"><a href="{{ nav.url }}"><i class="fas fa-angle-right"></i> {{ nav.text }}</a></li>
+        {% endif %}
+        {% endfor %}
+        <!-- end navbar loop -->
+    </ul>   
+    
+    <h3>Social Media</h3>
+    
+    <ul>
+            <!-- social media loop -->
+            {% for sm in site.data.socialmedia %}
+                <li>
+                    <a href="{{sm.url}}"><i class="fab {{sm.icon}}"></i>&nbsp; {{sm.text}}</a>   
+                </li>
+            {% endfor %}
+            <!-- end social media loop -->
+    </ul>
+    
+    <p>This site has been built with <a href="https://jekyllrb.com/" target="blank">Jekyll</a>, too many hours in front of <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>, and bottomless pots of coffee.</p>
+
+    <script type="text/javascript">
+        var today = new Date();
+        var year = today.getFullYear();
+        document.write("<p>&copy; " + year + " alzamon.com, all rights reserved</p>");   
+    </script>
+                </div>
+
+           </div>
+           <div class="col-md-8">
+               &nbsp; 
+               <!-- Silence is golden. -->
+           </div>
+        </div>
+    </div>
+
+    
+
+</footer>

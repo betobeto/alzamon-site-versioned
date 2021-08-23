@@ -1,0 +1,26 @@
+<!-- previous-next -->
+<div class="portfolio-item-previousNext">
+
+    <!-- Previous -->
+
+    {% if page.previous.url %}
+    <!-- Previous portfolio page -->
+        <a href="{{page.previous.url}}" class="portfolio-previous" title="{{page.previous.pretty_category}}: {{page.previous.pretty_title}}">
+        <i class="fas fa-chevron-left"></i>
+            <img src="{{page.previous.masonryimage}}" alt="{{page.previous.title}}">
+                <span class="sr-only"><strong>{{page.previous.pretty_title}}</strong> / {{page.previous.pretty_category}}</span>
+            </a>           
+    {% endif %}
+
+    <!-- next -->
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="portfolio-next" title="{{page.next.pretty_category}}: {{page.next.pretty_title}}">
+        <span class="sr-only"><strong>{{page.next.pretty_title}}</strong> / {{page.next.pretty_category}}</span>
+    </span>   
+        <img src="{{page.next.masonryimage}}" alt="{{page.next.title}}">
+    <i class="fas fa-chevron-right"></i>
+    </a>
+    {% endif %}
+
+</div>
+<!-- end previous-next -->

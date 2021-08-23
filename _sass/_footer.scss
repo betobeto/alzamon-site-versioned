@@ -1,0 +1,98 @@
+// footer styles
+
+footer {
+    // actual links and copyright container
+    background-image: url('/assets/images/azm-bg-footer-alpha-hires.png'), 
+    linear-gradient(to bottom, rgb(26, 2, 12) 0%, rgb(51, 5, 24) 40%, rgb(187, 18, 88) 95%);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+
+
+    .container{
+        @include respond-above(md){
+        padding:0;
+        }
+    }
+// footer breakpoints
+
+    @include respond-between(sm,md){
+        background-attachment: scroll;
+    }
+
+    @include respond-below(sm) {
+        //mobile
+        background-image: none;
+    }
+}
+
+
+.footer-container {
+    //container for small screens
+    margin: 4rem 0 0 0;
+
+    ul {
+        margin-top: 0.8rem;
+
+        li {
+            list-style: none;
+            height: 2rem;
+            a{
+                color: $footerLinkColor;
+            }
+        }
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        a{
+            color: lighten($footerLinkColor, 5%) !important;
+            text-decoration: underline;
+        }
+    }
+
+    // footer-container breakpoints
+
+    @include respond-between(sm, md) {
+
+        // tablets
+        ul {
+            min-width: 250px;
+            li {
+                margin-left: -30px;
+            }
+        }
+    }
+
+    @include respond-between(md,lg){
+        position: relative;
+        // top: 30vw;
+    }
+
+    @include respond-below(sm) {
+        height: inherit;
+        background: $footerContainerBgColor;
+        padding: 2rem 2rem 1rem; 
+        margin: 0;
+
+        h3, ul{
+            display: none;
+            // menu already replicates on main nav
+        }
+
+        p {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            a{
+                color: $linkColor;
+            }
+            &:last-child{
+                display: block;
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+}
