@@ -16,5 +16,7 @@ masonryimage: /assets/images/portfolio/danielsRoom-thumb.jpg
 fullsizeimage: /assets/images/portfolio/danielsRoom.jpg
 work_details:
     - Digital Artwork, 2021
-    - Based on <a href="/sketchbook/">a previous sketch</a> done some years ago. I wanted to explore further the universe my characters should live in and develop. Of course, any 9-year old deserves a messy room.
+    - Based on <a href="/sketchbook/">a previous sketch</a> done some years ago. I want to explore
+    further the universe my characters should live in and develop their lives. Of course, any 9-year old
+    deserves a messy room.
 ---
