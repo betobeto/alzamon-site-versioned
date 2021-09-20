@@ -1,3 +1,3 @@
 # Alzamon.art (Github repository)
 
-This is the versioned repository and backup for alzamon.art source and website files.
+This is the versioned repository and backup for alzamon.art source and website files, intended for backup. Hosting provided by Dreamhost.
