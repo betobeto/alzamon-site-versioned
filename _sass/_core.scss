@@ -10,18 +10,18 @@ $zIndexFooter: 2;
 // bind variables to themes for switching
 // ========================================
 
-// Default theme for swapping (light)
+// Default theme for swapping
 :root,[data-theme="default"]{
     --body-bg-color: rgb(255, 255, 255);
-    --body-color:  rgb(27, 12, 17);
+    --body-color: rgb(27, 12, 17);
     --body-text-color: rgb(27, 12, 17);
     --switch-on-color: rgb(221, 24, 100);
     --switch-off-color:rgb(139, 88, 88);
-    --toggler-color: rgb(173,24,86);
+    --toggler-color: rgb(173, 24, 86);
     --navbar-bg-color: rgb(232, 219, 227);
     --navbar-link-color: rgb(29, 22, 26);
     --icon-color: rgb(221, 24, 100);
-    --jumbotron-bg-color: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 75%,  rgba(207, 207, 207,1) 92%);
+    --jumbotron-bg-color: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 75%, rgba(207, 207, 207, 1) 92%);
     --portfolio-masonry-bg-color: none;
     --portfolio-masonry-bg-hover-color: rgb(255, 190, 215);
     --portfolio-masonry-title-color: white;
@@ -31,14 +31,14 @@ $zIndexFooter: 2;
     --azm-logo: url('/assets/images/alzamon_logo_light.png');
 }
 
-// dark theme -- default
+// light theme -- toggle alternate
 [data-theme="dark"]{
     --body-bg-color: rgb(27, 12, 17);
     --body-color: rgb(255, 255, 255);
     --body-text-color: rgb(255, 255, 255);
     --switch-on-color: rgb(221, 24, 100);
     --switch-off-color: rgb(139, 88, 88);
-    --toggler-color: rgb(173,24,86);
+    --toggler-color: rgb(173, 24, 86);
     --navbar-bg-color: rgba(14, 3, 10, 1);
     --navbar-link-color: rgb(163, 151, 151);
     --icon-color: rgb(255, 255, 255);
@@ -50,7 +50,7 @@ $zIndexFooter: 2;
     --portfolio-series-category-color: rgb(163, 151, 151);
     --footer-text-color: rgb(249, 200, 219);
     --azm-logo: url('/assets/images/alzamon_logo_dark.png');
-}
+    }
 
 * {
     // color: var(--body-color);
