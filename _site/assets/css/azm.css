@@ -423,6 +423,8 @@ body main { position: relative; z-index: 4; }
 
 #posts-item .post-content .col p { color: #1f1015 !important; font-size: 130%; margin: 1.5rem 0; }
 
+#posts-item .post-content .col p:nth-of-type(1)::first-letter { font-size: 85px; font-weight: 700; line-height: 0.6em; padding: 0 6px 6px 3px; margin-top: 0.2em; float: left; }
+
 #posts-item .post-content .col em, #posts-item .post-content .col strong { font-size: 110%; color: #1f1015 !important; }
 
 #posts-item .post-content-picture { position: relative; z-index: 10; background: white; padding: 2rem; margin: 3rem 0 0 0; transform: scale(1.1); box-shadow: 0px 4px 14px 7px rgba(41, 8, 20, 0.61); -webkit-box-shadow: 0px 4px 14px 7px rgba(41, 8, 20, 0.61); -moz-box-shadow: 0px 4px 14px 7px rgba(41, 8, 20, 0.61); }
