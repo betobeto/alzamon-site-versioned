@@ -1,4 +1,4 @@
-node_modules
+node_modules/
 assets_NOEXPORT
 .jekyll-cache
-_site
+_site/
