@@ -3,3 +3,4 @@ assets_NOEXPORT/
 .jekyll-cache
 Gemfile
 Gemfile.lock
+_site/
