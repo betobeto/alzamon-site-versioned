@@ -1,6 +1,7 @@
 node_modules/
 assets_NOEXPORT/
+_site/
 .jekyll-cache
 Gemfile
 Gemfile.lock
-_site/
+gulpfile.js
