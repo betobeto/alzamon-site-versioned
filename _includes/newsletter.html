@@ -1,0 +1,34 @@
+<!-- Buttondown newsletter integration -->
+
+<div class="container-fluid newsletter-form">
+    <div class="row">
+        <div class="col text-center py-3">
+        <h3>The Alzamon Newsletter</h3>
+        <p>Keep up with new artwork and stories, plus what I am up to in very ocassional, spam-free deliveries to your inbox.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-center py-3">
+            <form action="https://buttondown.email/api/emails/embed-subscribe/alzamonart" method="post" target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/alzamonart', 'popupwindow')"
+                class="embeddable-buttondown-form">
+                <div class="row">
+                    <div class="col d-flex justify-content-center py-2">
+                        <label for="bd-email" class="sr-only">Enter your email</label>
+                        <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
+                        <input type="submit" value="Subscribe" class="btn-dark" />
+                        <input type="hidden" name="tag" value="From Website" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="smaller">
+                            <em>This newsletter service is powered by <a href="https://buttondown.email"
+                                    target="_blank">Buttondown</a></em>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

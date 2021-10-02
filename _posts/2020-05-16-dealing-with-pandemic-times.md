@@ -3,7 +3,7 @@ layout: posts
 title: Life and Creativity in Pandemic Times
 postimagesmall: /assets/images/blog/Life_In_Pandemic_-_Flat@400w.png
 postimage: /assets/images/blog/Life_In_Pandemic_-_Flat@1500w.png
-image: /assets/images/blog/alzamon-art-finally-done@400w.jpg 
+#image: /assets/images/blog/alzamon-art-finally-done@400w.jpg 
 description: We were just living and working our lives out as usual. Then COVID-19 happened.
 ---
 

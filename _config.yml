@@ -27,6 +27,15 @@ encoding: UTF-8
 #include: 
 #  - .htaccess
 
+#exclude files from export
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package-lock.json
+  - package.json
+  - README.md
+
 defaults:
   - scope:
       path: ""

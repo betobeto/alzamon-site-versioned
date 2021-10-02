@@ -1,3 +1,13 @@
+---
+layout: posts
+title: Markdown Lists - Example Code
+postimagesmall: https://via.placeholder.com/400x267.png
+postimage: https://via.placeholder.com/1500x1000.png
+#image: /assets/images/blog/alzamon-art-finally-done@400w.jpg 
+description: Some code to create lists using Markdown language.
+---
+
+
 <!-- Notes:
     To enable display grid on Markdown Images they should be placed inside an ORDERED list element
     (so unordered lists can be used for simple text)
