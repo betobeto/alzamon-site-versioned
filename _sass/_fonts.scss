@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800|Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400&display=swap');
 
 // Font Mixins
@@ -117,4 +116,9 @@ h1, h2, h3, h4, h5, h6,
         font-size: 1rem !important;
         color: var(--footer-text-color);
     }
+}
+
+// font size classes
+.smaller{
+    font-size: 90% !important;
 }
