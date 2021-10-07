@@ -1,7 +1,6 @@
-node_modules/
-assets_NOEXPORT/
+node_modules
+assets_NOEXPORT
 _site/
-.jekyll-cache
-Gemfile
-Gemfile.lock
-gulpfile.js
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
