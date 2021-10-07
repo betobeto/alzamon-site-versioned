@@ -1,3 +1,5 @@
+node_modules
+assets_NOEXPORT
 _site/
 .sass-cache/
 .jekyll-cache/
