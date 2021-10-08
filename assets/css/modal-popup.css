@@ -1,0 +1,97 @@
+/* Scroll-Triggered Popup Box - jPop - modal Styles
+https://www.jqueryscript.net/other/jQuery-Plugin-For-Scroll-triggered-Popup-Box-jPop.html */
+
+.popup {
+	position: fixed;
+	z-index: 101010;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(0,0,0,0.70);
+}
+	.popup-inner {
+		position: absolute;
+		left: 30%;
+		right: 30%;
+		top: 20%;
+		/*bottom: 30%;*/
+		min-height: 40px;
+		height: auto;
+		background: white;
+		padding: 23px;
+		text-align: center;
+	}
+		.popup-inner .popup-header {
+			text-align: center;
+			
+		}
+			.popup-inner .popup-header .popup-title {
+				color: #09afdf;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			.popup-inner .btn {
+				background: #09afdf;
+				border-radius: 0px;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			.popup-inner p {
+				margin: 20px 0px;
+				font-size: 19px;
+				font-weight: 300;
+			}
+			.popup-inner .input {margin: 20px 0px;}
+			.popup-inner .input .form-control {
+				border-radius: 0px;
+				height: 40px;
+			}
+			.popup-inner .close-button {
+				float: right;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: #09afdf;
+				width: 30px;
+				height: 30px;
+				color: white;
+				padding: 2px;
+				padding-left: 10px;
+				border-bottom-left-radius: 100px;
+				cursor: pointer;
+			}
+			.popup-inner .close-button:hover,
+			.popup-inner .close-button:focus {
+				text-decoration: none;
+			}
+
+.popup {
+	display: none;
+}
+html.active-poup {
+	overflow-y: hidden;
+}
+html.active-poup .popup {
+	display: block;
+}
+/*media*/
+@media (max-width: 965px) {
+	.popup-inner {
+		left: 20%;
+		right: 20%;
+	}
+}
+@media (max-width: 640px) {
+	.popup-inner {
+		left: 10%;
+		right: 10%;
+		top: 7%;
+	}
+}
+@media (max-width: 280px) {
+	.popup-inner {
+		left: 1%;
+		right: 1%;
+	}
+}
