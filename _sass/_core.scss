@@ -54,6 +54,10 @@ $zIndexFooter: 2;
     --azm-logo: url('/assets/images/alzamon_logo_dark.png');
     }
 
+    // common color variables
+    $blockquote-bg-color: rgb(245, 212, 217);
+    $blockquote-border-color: rgb(75, 43, 53);
+
 * {
     // color: var(--body-color);
     // transition: all .45s ease-in;
@@ -63,19 +67,16 @@ body {
     position: relative;
     // background-color: var(--body-bg-color);
     // transition: background-color .45s ease-in;
-
     h1 {
         color: $headerColor;
         font-size: 4rem;
         text-align: center;
         background-image: url('/assets/images/alzamon_logo_light.png');
     }
-
     main {
         position: relative;
         z-index: $zIndexMain;
     }
-
 }
 
 //for bg switcher

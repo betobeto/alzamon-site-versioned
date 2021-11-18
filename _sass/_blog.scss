@@ -71,7 +71,7 @@
                     margin: 1.5rem 0;
 
                     // Drop Cap for posts
-                    &:nth-of-type(1) {
+                    &.dropcap{
                         &::first-letter {
                             font-size: 85px;
                             font-weight: 700;
@@ -81,11 +81,29 @@
                             float:left;
                         }
                     }
+                    &.closing{
+                        &::after{
+                            content:"\272A";
+                            color: rgb(221, 24, 100);
+                            margin: 0 0 0 0.5rem;
+                        }
+                    }
                 }
 
                 em, strong{
                     font-size: 110%;
                     color: $blogTextColor !important;
+                }
+
+                blockquote{
+                    background-color: $blockquote-bg-color;
+                    border: 1px dotted $blockquote-border-color;
+                    padding: 0 2rem;
+                }
+                // centering images on markdown posts
+                img[src*='#center'] { 
+                    display: block;
+                    margin: auto;
                 }
             }
                 &-picture{
