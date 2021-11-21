@@ -1,8 +1,10 @@
 ---
 layout: posts
 title: Make Artist Earnings Great Again
-postimagesmall: https://via.placeholder.com/400x267.png
-postimage: https://via.placeholder.com/1500x1000.png
+postimagesmall: /assets/images/blog/p-mega-thumb.jpg
+postimage: /assets/images/blog/p-mega.jpg
+#postimagesmall: https://via.placeholder.com/400x267.png
+#postimage: https://via.placeholder.com/1500x1000.png
 description: We left ourselves being told art is worthless as a career. But this wasn't the way it used to be. Nor it should continue to — if we care to do something about it.
 
 #if using .dropcap class, first paragraph must use HTML, not Markdown.
@@ -27,7 +29,7 @@ Somewhere along this way, the idea among laymen that design, and consequently ev
 
 ### Were things really better before?
 
-Let's take [Kelly Freas](https://en.wikipedia.org/wiki/Kelly_Freas) for an example. One of the most celebrated and successful American illustrators of the 20th century by any measures, Mr. Freas's heyday as a highly recognized, on-demand illustrator was from the 1950s through the 1980s. Hundreds of covers for MAD Magazine and other science fiction publications, advertisements (illustration was still a highly demanded resource for advertising), even Queen's [News of the World](https://en.wikipedia.org/wiki/News_of_the_World_(album)) album cover... the man did it all and then some. And sure enough he commanded not just a living wage, but a very good one enough to sustain their family on a single income.
+Let's take [Kelly Freas](https://en.wikipedia.org/wiki/Kelly_Freas) for an example. One of the most celebrated and successful American illustrators of the 20th century by any measures, Mr. Freas's heyday as a highly recognized, on-demand illustrator was from the 1950s through the 1980s. Hundreds of covers for MAD Magazine and other science fiction publications, advertisements (illustration was still a highly demanded resource for advertising), even Queen's [News of the World](https://en.wikipedia.org/wiki/News_of_the_World_(album)) album cover... the man did it all and then some. And sure enough he commanded not just a living wage, but a very good one enough to sustain his family on a single income.
 
 Need more examples? Take [Al Capp](https://en.wikipedia.org/wiki/Al_Capp) and other comic strip cartoonists from the 1920s and 1930s. Before TV and the Internet, newspaper comics were the most accessible and popular form of visual entertainment, and their top artists (and even most second-rate others) were commanding huge wages that could be translated to [millions of dollars today](https://www.printmag.com/featured/the-advertising-power-of-comic-book-artists/). They were truly the entertainment kings of their era.
 
@@ -42,7 +44,7 @@ And if on top of all this artists are never taught about the basic ways of money
 
 ### You can spend years at art college and never hear a thing about financial management.
 
-No wonder artists can't tell why they are always getting the short end of the stick. They end up selling their hard-earned art skills for peanuts because frankly **they don't know better.** No one cared to teach them the ways of money and the market. And media moguls use this lack of knowledge —damn sure— to their advantage, every time. Artists get being constantly used, abused and exploited by the market and somehow we've ended up normalizing what shouldn't be normal by any standards.
+No wonder artists can't tell why they are always getting the short end of the stick. They end up selling their hard-earned art skills for peanuts because frankly **they don't know better.** No one cared to teach them the ways of money and the market. And media moguls —count on it— use this lack of knowledge to their advantage, every time. Artists get being constantly used, abused and exploited by the market and somehow we've ended up normalizing what shouldn't be normal by any standards.
 
 Illustrator Lily Williams recently published a tremendous blog post named ["Artists You Need to Charge More"](https://lilywilliamsart.com/2021/11/15/artists-income-inflation/) which in turn inspired me to write this one. Lily has gone into the subject far deeper than I could even aspire to and it is a highly recommended read. A huge eye-opener. But just in case you don't feel like reading the whole thing, here are its main takeaways as I see them.
 
