@@ -68,12 +68,12 @@
             .nav-link {
                 margin-right: 1rem;
                 color: var(--navbar-link-color);
-                @include respond-above(lg){
+                @include respond-above(md){
                     font-size:1.6rem;
                 }
-                @include respond-between(sm,md){
-                    font-size: 1.3rem;
-                }
+                // @include respond-between(sm,md){
+                //     font-size: 1.3rem;
+                // }
                 @include respond-below(sm){
                     font-size:1.6rem;
                 }
@@ -95,15 +95,6 @@
                     border-bottom: 4px $linkUnderlineColor double;
                 }
             }
-            @include respond-below(sm){
-                        // hide nav-item breakpoints on mobile
-                        &:nth-of-type(7),
-                        &:nth-of-type(8),
-                        &:nth-of-type(9),
-                        &:nth-of-type(10){
-                            display:none;
-                        }
-            }
         }
     }
     //mobile: menu icon
@@ -122,8 +113,8 @@
         li{
             text-align: center;
             i.fab{ // icons
-               font-size: 1.8rem;
-               color: $linkColor;
+                font-size: 1.8rem;
+                color: $linkColor;
             }
         }
     }
@@ -202,6 +193,7 @@
         //breakpoints
         @include respond-below(sm){
             left: 55%;
+            transform: scale(0.8);
         }
 
         @include respond-between(sm, md){

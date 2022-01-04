@@ -154,10 +154,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed156f', end
                 color: $linkColor;
                 font-weight: 800;
                 margin: 0.3rem 0 0 0;
+                @include respond-below(sm){
+                    font-size: 1.3rem;
+                }
             }
             span{
                     font-size: smaller;
                     color: $blogTextColor !important;
+                    @include respond-below(sm){
+                        font-size: larger;
+                    }
             }
         }
         &:hover{

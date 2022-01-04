@@ -18,26 +18,12 @@ Portfolio page: set source variable and conditions on Assign tag below
 
 <div class="container">
 
-    <!-- <div class="row d-md-none">
-        <div class="col text-center py-0">
-            <h3>Children's Illustration & Character Design</h3>
-            <p class="my-2">If this is what you are looking for, I welcome you to know my work and about me further below.</p>
-        </div>
-    </div> -->
-
-    <!-- <div class="row">
-        <div class="col">
-            <pre style="color:white">{{ site.portfolio | sort: "sort_number" | inspect }}</pre> 
-        </div>
-    </div> -->
-
-
-    <!-- Portfolio category selecrtor -->
+    <!-- Portfolio category selector -->
     <div class="row portfolio-category-container">
         <div class="col portfolio-category-selector py-xs-2 py-sm-4">
             <ul class="d-flex">
                 <li><a href="#" data-filter=".pmi-illustration">Illustration</a></li>
-                <li><a href="#" data-filter=".pmi-characterdesign">Character Design</a></li>
+                <li><a href="#" data-filter=".pmi-characterdesign">Character<span class="d-block d-sm-none">s</span> <span class="d-none d-sm-block">&nbsp;Design</span></a></li>
                 <li><a href="#" data-filter=".pmi-fanart">Fan Art</a></li>
                 <li><a href="#" data-filter="*">Show All</a></li>
             </ul> 
@@ -46,8 +32,8 @@ Portfolio page: set source variable and conditions on Assign tag below
 
     <div class="row">
         <div class="col">
-            <!-- Portfolio Masonry -->
-            <div class="portfolio-masonry">
+            <!-- Display Isotope Portfolio Masonry -->
+            <div id="portfolio-home" class="portfolio-masonry">
                 <!-- Show *only* items matching the "homepage" category and sort by the "sort_number" variable-->
                 <!-- use reverse switch to display latest (in number) posts -->
 
@@ -62,18 +48,21 @@ Portfolio page: set source variable and conditions on Assign tag below
                 ex: {% for item in hp limit:32 %}{% endfor %}
                 {%- endcomment -%}
 
-                <!-- masonry item -->
-                <div class="portfolio-masonry-item {% if item.categories contains "illustration"%}pmi-illustration{% endif%}{%if item.categories contains "characterdesign"%}pmi-characterdesign{%endif%}{%if item.categories contains "fanart"%}pmi-fanart{%endif%}">
-                    <a href="{{item.url}}">
+                <!-- masonry item - define categories here -->
+                <!-- now using lightGallery to display images -->
+                <div class="portfolio-masonry-item {% 
+                    if item.categories contains "illustration"%}pmi-illustration{% endif%}
+                    {%if item.categories contains "characterdesign"%}pmi-characterdesign{%endif%}
+                    {%if item.categories contains "fanart"%}pmi-fanart{%endif%}">
+                    <a href="{{item.fullsizeimage}}">
                         <div class="pm-overlay d-flex flex-column">
                             <i class="fas fa-search"></i>
-                           <strong class="text-center">{{item.pretty_title}}</strong> <span>{{item.pretty_category}}</span>
+                            <strong class="text-center">{{item.pretty_title}}</strong>
+                            <span>{{item.pretty_category}}</span>
                         </div>
                         <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
-                        
                     </a>
 
-                    <!-- <p><strong>{{item.pretty_title}}</strong> / {{item.pretty_category}}</p> -->
                 </div>
                 <!-- /masonry item -->
                 {% endfor %}

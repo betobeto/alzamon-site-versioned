@@ -44,9 +44,14 @@ $portfolioPagePrevNextIndex: 2;
         // portfolio category pages
             h2 {
                 color: $portfolioHeaderColor;
-                font-size: 4rem;
                 span{
                     color: var(--portfolio-series-category-color);
+                }
+                @include respond-above(sm){
+                    font-size: 4rem;
+                }
+                @include respond-below(sm){
+                    font-size: 2.5rem;
                 }
             }
         &-description{
@@ -74,6 +79,8 @@ $portfolioPagePrevNextIndex: 2;
                         border-right: $linkVisitedColor 2px solid;
                     }
                     a{
+                        display: flex;
+                        justify-content: center;
                         text-decoration: none !important;
                         cursor: pointer;
                         &:active{
@@ -83,26 +90,34 @@ $portfolioPagePrevNextIndex: 2;
                             color: $linkColor !important;
                         }
                         &.selector-active{
-                            display: inline-block;
+                            display: inline-flex;
                             background: var(--switch-on-color);
                             color: white !important;
-                            padding: 0 1rem;
+                            padding: 0 0.5rem;
                             border-radius: 8px;
                             -moz-border-radius: 8px;
                             -webkit-border-radius: 8px;
                         }
                     }
                     //selector: breakpoints
-                    @include respond-below(xs){
-                        border-right: none !important;
-                    }
+                    // @include respond-below(xs){
+                    //     border-right: none !important;
+                    // }
                 }
                 //list: breakpoints
+                @include respond-above(md){
+                    width:70%;
+                    margin: 0 auto;
+                }
+
                 @include respond-below(xs){
-                    flex-direction: column;
+                    // flex-direction: column;
                     padding-bottom: 1rem;
                     li{
                         width: 100%;
+                        a{
+                            font-size: 80%;
+                        }
                     }
                 }
             }
@@ -173,8 +188,6 @@ $portfolioPagePrevNextIndex: 2;
             }
         }
     }
-
-
 }
 
 // Portfolio Masonry Item settings
@@ -443,80 +456,107 @@ $portfolioPagePrevNextIndex: 2;
 
 // Portfolio Comics Page styles
 // ===================================
-#comicPages {
-    display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
-    grid-column-gap: 1rem;
-    justify-content: center;
-    align-items: center;
 
-    a {
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-
-        img {
-            transform: scale(0.85);
-            transition: all 0.25s ease;
-        }
-
-        span{
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        //    Start overlay + hover effects
-        .thumbnailOverlay {
-            background-color: rgba(0, 0, 0, 0.4);
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            -webkit-transition: background-color 0.15s ease 0s;
-            -o-transition: background-color 0.15s ease 0s;
-            transition: background-color 0.15s ease 0s;
-
-            i.fas {
-                //search icon
-                font-size: 2.5rem;
-                opacity: 0;
-                transition: all 0.15s ease;
+.portfolio-comics{
+    &-item{
+        ul{
+            display: grid;
+            margin-bottom: 2rem;
+            li{
+              list-style: none;  
+              border: yellow 1px solid;
             }
-
-            &:hover {
-                // thumbnails hover actions
-                background-color: rgba(0, 0, 0, 0.5);
-
-                i.fas {
-                    opacity: 1;
-                }
+            // breakpoints
+            @include respond-above(sm){
+                grid-template-columns: 22% 22% 22% 22%;
+                grid-column-gap: 1.2rem;
+                grid-row-gap: 1.4rem;
+            }
+            @include respond-below(sm){
+                margin-left: -2.5rem;
+                grid-template-columns: 46% 46%;
+                grid-column-gap: 1.2rem;
+                grid-row-gap: 1.2rem;   
             }
         }
-
-        &:hover {
-           span{
-                color:lighten($linkColor, 20%);
-            }
-            // img {
-            //     transform: scale(0.9);
-            // }
-        }
-
-        //  end overlay + hover effects  
-    }
-
-    @include respond-between(sm, md) {
-        grid-template-columns: 23% 23% 23% 23%;
-    }
-
-    @include respond-below(sm) {
-        grid-template-columns: 46% 46%;
     }
 }
+
+
+// #comicPages {
+//     display: grid;
+//     grid-template-columns: 22% 22% 22% 22%;
+//     grid-column-gap: 1rem;
+//     justify-content: center;
+//     align-items: center;
+
+//     a {
+//         position: relative;
+//         text-align: center;
+//         text-decoration: none;
+
+//         img {
+//             transform: scale(0.85);
+//             transition: all 0.25s ease;
+//         }
+
+//         span{
+//             display: block;
+//             margin-bottom: 1rem;
+//         }
+
+//         //    Start overlay + hover effects
+//         .thumbnailOverlay {
+//             background-color: rgba(0, 0, 0, 0.4);
+//             bottom: 0;
+//             left: 0;
+//             position: absolute;
+//             right: 0;
+//             top: 0;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             -webkit-transition: background-color 0.15s ease 0s;
+//             -o-transition: background-color 0.15s ease 0s;
+//             transition: background-color 0.15s ease 0s;
+
+//             i.fas {
+//                 //search icon
+//                 font-size: 2.5rem;
+//                 opacity: 0;
+//                 transition: all 0.15s ease;
+//             }
+
+//             &:hover {
+//                 // thumbnails hover actions
+//                 background-color: rgba(0, 0, 0, 0.5);
+
+//                 i.fas {
+//                     opacity: 1;
+//                 }
+//             }
+//         }
+
+//         &:hover {
+//            span{
+//                 color:lighten($linkColor, 20%);
+//             }
+//             // img {
+//             //     transform: scale(0.9);
+//             // }
+//         }
+
+//         //  end overlay + hover effects  
+//     }
+
+//     @include respond-between(sm, md) {
+//         grid-template-columns: 23% 23% 23% 23%;
+//     }
+
+//     @include respond-below(sm) {
+//         grid-template-columns: 46% 46%;
+//     }
+// }
 
 // Portfolio Series Page Layout Styles
 // ====================================

@@ -3,13 +3,15 @@ $(document).ready(function () {
     // enable lightgallery on comicspages component
         $("#comicPages").lightGallery({
             thumbnail:true,
-            download:false
+            download:false,
+            enableSwipe:true
         }); 
 
-    // enable lightgallery on sketchbook component
-    $("#portfolio-grid, #sketchbook-grid").lightGallery({
+    // enable lightgallery on portfolio (homepage) and sketchbook component
+    $("#portfolio-home, #portfolio-comics, #portfolio-grid, #sketchbook-grid").lightGallery({
         thumbnail:true,
         download:false,
+        enableSwipe:true,
         selector: "a"
     }); 
 
@@ -39,8 +41,8 @@ $(document).ready(function () {
                         gutter: '.gutter-sizer'
             }
         });
-         // enable data filtering
-         $('.portfolio-category-selector a').click(function (e) { 
+         // enable data filtering - top menu: selects item categories (portfolio, comics, sketchbook)
+        $('.portfolio-category-selector a').click(function (e) { 
             var filterValue = $(this).attr('data-filter');
             $pMasonry.isotope({ filter: filterValue });
             //console.log (filterValue);

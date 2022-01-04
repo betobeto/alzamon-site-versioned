@@ -13,40 +13,43 @@ permalink: /comics/
         </div>
     </div>
 
-    <div class="row">
+    <div id="portfolio-comics" class="row">
         <div class="col">
             <!-- Portfolio Masonry -->
-            <div class="portfolio-masonry">
+            {% for item in cm %}
+            <!-- masonry item -->
+            <div class="portfolio-comics-item">
 
-                <div class="grid-sizer"></div>
-                <div class="gutter-sizer"></div>
+                <h3>{{item.title}}</h3>
+                <p>{{item.description}}</p>
 
-                {% for item in cm %}
-                    <!-- masonry item -->
-                    <div class="portfolio-masonry-item">
-                        <a href="{{item.url}}">
+                <ul>
+                    {% for comicpage in item.comicpages %}
+                    <li><a href="{{comicpage.cp_full}}"><img src="{{comicpage.cp_thumb}}" alt="" srcset=""></a></li>
+                    {% endfor %}
+                </ul>
+
+                <!-- <a href="{{item.url}}">
                             <div class="pm-overlay">
                                 <i class="fas fa-search"></i>
                             </div>
                             <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
-                            <!-- <div class="portfolio-masonry-title">
-                                <p class="text-center">{{item.pretty_title}}</p>
-                            </div> -->
-                        </a>
-                        <p><strong>{{item.pretty_title}}</strong> / {{item.pretty_category}}</p>
-                    </div>
-                    <!-- /masonry item -->
-                {% endfor %}
+                        </a> -->
+
             </div>
-            <!-- End Masonry -->
+            <!-- /masonry item -->
+
+            <!-- separator -->
+            <div class="row">
+                <div class="col separator-h">
+                </div>
+            </div>
+
+            {% endfor %}
         </div>
     </div>
 
-    <!-- separator -->
-    <div class="row">
-        <div class="col separator-h">
-        </div>
-    </div>
+
 
 <!-- 
     <div class="row">

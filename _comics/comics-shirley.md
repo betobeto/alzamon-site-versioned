@@ -1,6 +1,6 @@
 ---
 layout: comics
-title: Shirley (comic pilot)
+title: Shirley (Pilot, 2017)
 # FB and Jekyll SEO Tag values
 description: A comic story project based on a real life story of a girl who wanted to make it big in soccer — and did.
 image: /assets/images/comics/2017_cm_shirley_web@400w.jpg

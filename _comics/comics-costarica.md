@@ -2,11 +2,10 @@
 layout: comics
 title: Discovering Costa Rica (Angoulême giveaway)
 # FB and Jekyll SEO Tag values
-description: A 4-page comic in French about Costa Rica I created and published on a small run to give away at the 2016 edition of the Angoulême comics festival in France.
+description: A 4-page comic in French about Costa Rica I created and published on a small run to give away at the 2016 edition of the Angoulême comics festival in France. About 50 full color copies were printed and given away.
 image: /assets/images/comics/2016_cm_costaRicaAng01@400w.jpg
 # End FB and Jekyll SEO Tag values
 categories: 
-    - homepage
     - comics
 pretty_category: Comics
 pretty_title: Discovering Costa Rica (Angoulême giveaway)

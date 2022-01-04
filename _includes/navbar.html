@@ -7,7 +7,7 @@
             <input id="toggler" type="checkbox">
             <span class="slider round"></span>
         </label>
-        <i class="far fa-moon"></i>
+        <i class="fas fa-sun"></i>
     </div>
     <!-- End of controller row -->
 
@@ -40,7 +40,7 @@
         
             <!-- social media links - tablet and above only -->
             {% for sm in site.data.socialmedia %}
-            <li class="nav-item">
+            <li class="nav-item d-none d-sm-block">
                 <a class="nav-link social" href="{{sm.url}}" target="_blank" title="{{sm.textDesc}}"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
             </li>
             {% endfor %}
