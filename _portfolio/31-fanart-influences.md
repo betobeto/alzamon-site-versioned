@@ -8,10 +8,10 @@ image: /assets/images/portfolio/ill_2022_influences_400.jpg
 categories: 
     - fanart
     - homepage
-pretty_category: Character Design
+pretty_category: Fan Art
 pretty_title: Fan Art - Influences
-permalink: /portfolio/characterdesign/daniel-model-sheet
-sort_number: 28
+sort_number: 31
+permalink: /portfolio/fanart/fanart-influences
 masonryimage: /assets/images/portfolio/ill_2022_influences_400.jpg
 fullsizeimage: /assets/images/portfolio/ill_2022_influences_1600.jpg
 ---

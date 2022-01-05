@@ -6,6 +6,7 @@ description: Model sheet for original character design.
 image: /assets/images/portfolio/cd_modelsheet_Susana_400.png
 # End FB and Jekyll SEO Tag values
 categories: 
+    - homepage
     - characterdesign
 pretty_category: Character Design
 pretty_title: Character Design - Susana - Model Sheet
