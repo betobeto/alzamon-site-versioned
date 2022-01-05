@@ -464,7 +464,6 @@ $portfolioPagePrevNextIndex: 2;
             margin-bottom: 2rem;
             li{
               list-style: none;  
-              border: yellow 1px solid;
             }
             // breakpoints
             @include respond-above(sm){

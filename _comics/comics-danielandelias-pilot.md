@@ -25,7 +25,7 @@ comicpages:
       cp_full: /assets/images/comics/2014_cm_danielElias03@1500w.jpg
     - cp_name: Daniel & Elias Pilot - Page 4
       cp_thumb: /assets/images/comics/2014_cm_danielElias04@400w.jpg
-      cp_full: /assets/images/comics/2014_cm_danielElias03@1500w.jpg
+      cp_full: /assets/images/comics/2014_cm_danielElias04@1500w.jpg
 ---
 
 ## About this comic

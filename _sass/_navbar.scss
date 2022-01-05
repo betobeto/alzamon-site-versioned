@@ -8,12 +8,6 @@
     z-index: 100;
     background-color: var(--jumbotron-bg-color);
     transition: background-color .45s ease-in;
-    // &-bg{
-    //     background-attachment: static;
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    // }
     h1 {
         // logo container
         background-image: var(--azm-logo);
@@ -71,9 +65,11 @@
                 @include respond-above(md){
                     font-size:1.6rem;
                 }
-                // @include respond-between(sm,md){
-                //     font-size: 1.3rem;
-                // }
+                @include respond-between(sm,md){
+                    @media screen and (orientation:portrait){
+                        font-size: 1.35rem;
+                    }        
+                }
                 @include respond-below(sm){
                     font-size:1.6rem;
                 }
