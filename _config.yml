@@ -19,8 +19,8 @@ social:
     - https://behance.net/alzamon
 
 # base URL values - use 'bundle exec jekyll build' (not serve) to generate correct canonical URLs for upload
+baseurl: ""
 url: "https://alzamon.art"
-baseurl: "/"
 encoding: UTF-8
 
 #include generated htaccess file for remote hosting
