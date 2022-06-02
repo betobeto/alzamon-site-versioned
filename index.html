@@ -15,65 +15,97 @@ Portfolio page: set source variable and conditions on Assign tag below
 {% assign pf = site.portfolio | sort: "sort_number" | reverse %}
 {% endcomment %}
 
+{% comment %}
+=======================================================================
+Use variable to retrieve latest post published
+=======================================================================
+{% endcomment %}
+{% assign latest_post = site.posts[0] %}
 
-<div class="container">
+{% assign latest_post_image = latest_post.postimagesmall %}
 
-    <!-- Portfolio category selector -->
-    <div class="row portfolio-category-container">
-        <div class="col portfolio-category-selector py-xs-2 py-sm-4">
-            <ul class="d-flex">
-                <li><a href="#" data-filter=".pmi-illustration">Illustration</a></li>
-                <li><a href="#" data-filter=".pmi-characterdesign">Character<span class="d-block d-sm-none">s</span> <span class="d-none d-sm-block">&nbsp;Design</span></a></li>
-                <li><a href="#" data-filter=".pmi-fanart">Fan Art</a></li>
-                <li><a href="#" data-filter="*">Show All</a></li>
-            </ul> 
+<!-- Home: Carousel -->
+<div id="azm-home-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#azm-home-carousel" data-slide-to="0" aria-current="location"></li>
+        <li data-target="#azm-home-carousel" data-slide-to="1"></li>
+        <li data-target="#azm-home-carousel" data-slide-to="2"></li>
+        <li data-target="#azm-home-carousel" data-slide-to="3"></li>
+    </ol>
+<div class="text-inside-container">
+    <h1>Creative Works for <br class="d-none d-sm-block"> the young at heart</h1>
+    <p>I am <a href="/about/">Alberto,</a> a Costa Rican Illustrator, comics and 3d artist with a focus on creating content for young, middle grade audiences. <a href="/portfolio/">These are my works.</a> Make yourself at home.</p>
+</div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <h2>First Slide</h2>
+        </div>
+        <div class="carousel-item">
+            <h2>Second Slide</h2>
+        </div>
+        <div class="carousel-item">
+            <h2>Third Slide</h2>
+        </div>
+        <div class="carousel-item">
+            <h2>Fourth Slide</h2>
+        </div>
+      </div>
+</div>
+<!-- /end carousel -->
+
+<!-- Category circles -->
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 text-center">
+
+            <a href="/portfolio/" class="categoryCircle ccPortfolio"></a>
+
+            <h2>Portfolio</h2>
+            <p>Illustration, Picture Books, Animation, Character Design</p>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">
+            <a href="/blog/" class="categoryCircle ccBlog" style="background-image: url({{ latest_post_image }})"></a>
+            <h2>Blog</h2>
+            <p>Latest post:<br>
+                <a href="{{ latest_post.url }}">{{ latest_post.title }}</a>
+                <br><em>{{latest_post.date | date_to_string:"ordinal","US" }}</em></p>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">
+            <a href="#" class="categoryCircle ccComics"></a>
+            <h2>Comics</h2>
+            <p>Graphic Novels, One-Shots, Works in Progress</p>
         </div>
     </div>
+</div>
+<!-- /end category circles -->
 
-    <div class="row">
-        <div class="col">
-            <!-- Display Isotope Portfolio Masonry -->
-            <div id="portfolio-home" class="portfolio-masonry">
-                <!-- Show *only* items matching the "homepage" category and sort by the "sort_number" variable-->
-                <!-- use reverse switch to display latest (in number) posts -->
 
-                <div class="grid-sizer"></div>
-                <div class="gutter-sizer"></div>
-
-                {% assign hp = site.portfolio | where:"categories", "homepage" | sort: "sort_number" | reverse %}
-                {% for item in hp %}
-
-                {%- comment -%}
-                Optional: set limit: XX to restrict homepage display to that number
-                ex: {% for item in hp limit:32 %}{% endfor %}
-                {%- endcomment -%}
-
-                <!-- masonry item - define categories here -->
-                <!-- now using lightGallery to display images -->
-                <div class="portfolio-masonry-item {% 
-                    if item.categories contains "illustration"%}pmi-illustration{% endif%}
-                    {%if item.categories contains "characterdesign"%}pmi-characterdesign{%endif%}
-                    {%if item.categories contains "fanart"%}pmi-fanart{%endif%}">
-                    <a href="{{item.fullsizeimage}}">
-                        <div class="pm-overlay d-flex flex-column">
-                            <i class="fas fa-search"></i>
-                            <strong class="text-center">{{item.pretty_title}}</strong>
-                            <span>{{item.pretty_category}}</span>
-                        </div>
-                        <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
-                    </a>
-
-                </div>
-                <!-- /masonry item -->
-                {% endfor %}
-            </div>
-            <!-- /End Masonry -->
-
+<!-- Creative services -->
+<div class="container my-3 azm-home-services">
+<div class="row mx-auto">
+    <div class="col">
+        <h3><span>How can I help? Are you...</span></h3>
+    </div>
+</div>
+    <div class="row mx-auto">
+        <div class="col-sm-12 col-md-4 text-center">
+            <h4>...a business?</h4>
+            <a href="/services/" class="azm-home-services-link i01" title="Services for Writers"><span>Services for Writers</span></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, nostrum animi quos nisi libero nesciunt quo.</p>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">           
+            <h4>...an art director?</h4>
+            <a href="/services/" class="azm-home-services-link i02" title="Services for Teachers"><span>Services for Teachers</span></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium blanditiis magnam est voluptates reiciendis.</p>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">
+            <h4>...an author?</h4>
+            <a href="/services/" class="azm-home-services-link i03" title="Services for Artists"><span>Services for Artists</span></a>
+            <p>Sequi, voluptates ullam? Quisquam dolorum quasi consequuntur. Nisi ipsam quae non eius velit praesentium, repellat ipsa iure.</p>
         </div>
     </div>
 </div>
 
-{% include block-about.html %}
 
 {% include newsletter.html %}
 

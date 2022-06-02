@@ -2,7 +2,7 @@
 layout: portfolio
 title: Still Life with Plants
 # FB and Jekyll SEO Tag values
-description: Digital illustration of still life with patio pots and plants.
+description: Something I did on our backyard to practice still life painting. 
 image: /assets/images/portfolio/2016_i_kitchenSoupWatercolor@400w.jpg
 # End FB and Jekyll SEO Tag values
 categories: 

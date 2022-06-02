@@ -4,25 +4,31 @@ title: Alzamon — Children's Illustration, Comics and Sketchbook Portfolio — 
 description: Internal blog for the alzamon.com/art website, covering topics of children's illustration, kids-oriented graphic design, animation and random musings by Costa Rica-based illustrator/author Alberto Gonzalez.
 ---
 
-<div class="container portfolio-category">
-    <div class="row">
-        <div class="col py-3">
-            <h2 class="text-center">Blog</h2>
-            <p class="text-center portfolio-category-description">Random pseudo-intellectual musings I write from time to time.</p>
-        </div>
-    </div>
+<!-- page hero -->
+<div class="jumbotron-fluid page-hero-services">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <h2>Blog</h2>
+              <p>My random brain zaps condensed into posts.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end page hero -->
 
+
+<div class="container">
     <div class="row">
         <div class="col posts-grid">
-            
             <ul>
                 {% for post in site.posts %}
                   <li>
                     <a href="{{ post.url }}">
                       <img src="{{post.postimagesmall}}" alt="{{post.title}}">
-                   <h6>
+                   <h3 class="text-center">
                      {{ post.title }}
-                   </h6>
+                   </h3>
                       <span>{{post.date | date_to_string:"ordinal","US" }}</span>
                     </a>
                   </li>

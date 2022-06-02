@@ -1,29 +1,41 @@
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400&family=Montserrat:wght@900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Montserrat:wght@900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;800&display=swap');
+
 
 // Font Mixins
 // ===================
 
-@mixin textCondensed{
-    line-height: 2rem;
-    font-size: 1.4rem;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-@mixin textCondensedLabel{
-    line-height: 2rem;
-    font-size: 1.4rem;
-    font-family: 'Open Sans Condensed', sans-serif;
+
+// Universal Font Scaling
+html{
+    font-size: calc(15px + 0.390625vw);
 }
 
+h1, h2, h3{
+    font-weight: 800;
+}
 
-h1, h2, h3, h4{
-    font-weight: 700;
+h1{
+    letter-spacing: -0.10rem;
+}
+
+h2{
+    letter-spacing: -0.08rem;
+}
+
+h3{
+    letter-spacing: -0.05rem;
+}
+
+h4, h5, h6{
+    font-weight: 500;
 }
 
 p, strong, ul, ol, li{
     font-family: 'Open Sans', sans-serif;
-    color: var(--body-text-color);
+    color: $body-text-color;
+    letter-spacing: -0.05rem;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -37,21 +49,21 @@ h1, h2, h3, h4, h5, h6,
 .posts-grid span,
 #comicPages a span
 {
-    // font-family: 'Alegreya Sans', sans-serif;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
 
 // navbar
 
 #azmNav ul li, .portfolio-category-selector ul li{
-    font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 //blog font styles
 .post{
     &-content{
         p, span, ul li{
-            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
     }
 }
@@ -60,35 +72,25 @@ h1, h2, h3, h4, h5, h6,
 .container{
     .row{
             h1, h2, h3{
-                color: $linkColor;
+                color: $link-color;
                 background-image: none;
             }
             h2, h3{
-                margin: 1.2rem 0;
+                margin: 0;
             }
             p{
-                margin: 1rem 0;
-               
+                margin: 1rem 0;  
             }
-            p,strong{
-                @include textCondensed;
-            }
-
             a{
-                color: $linkColor;
+                color: $link-color;
                 // font-weight: bold;
                 &:hover{
-                    text-decoration: underline;
+                    color: lighten($body-alt-color,10%);
                 }
                 &:visited{
-                    color:$linkVisitedColor;
+                    color:$link-visited-color;
                 }
             }
-            .form-group{
-                label{
-                    @include textCondensedLabel;
-                }
-        }
         @include respond-below(sm){
             h1{
                 font-size: 2.4rem;
@@ -98,15 +100,22 @@ h1, h2, h3, h4, h5, h6,
     // style headers by category
     &.portfolio-category{
         h2{
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Open Sans',sans-serif;
         }
     }
     &.section-about{
         h1{
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
     }
 }
+
+//reset font size on content containers
+// .jumbotron-fluid+.container{
+//     h1,h2,h3,h4,h5,h6{
+//         font-size: inherit;
+//     }
+// }
 
 //footer-container overrides
 .footer-container{
@@ -114,24 +123,22 @@ h1, h2, h3, h4, h5, h6,
         color:white !important;
     }
     ul li{
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 400;
-        font-size: 1.2rem;
         a{
             color:$footerLinkColor !important;
             &:hover{
-                color: $linkColor !important;
+                color: $link-color !important;
                 text-decoration: underline;
             }
         }
     }
     p{
-        font-size: 1rem !important;
-        color: var(--footer-text-color);
+        color: $footer-text-color;
     }
 }
 
 // font size classes
 .smaller{
-    font-size: 90% !important;
+    font-size: 80% !important;
 }

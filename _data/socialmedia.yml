@@ -6,10 +6,10 @@
   icon: fa-instagram
   badge: /assets/images/azm-badge-instagram.png
 
-- text: Deviantart
-  textDesc: Alzamon on DeviantArt
-  url: https://www.deviantart.com/alzamonart
-  icon: fa-deviantart
+- text: LinkedIn
+  textDesc: Alzamon on LinkedIn
+  url: https://www.linkedin.com/in/betobeto
+  icon: fa-linkedin
   badge: /assets/images/azm-badge-deviantart.png
 
 - text: Behance
@@ -24,3 +24,8 @@
   icon: fa-twitter
   badge: /assets/images/azm-badge-twitter.png
 
+- text: Deviantart
+  textDesc: Alzamon on DeviantArt
+  url: https://www.deviantart.com/alzamonart
+  icon: fa-deviantart
+  badge: /assets/images/azm-badge-deviantart.png

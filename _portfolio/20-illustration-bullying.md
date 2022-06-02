@@ -2,13 +2,12 @@
 layout: portfolio
 title: Bullying
 # FB and Jekyll SEO Tag values
-description: Illustration themed on the worldwide issue of bullying in schools.
+description: A rare and serious personal take on the issue of bullying in schools.
 image: /assets/images/portfolio/2014_i_bullying@400w.jpg
 # End FB and Jekyll SEO Tag values
 categories: 
     - illustration
     - homepage
-description: Illustration related to the problem of bullying in schools.
 pretty_category: Illustration
 pretty_title: Bullying
 permalink: /portfolio/illustration/bullying

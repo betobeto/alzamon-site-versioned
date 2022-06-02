@@ -6,17 +6,24 @@ description: Description page with info of this illustration portfolio site's au
 
 {% assign social = site.data.socialmedia %}
 
+<!-- page hero -->
+<div class="jumbotron-fluid page-hero-about">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Who runs this thing?</h2>
+                <p>Let me present myself...</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- end page hero -->
+
 <div class="container section-about">
     <div class="row">
         <div class="col-md-10 offset-md-1 d-flex flex-column py-4 ">
-
-            <h1>About The Author</h1>
-
-            <img src="/assets/images/azm-aboutpage-art.png"
-                alt="Illustration of the author featuring his main characters" class="align-self-center mb-3">
-
             <p>
-                Thank you for stopping by. My name is <strong>Alberto
+                I am <strong>Alberto
                 González</strong>, a Costa Rica-based illustrator and graphics
                 artist with a degree from the <strong>University of Costa
                 Rica</strong> in graphic design. <strong>Alzamon</strong> is
@@ -36,6 +43,11 @@ description: Description page with info of this illustration portfolio site's au
 
             <h3>Get In Touch</h3>
 
+
+            <!-- navbar include -->
+            {% include azm-zoho-contactForm.html %}
+
+        
             <div class="row">
                 <div class="col-sm-6 d-flex justify-content-center">
                     <p><a id="azmail" href=" " onclick='openMailer(this);'>

@@ -1,0 +1,89 @@
+// bind variables to themes for switching
+// ========================================
+
+// (old) Default theme for swapping
+
+// :root,[data-theme="default"]{
+//     --body-bg-color: rgb(255, 255, 255);
+//     --body-color: rgb(27, 12, 17);
+//     --body-text-color: rgb(27, 12, 17);
+//     --switch-on-color: rgb(221, 24, 100);
+//     --switch-off-color:rgb(139, 88, 88);
+//     --toggler-color: rgb(173, 24, 86);
+//     --navbar-bg-color: rgb(232, 219, 227);
+//     --navbar-link-color: rgb(29, 22, 26);
+//     --icon-color: rgb(221, 24, 100);
+//     --jumbotron-bg-color: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 75%, rgba(207, 207, 207, 1) 92%);
+//     --portfolio-masonry-bg-color: none;
+//     --portfolio-masonry-bg-hover-color: rgb(255, 190, 215);
+//     --portfolio-masonry-title-color: white;
+//     --portfolio-masonry-category-color: rgb(65, 29, 41);
+//     --portfolio-series-category-color: rgb(75, 62, 62);
+//     --footer-text-color: rgb(249, 200, 219);
+//     --newsletter-button-color: rgb(15, 105, 179);
+//     --lg-backdrop-color: rgb(221, 193, 202);
+//     --azm-logo: url('/assets/images/alzamon_logo_light.png');
+// }
+
+// // light theme -- toggle alternate
+// [data-theme="dark"]{
+//     --body-bg-color: rgb(27, 12, 17);
+//     --body-color: rgb(255, 255, 255);
+//     --body-text-color: rgb(255, 255, 255);
+//     --switch-on-color: rgb(221, 24, 100);
+//     --switch-off-color: rgb(139, 88, 88);
+//     --toggler-color: rgb(175, 24, 87);
+//     --navbar-bg-color: rgba(14, 3, 10, 1);
+//     --navbar-link-color: rgb(163, 151, 151);
+//     --icon-color: rgb(255, 255, 255);
+//     --jumbotron-bg-color: linear-gradient(to bottom, rgba(41, 24, 32, 0.7) 0%, rgba(14, 3, 10, 1) 90%);
+//     --portfolio-masonry-bg-color: rgb(75, 43, 53);
+//     --portfolio-masonry-bg-hover-color: rgb(70, 0, 27);
+//     --portfolio-masonry-title-color: white;
+//     --portfolio-masonry-category-color: white;
+//     --portfolio-series-category-color: rgb(163, 151, 151);
+//     --footer-text-color: rgb(249, 200, 219);
+//     --newsletter-button-color: rgb(15, 105, 179);
+//     --lg-backdrop-color: rgb(29, 19, 22);
+//     --azm-logo: url('/assets/images/alzamon_logo_dark.png');
+//     }
+
+// * {
+//     color: $body-bg-color;
+//     transition: all .45s ease-in;
+// }
+
+
+// gradient revealed on masonry:hover of elements
+@mixin masonryItemBgGradient() {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#51102d+13,752548+31,ce276c+54,f76f9c+75 */
+    background: rgb(81, 16, 45);
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, $masonryItemGrad1, $masonryItemGrad2, $masonryItemGrad3, $masonryItemGrad4);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, $masonryItemGrad1, $masonryItemGrad2, $masonryItemGrad3, $masonryItemGrad4);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, $masonryItemGrad1, $masonryItemGrad2, $masonryItemGrad3, $masonryItemGrad4);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#51102d', endColorstr='#f76f9c', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+// previous - next portfolio item gradients
+@mixin gradientBgPrev() {
+    background: -moz-linear-gradient($prevDeg, $prevColor0, $prevColor1, $prevColor2, $prevColor3, $prevColor4);
+    background: -webkit-linear-gradient($prevDeg, $prevColor0, $prevColor1, $prevColor2, $prevColor3, $prevColor4);
+    background: linear-gradient($prevDeg, $prevColor0, $prevColor1, $prevColor2, $prevColor3, $prevColor4);
+    -moz-transition: background $prevTransition ease-out;
+    -webkit-transition: background $prevTransition ease-out;
+    transition: background $prevTransition ease-out;
+}
+
+@mixin gradientBgNext() {
+    background: -moz-linear-gradient($nextDeg, $nextColor0, $nextColor1, $nextColor2, $nextColor3);
+    background: -webkit-linear-gradient($nextDeg, $nextColor0, $nextColor1, $nextColor2, $nextColor3);
+    background: linear-gradient($nextDeg, $nextColor0, $nextColor1, $nextColor2, $nextColor3);
+    -moz-transition: background $nextTransition ease-out;
+    -webkit-transition: background $nextTransition ease-out;
+    transition: background $nextTransition ease-out;
+}

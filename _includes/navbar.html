@@ -1,14 +1,14 @@
 
 <!-- Light/Dark toggle switch -->
     <!-- Controller Row -->
-    <div class="controller-row">
+    <!-- <div class="controller-row">
         <i class="fas fa-moon"></i>
         <label class="switch" title="Toggle Light/Dark styles">
             <input id="toggler" type="checkbox">
             <span class="slider round"></span>
         </label>
         <i class="fas fa-sun"></i>
-    </div>
+    </div> -->
     <!-- End of controller row -->
 
 <div class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center">
@@ -28,15 +28,20 @@
 
     <div id="azmNav" class="collapse navbar-collapse justify-content-between">
         <ul class="navbar-nav mr-auto">
-            <!-- nav loop -->
-    {% for nav in site.data.navigation %}
-        {% if nav.url == page.url %}
-    <li class="nav-item active"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
-        {% else %}
-    <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>   
-        {% endif %}
-    {% endfor %}
-    <!-- end navbar loop -->
+            <!-- home icon -->
+            <li id="nav-item-homeicon" class="nav-item nav-item-homeicon is-hidden">
+                <a href="/" class="nav-link"><img src="/assets/images/azm-home-icon-placeholder.png" alt="Alzamon Home" srcset="">
+                </a>
+            </li>
+            <!-- navbar loop -->
+                {% for nav in site.data.navigation %}
+                    {% if nav.url == page.url %}
+                <li class="nav-item active"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
+                    {% else %}
+                <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>   
+                    {% endif %}
+                {% endfor %}
+            <!-- end navbar loop -->
         
             <!-- social media links - tablet and above only -->
             {% for sm in site.data.socialmedia %}

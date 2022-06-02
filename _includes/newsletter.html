@@ -1,36 +1,39 @@
 <!-- Buttondown newsletter integration -->
 
-<div class="container-fluid newsletter-form">
+<div id="newsletter-signup" class="container py-3">
     <div class="row">
-        <div class="col newsletter-form-header py-3">
-                <img src="/assets/images/azm-newsletter-header.png" alt="Newsletter Header" srcset="">
-
-        <h3>Meanderings: The Alzamon Newsletter</h3>
-        <p>Keep up with new artwork and stories, plus what I am up to in very ocassional, spam-free deliveries to your inbox.</p>
+        <div class="col newsletter-form-header">
+            <h3><span>Newsletter</span></h3>
         </div>
     </div>
+
     <div class="row">
-        <div class="col d-flex justify-content-center py-3">
+        <div class="col-md-6 d-flex justify-content-center"><img src="/assets/images/azm-newsletter-header.png" alt="Newsletter Header"></img></div>
+        <div class="col-md-6">
+            <p>Get freebies, news on my latest and future work, personal trivia and more signing up to my bi-monthly newsletter. All of the gravy, none of the spam.</p>
+
+            <!-- newsletter form -->
             <form action="https://buttondown.email/api/emails/embed-subscribe/alzamonart" method="post" target="popupwindow"
-                onsubmit="window.open('https://buttondown.email/alzamonart', 'popupwindow')"
-                class="embeddable-buttondown-form">
-                <div class="row">
-                    <div class="col d-flex justify-content-center py-2">
-                        <label for="bd-email" class="sr-only">Enter your email</label>
-                        <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
-                        <input type="submit" value="Subscribe" class="btn-dark" />
-                        <input type="hidden" name="tag" value="From Website" />
-                    </div>
+            onsubmit="window.open('https://buttondown.email/alzamonart', 'popupwindow')"
+            class="embeddable-buttondown-form">
+            <div class="row">
+                <div class="col d-flex py-2">
+                    <label for="bd-email" class="sr-only">Enter your email</label>
+                    <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
+                    <input type="submit" value="Subscribe" class="btn-dark" />
+                    <input type="hidden" name="tag" value="From Website" />
                 </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <p class="smaller">
-                            <em>This newsletter service is powered by <a href="https://buttondown.email"
-                                    target="_blank">Buttondown</a></em>
-                        </p>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="smaller">
+                        <em>This newsletter service is powered by <a href="https://buttondown.email"
+                                target="_blank">Buttondown</a></em>
+                    </p>
                 </div>
-            </form>
+            </div>
+        </form>
+
         </div>
     </div>
 </div>

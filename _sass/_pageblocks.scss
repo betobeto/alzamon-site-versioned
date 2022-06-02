@@ -18,9 +18,9 @@
                 letter-spacing: -0.05rem;
             }
         }
-        p, strong{
-            @include textCondensed;
-        }
+        // p, strong{
+        //     @include textCondensed;
+        // }
 
         a{
             color: $footerLinkColor;

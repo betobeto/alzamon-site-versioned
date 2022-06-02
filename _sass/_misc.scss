@@ -14,21 +14,49 @@
 
 // line separator for sections
 .separator-h{
+    &:not(:last-of-type){
+        background: limegreen;
+    }
     display: block;
-    height: 1px;
     width: auto;
-    background: $blockAboutColor;
+    height: 3px;
+    margin: 1rem auto;        
+    background: lighten($body-alt-color, 20%);
 }
+
 
 // Instagram container
 .ig-widget{
-    background: var(--body-bg-color);
+    background: $body-bg-color;
+    h3{
+        color: $body-alt-color !important;
+        @include headerLine($body-alt-color,$body-bg-color);
+    }
 }
 
 //lightGallery extras
 
 .lg-backdrop{
     opacity: 0.9 !important;
-    background-color: var(--lg-backdrop-color);
+    background-color: $lg-backdrop-color;
+}
+
+//sub page heros
+.page-hero{
+    &-portfolio{
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png');
+    }
+    &-comics{
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+    }
+    &-services{
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+    }
+    &-blog{
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+    }
+    &-about{
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+    }
 }
 

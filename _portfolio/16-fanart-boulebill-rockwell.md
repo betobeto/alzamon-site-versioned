@@ -1,15 +1,15 @@
 ---
 layout: portfolio
-title: "Fan Art: Boule & Bill"
+title: "Boule & Bill after Rockwell (Fan Art)"
 # FB and Jekyll SEO Tag values
-description: Fan Art illustration combining the talents of American painter Norman Rockwell and Belgian comics artist Jean Roba, featuring characters from his Boule & Bill comic strip.
+description: A mix of comics artist Jean Roba's characters and Norman Rockwell's famous &#34;No Swimming&#34; illustration.
 image: /assets/images/portfolio/2018_fa_bouleBillRockwell@400w.jpg
 # End FB and Jekyll SEO Tag values
 categories: 
     - homepage
-    - fanart
+    - illustration
 pretty_category: Illustration
-pretty_title: "Fan Art: Boule & Bill"
+pretty_title: "Boule & Bill after Rockwell (Fan Art)"
 permalink: /portfolio/fanart/fanart-boule-bill
 sort_number: 16
 masonryimage: /assets/images/portfolio/2018_fa_bouleBillRockwell@400w.jpg

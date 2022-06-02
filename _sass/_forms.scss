@@ -2,7 +2,6 @@
 // ====================
 
 .btn{
-    @include textCondensed;
     &-light{
         background: $btnDarkColor;
         color:white;
@@ -12,57 +11,48 @@
         }
     }
     &-dark{
-        background: lighten($linkColor, 10%);
+        background: lighten($link-color, 10%);
         color:white;
         border:none;
         &:hover{
-            background:darken($linkColor,20%);
+            background:darken($link-color,20%);
         }
     }
 }
 
 //newsletter form
 
-.container-fluid.newsletter-form {
-    // background-color: rgb(198, 195, 247);
-    background-color: rgb(126, 162, 210);
-
+#newsletter-signup{
     .newsletter-form-header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        img{
-            width: 450px;
-            margin: 0 0 1rem 0;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        h3{
+            @include headerLine($carousel-bg-color, $body-bg-color);
         }
     }
-
-    p{
-        font-family: 'Open Sans Condensed', sans-serif;
-        color: black; 
-        font-size: 1.3rem; 
+    img{
+        width: 450px;
+        margin: 0 0 1rem 0;
+        filter: hue-rotate(328deg) saturate(2);
+        height: max-content;
     }
-
     a{
-        color: var(--newsletter-button-color);
+        color: $newsletter-button-color;
     }
 
     input{
-        font-family: 'Open Sans',sans-serif;
         &[type=email]{
-            background-color: white;
-            border-color: var(--newsletter-button-color);
+            background-color: rgb(221, 221, 221);
+            border-color: lighten($carousel-bg-color, 20%);
             border-radius: 4px;
-            font-size: 110%;
-            min-width: 300px;
             margin: 0 1rem 0 0;
             padding: 10px;
         }
         &[type=submit]{
             border-radius: 6px;
-            min-width: 150px;
-            background-color: var(--newsletter-button-color) !important;
+            background-color: $body-alt-color !important;
         }
     }
 

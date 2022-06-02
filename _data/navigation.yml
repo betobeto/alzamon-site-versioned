@@ -1,14 +1,14 @@
-- text: Portfolio
-  url: /
+#- text: Home
+#  url: /
 
-#- text: Artwork
-#  url: /portfolio/
+- text: Portfolio
+  url: /portfolio/
 
 - text: Comics
   url: /comics/
 
-- text: Sketchbook
-  url: /sketchbook/
+- text: Services
+  url: /services/
 
 - text: Blog
   url: /blog/

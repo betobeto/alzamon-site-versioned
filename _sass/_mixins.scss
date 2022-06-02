@@ -8,6 +8,15 @@
     left: -9999em;
 }
 
+@mixin headerTextShadow{
+    text-shadow: 2px 2px 3px $header-shadow-color;
+    -webkit-text-shadow: 2px 2px 3px $header-shadow-color;
+    -moz-text-shadow: 2px 2px 3px $header-shadow-color;
+    -o-text-shadow: 2px 2px 3px $header-shadow-color;
+    -ms-text-shadow: 2px 2px 3px $header-shadow-color;
+}
+
+
 // box-shadow mixins
 //=============================
 
@@ -15,6 +24,14 @@
     -webkit-box-shadow: 3px 3px 5px 0px $masonryBoxShadow;
     -moz-box-shadow: 3px 3px 5px 0px $masonryBoxShadow;
     box-shadow: 3px 3px 5px 0px $masonryBoxShadow;
+}
+
+@mixin masonryTextShadow{
+    text-shadow: 2px 1px 2px $header-shadow-color;
+    -webkit-text-shadow: 2px 1px 2px $header-shadow-color;
+    -moz-text-shadow: 2px 1px 2px $header-shadow-color;
+    -o-text-shadow: 2px 1px 2px $header-shadow-color;
+    -ms-text-shadow: 2px 1px 2px $header-shadow-color;
 }
 
 @mixin blogBoxShadow{
@@ -59,72 +76,11 @@
     transition: all .5s ease;
     opacity: 0.01;
     >i{
-        color:white;
         font-size:2rem;
         
     }
 }
 
-// portfolio gradient mixins
-//=============================
-
-// gradient revealed on masonry:hover of elements
-@mixin masonryItemBgGradient() {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#51102d+13,752548+31,ce276c+54,f76f9c+75 */
-    background: rgb(81, 16, 45);
-    /* Old browsers */
-    background: -moz-linear-gradient(45deg, $masonryItemGrad1, $masonryItemGrad2, $masonryItemGrad3, $masonryItemGrad4);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, $masonryItemGrad1, $masonryItemGrad2, $masonryItemGrad3, $masonryItemGrad4);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, $masonryItemGrad1, $masonryItemGrad2, $masonryItemGrad3, $masonryItemGrad4);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#51102d', endColorstr='#f76f9c', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
-}
-
-@mixin portfolioBgGradient() {
-    background: var(--body-bg-color) !important;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0c050a+0,1c0515+36,1c0515+36,1c0515+100&0+0,0.62+36,1+100 */
-    background: -moz-linear-gradient(top, $pfGradientStart 0%, $pfGradientMiddle 36%, $pfGradientEnd 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, $pfGradientStart 0%, $pfGradientMiddle 36%, $pfGradientEnd 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, $pfGradientStart 0%, $pfGradientMiddle 36%, $pfGradientEnd 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$pfGradientStart', endColorstr='$pfGradientEnd', GradientType=0);
-    /* IE6-9 */
-}
-
-//footergradient
-
-@mixin footerGradient(){
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ed156f+0,770a38+39,770a38+40,38051a+90 */
-background: rgb(237,21,111); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(237,21,111,1) 0%, rgba(119,10,56,1) 20%, rgba(56,5,26,1) 70%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(237,21,111,1) 0%,rgba(119,10,56,1) 20%,rgba(56,5,26,1) 70%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(237,21,111,1) 0%,rgba(119,10,56,1) 20%,rgba(56,5,26,1) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed156f', endColorstr='#38051a',GradientType=0 ); /* IE6-9 */
-}
-
-// previous - next portfolio item gradients
-@mixin gradientBgPrev() {
-    background: -moz-linear-gradient($prevDeg, $prevColor0, $prevColor1, $prevColor2, $prevColor3, $prevColor4);
-    background: -webkit-linear-gradient($prevDeg, $prevColor0, $prevColor1, $prevColor2, $prevColor3, $prevColor4);
-    background: linear-gradient($prevDeg, $prevColor0, $prevColor1, $prevColor2, $prevColor3, $prevColor4);
-    -moz-transition: background $prevTransition ease-out;
-    -webkit-transition: background $prevTransition ease-out;
-    transition: background $prevTransition ease-out;
-}
-
-@mixin gradientBgNext() {
-    background: -moz-linear-gradient($nextDeg, $nextColor0, $nextColor1, $nextColor2, $nextColor3);
-    background: -webkit-linear-gradient($nextDeg, $nextColor0, $nextColor1, $nextColor2, $nextColor3);
-    background: linear-gradient($nextDeg, $nextColor0, $nextColor1, $nextColor2, $nextColor3);
-    -moz-transition: background $nextTransition ease-out;
-    -webkit-transition: background $nextTransition ease-out;
-    transition: background $nextTransition ease-out;
-}
 
 // Blog post mixins
 
@@ -142,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed156f', end
 @mixin grid-item{
         list-style: none;
         background:white;
-        @include blogBoxShadow;
+        // @include blogBoxShadow;
         padding: 0.8rem;
         min-height: 300px;
         transition: all 1s ease-in-out;
@@ -151,7 +107,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed156f', end
             text-decoration: none;
             
             h6{
-                color: $linkColor;
+                color: $link-color;
                 font-weight: 800;
                 margin: 0.3rem 0 0 0;
                 @include respond-below(sm){
@@ -166,12 +122,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed156f', end
                     }
             }
         }
-        &:hover{
-            @include blogPostGrid;
-            a{
-                h6, span{
-                    color:white !important;
-                }
-            }
-        }
+        // &:hover{
+        //     @include blogPostGrid;
+        //     a{
+        //         h6, span{
+        //             color:white !important;
+        //         }
+        //     }
+        // }
     }
+
+// mixin: horizontal line for headers
+// ===================================
+
+@mixin headerLine($headerLineColor,$headerBgColor){
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    &:before{ // background line generation
+        content: "";
+        display: block;
+        border-top: $headerLineColor 5px solid;
+        width: 96%;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+    }
+    span{
+        background: $headerBgColor;
+        padding: 0 20px;
+        position: relative;
+        z-index: 3;
+        margin: 0 auto;
+    }
+}
+
+// mixin: page heros
+// =================
+@mixin pageHero($phBgcolor,$phHeaderColor, $phBgImage){
+    background: $phBgcolor url($phBgImage);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 100%;
+    h2, p{
+        color: $phHeaderColor !important;
+    }
+}

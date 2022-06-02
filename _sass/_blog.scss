@@ -10,37 +10,47 @@
             display: grid;
             grid-column-gap: 2rem;
             grid-row-gap: 2rem;
+            grid-template-columns: 44% 44%;
+            column-count: 2;
             column-fill: auto;
 
             li {
                 @include grid-item;
                 a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     &:hover{
                         text-decoration: none !important;
+                    }
+                    h3{
+                        font-size: inherit;
                     }
                 }
             }
 
+
             // grid breakpoints
-            @include respond-below(sm) {
-                grid-template-columns: 88%;
-                column-count: 1;
-            }
 
-            @include respond-between(sm, md) {
-                grid-template-columns: 44% 44%;
-                column-count: 2;
-            }
+            // @include respond-below(sm) {
+            //     grid-template-columns: 88%;
+            //     column-count: 1;
+            // }
 
-            @include respond-between(md, lg) {
-                grid-template-columns: 29% 29% 29%;
-                column-count: 3;
-            }
+            // @include respond-between(sm, md) {
+            //     grid-template-columns: 44% 44%;
+            //     column-count: 2;
+            // }
 
-            @include respond-above(lg) {
-                grid-template-columns: 22% 22% 22% 22%;
-                column-count: 4;
-            }
+            // @include respond-between(md, lg) {
+            //     grid-template-columns: 29% 29% 29%;
+            //     column-count: 3;
+            // }
+
+            // @include respond-above(lg) {
+            //     grid-template-columns: 22% 22% 22% 22%;
+            //     column-count: 4;
+            // }
         }
     }
 }
@@ -55,19 +65,17 @@
                 background-image: none;
                 + span{
                     color: $blogTextColor;
-                    font-size:larger;
                 }
             }
             .col {
                 background: white;
-                padding: 0 2rem;
+                // padding: 0 2rem;
                 h3 {
                     color: $blogHeaderColor;
                     margin: 1.6rem 0 1rem 0;
                 }
                 p{
                     color: $blogTextColor !important;
-                    font-size: 130%;
                     margin: 1.5rem 0;
 
                     // Drop Cap for posts
@@ -84,7 +92,7 @@
                     &.closing{
                         &::after{
                             content:"\272A";
-                            color: rgb(221, 24, 100);
+                            color: $body-alt-color;
                             margin: 0 0 0 0.5rem;
                         }
                     }
@@ -99,6 +107,9 @@
                     background-color: $blockquote-bg-color;
                     border: 1px dotted $blockquote-border-color;
                     padding: 0 2rem;
+                    p{
+                        color: $body-bg-color !important;
+                    }
                 }
                 // centering images on markdown posts
                 img[src*='#center'] { 
@@ -110,10 +121,8 @@
                     position: relative;
                     z-index: 10;
                     background: white;
-                    padding: 2rem;
                     margin: 3rem 0 0 0;
                     transform:scale(1.1);
-                    @include blogPostShadow;
                     @include respond-below(sm){
                         padding: 1rem;
                         margin-top: 2rem;

@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: My Neighbor Totoro (Fan Art)
+title: Totoro (Fan Art)
 # FB and Jekyll SEO Tag values
 description: Parody of the famous 'bus scene' of the celebrated Studio Ghibli film, featuring my original characters.
 image: /assets/images/portfolio/2020_i_myNeighborTotoro@400w.jpg
@@ -10,7 +10,7 @@ categories:
     - illustration
     - fanart
 pretty_category: Illustration
-pretty_title: "Fan Art: My Neighbor Totoro"
+pretty_title: "Totoro (Fan Art)"
 permalink: /portfolio/illustration/totoro-parody
 sort_number: 08
 masonryimage: /assets/images/portfolio/2020_i_myNeighborTotoro@400w.jpg

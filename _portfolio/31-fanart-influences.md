@@ -1,15 +1,16 @@
 ---
 layout: portfolio
-title: Fan Art - Influences
+title: Influences (Fan Art)
 # FB and Jekyll SEO Tag values
-description: Allegoric composition about some characters that influenced me.
+description: >
+    Because I wanted to answer the &#34;who influenced you?&#34; question in a graphic way.
 image: /assets/images/portfolio/ill_2022_influences_400.jpg
 # End FB and Jekyll SEO Tag values
 categories: 
-    - fanart
+    - illustration
     - homepage
 pretty_category: Fan Art
-pretty_title: Fan Art - Influences
+pretty_title: Influences (Fan Art)
 sort_number: 31
 permalink: /portfolio/fanart/fanart-influences
 masonryimage: /assets/images/portfolio/ill_2022_influences_400.jpg

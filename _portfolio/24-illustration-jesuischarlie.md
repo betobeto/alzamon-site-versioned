@@ -1,15 +1,15 @@
 ---
 layout: portfolio-series
-title: Je Suis Charlie for Spirou Magazine
+title: After Magritte (for Spirou Magazine)
 # FB and Jekyll SEO Tag values
-description: Illustration parody of painter Rene Magritte's 'The Key of Dreams' published on the Charlie Hebdo 2015 special of Belgian magazine Spirou.
+description: Parody of Rene Magritte's 'The Key of Dreams' published on the Charlie Hebdo 2015 special of Belgian magazine Spirou.
 image: /assets/images/portfolio/2015_i_charlieHebdo_spirou@400w.jpg
 # End FB and Jekyll SEO Tag values
 categories: 
     - homepage
     - illustration
 pretty_category: Illustration
-pretty_title: Je Suis Charlie (Spirou magazine)
+pretty_title: After Magritte (for Spirou Magazine)
 sort_number: 24
 permalink: /portfolio/illustration/jesuischarlie-spirou
 masonryimage: /assets/images/portfolio/2015_i_charlieHebdo_spirou@400w.jpg

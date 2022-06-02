@@ -5,14 +5,21 @@ permalink: /comics/
 ---
 {% assign cm = site.comics %}
 
-<div class="container portfolio-category">
-    <div class="row">
-        <div class="col py-3">
-            <h2 class="text-center">Comics</h2>
-            <p class="text-center portfolio-category-description">My takes on sequential art, for better or else.</p>
+<!-- page hero -->
+<div class="jumbotron-fluid page-hero-portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Sequential Art</h2>
+                <p class="portfolio-category-description">Graphic Novels, Comics, One Shots... and so on.</p>
+            </div>
         </div>
     </div>
+</div>
+<!-- end page hero -->
 
+
+<div class="container portfolio-category">
     <div id="portfolio-comics" class="row">
         <div class="col">
             <!-- Portfolio Masonry -->
@@ -58,5 +65,6 @@ permalink: /comics/
         </div>
     </div> -->
 
+    {% include newsletter.html %}
     {% include ig-lightwidget.html %}
 </div>

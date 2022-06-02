@@ -6,18 +6,18 @@
     position: relative;
     min-height: auto;
     z-index: 100;
-    background-color: var(--jumbotron-bg-color);
-    transition: background-color .45s ease-in;
+    background-color: $jumbotron-bg-color;
+    // transition: background-color .45s ease-in;
     h1 {
         // logo container
-        background-image: var(--azm-logo);
+        background-image: $azm-logo;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
         display: inline-block;
-        width: 400px;
+        width: 360px;
         &.display-4{
-            font-size: 8rem;
+            font-size: 4rem;
         }
         >span {
             @include hideText;
@@ -27,13 +27,8 @@
         // display jumbotron only in medium and up screens
         display: none !important;
     }
-    @include respond-above(md){
-        padding: 0;
-
-    }
-    // nix jumbotron padding on tablets
-    @include respond-between(sm, md){
-        padding: unset;
+    @include respond-above(sm){
+        padding: 1rem 0 0 0;
     }
 }
 
@@ -41,10 +36,10 @@
 // ====================
 
 .navbar {
-    background-color: var(--navbar-bg-color);
-    transition: background-color .45s ease-in;
+    background-color: $navbar-bg-color;
+    // transition: background-color .45s ease-in;
     &-brand {
-        background-image: var(--azm-logo);
+        background-image: $azm-logo;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -61,22 +56,25 @@
             // each item
             .nav-link {
                 margin-right: 1rem;
-                color: var(--navbar-link-color);
-                @include respond-above(md){
-                    font-size:1.6rem;
-                }
-                @include respond-between(sm,md){
-                    @media screen and (orientation:portrait){
-                        font-size: 1.35rem;
-                    }        
-                }
-                @include respond-below(sm){
-                    font-size:1.6rem;
-                }
+                color: $navbar-link-color;
+                // @include respond-above(md){
+                //     font-size:1.3rem;
+                // }
+                // @include respond-between(sm,md){
+                //     @media screen and (orientation:portrait){
+                //         font-size: 1.2rem;
+                //     }        
+                // }
+                // @include respond-below(sm){
+                //     font-size:1.6rem;
+                // }
                 &.social {
                     // social networks icons
                     i {
-                        color: $linkColor;
+                        color: $link-hover-color;
+                        &:hover{
+                            color: $navbar-link-hover-color;
+                        }
                     }
                 }
                 &:hover{
@@ -86,16 +84,16 @@
             }
             &.active {
                 .nav-link {
-                    color: $linkColor;
+                    color: $link-color;
                     font-weight: bold;
-                    border-bottom: 4px $linkUnderlineColor double;
+                    border-bottom: 4px $link-underline-color double;
                 }
             }
         }
     }
     //mobile: menu icon
     &-toggler-icon{
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(221, 24, 100, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(26, 76, 82, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 }
 .nav-link-social-mobile{
@@ -104,95 +102,110 @@
     }
     @include respond-below(sm){
         display:grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        border-top: $linkColor 1px solid;
+        grid-template-columns: 20% 20% 20% 20% 20%; 
+        border-top: $link-color 1px solid;
         li{
             text-align: center;
             i.fab{ // icons
                 font-size: 1.8rem;
-                color: $linkColor;
+                color: $link-color;
             }
         }
     }
 }
 
+// navbar icon (desktop) - show/hide on affix
+
+.nav-item-homeicon{
+    transition: transform 0.25s;
+    // alt show-hide classes
+    &.is-visible{
+        opacity: 1;
+    }
+
+    &.is-hidden{
+        opacity: 0;
+    }
+}
+
+
 // Light/Dark Toggle Switcher
 // based on: https://codepen.io/chen1223/pen/PobxwMj
 // ==================================================
-.controller-row{
-    position: sticky;
-    left: 88%;
-    top: 25px;
-    z-index: 1040;
-    margin: 0 0 -25px 0;
-    width: 100px;
-    height: 25px;
-    display: flex;
-    justify-content: space-between;
-        .switch{
-            position: absolute;
-            left: 24px;
-            display: inline-block;
-            width: 48px;
-            height: 20px;
-            input{
-                //hide default html checkbox
-                opacity: 0;
-                width: 0;
-                height: 0;
-                &:checked+.slider{
-                    background-color: var(--switch-on-color);
-                    &:before{
-                        //move switch animation
-                        -webkit-transform: translateX(26px);
-                        -ms-transform: translateX(26px);
-                        transform: translateX(26px);
-                    }
-                }
-                &:focus+.slider{
-                    box-shadow: 0 0 1px var(--switch-on-color);
-                }
-            }
-        }
-        .slider{
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: var(--switch-off-color);
-            -webkit-transition: .4s;
-            transition: .4s;
-            &.round{
-                border-radius: 20px;
-                &:before{
-                    border-radius:50%;
-                }
-            }
-            &:before{
-                position: absolute;
-                content: "";
-                height: 12px;
-                width: 12px;
-                left: 4px;
-                bottom: 4px;
-                background-color: var(--toggler-color);
-                -webkit-transition: .4s;
-                transition: .4s;
-            }
-        }
-        //icons
-        i.fas, i.far{
-            color: var(--icon-color);
-        }
-        //breakpoints
-        @include respond-below(sm){
-            left: 55%;
-            transform: scale(0.8);
-        }
+// .controller-row{
+//     position: sticky;
+//     left: 88%;
+//     top: 25px;
+//     z-index: 1040;
+//     margin: 0 0 -25px 0;
+//     width: 100px;
+//     height: 25px;
+//     display: flex;
+//     justify-content: space-between;
+//         .switch{
+//             position: absolute;
+//             left: 24px;
+//             display: inline-block;
+//             width: 48px;
+//             height: 20px;
+//             input{
+//                 //hide default html checkbox
+//                 opacity: 0;
+//                 width: 0;
+//                 height: 0;
+//                 &:checked+.slider{
+//                     background-color: $switch-on-color;
+//                     &:before{
+//                         //move switch animation
+//                         -webkit-transform: translateX(26px);
+//                         -ms-transform: translateX(26px);
+//                         transform: translateX(26px);
+//                     }
+//                 }
+//                 &:focus+.slider{
+//                     box-shadow: 0 0 1px $switch-on-color;
+//                 }
+//             }
+//         }
+//         .slider{
+//             position: absolute;
+//             cursor: pointer;
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             bottom: 0;
+//             background-color: $switch-off-color;
+//             -webkit-transition: .4s;
+//             transition: .4s;
+//             &.round{
+//                 border-radius: 20px;
+//                 &:before{
+//                     border-radius:50%;
+//                 }
+//             }
+//             &:before{
+//                 position: absolute;
+//                 content: "";
+//                 height: 12px;
+//                 width: 12px;
+//                 left: 4px;
+//                 bottom: 4px;
+//                 background-color: $toggler-color;
+//                 -webkit-transition: .4s;
+//                 transition: .4s;
+//             }
+//         }
+//         //icons
+//         i.fas, i.far{
+//             color:$icon-color;
+//         }
+//         //breakpoints
+//         @include respond-below(sm){
+//             left: 55%;
+//             transform: scale(0.8);
+//         }
 
-        @include respond-between(sm, md){
-            left: 85%;
-        }
-}
+//         @include respond-between(sm, md){
+//             left: 85%;
+//         }
+// }

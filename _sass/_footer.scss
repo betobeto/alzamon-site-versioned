@@ -2,17 +2,17 @@
 
 footer {
     // actual links and copyright container
-    background-image: url('/assets/images/azm-bg-footer-alpha-hires.png'), 
-    linear-gradient(to bottom, rgb(26, 2, 12) 0%, rgb(51, 5, 24) 40%, rgb(187, 18, 88) 95%);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(to bottom, rgb(26, 76, 82) 0%, $link-color 50%, $link-color 80%);
+    
+    // background-size: 70%;
     color: white;
-
-
+    
     .container{
         @include respond-above(md){
         padding:0;
+        }
+        h3{
+            font-size: 1.3rem;
         }
     }
 // footer breakpoints
@@ -27,6 +27,20 @@ footer {
     }
 }
 
+// footer bg image
+.footer-background{
+    background-image: url('/assets/images/azm-bg-footer-alpha-hires.png');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include respond-between(sm, md){
+        background-size: 70%;
+    }
+    @include respond-below(xs){
+        background-size: cover;
+    }
+}
+
 
 .footer-container {
     //container for small screens
@@ -38,9 +52,19 @@ footer {
         li {
             list-style: none;
             height: 2rem;
+            // footer links
             a{
                 color: $footerLinkColor;
+                &:hover{
+                    color: $link-hover-color !important;
+                    text-decoration: none;
+                }
             }
+        }
+
+        @include respond-above(md){
+            position: relative;
+            left: -36px;
         }
     }
 
@@ -63,6 +87,9 @@ footer {
             li {
                 margin-left: -30px;
             }
+            @include respond-between(sm, md){
+                margin-left: 0;
+            }
         }
     }
 
@@ -73,7 +100,7 @@ footer {
 
     @include respond-below(sm) {
         height: inherit;
-        background: $footerContainerBgColor;
+        background: linear-gradient(to bottom, rgb(26, 76, 82) 0%, $link-color 50%, $link-color 80%);
         padding: 2rem 2rem 1rem; 
         margin: 0;
 
@@ -87,7 +114,7 @@ footer {
             margin-bottom: 1rem;
             text-align: center;
             a{
-                color: $linkColor;
+                color: $link-color;
             }
             &:last-child{
                 display: block;

@@ -1,14 +1,15 @@
 ---
 layout: portfolio
-title: "Fan Art: La Ribambelle"
+title: "La Ribambelle (Fan Art)"
 # FB and Jekyll SEO Tag values
-description: Fan Art illustration based on characters from the La Ribambelle comics series from Belgian cartoonist Jean Roba.
+description: Based on characters from Belgian cartoonist Jean Roba.
 image: /assets/images/portfolio/2019_fa_laRibambelle@400w.png
 # End FB and Jekyll SEO Tag values
 categories: 
-    - fanart
+    - illustration
+    - homepage
 pretty_category: Illustration
-pretty_title: "Fan Art: La Ribambelle"
+pretty_title: "La Ribambelle (Fan Art)"
 permalink: /portfolio/fanart/fanart-la-ribambelle
 sort_number: 18
 masonryimage: /assets/images/portfolio/2019_fa_laRibambelle@400w.png

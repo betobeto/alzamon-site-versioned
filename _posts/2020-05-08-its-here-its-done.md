@@ -46,4 +46,4 @@ If you are among the 1% of potential visitors that actually understood what the 
 
 ### Wrapping it up
 
-If you have read up to here, I want to give you my sincerest thanks for taking part with me in this design-y rant. So here's my new website with hopes of sticking in for the long haul - starting over time and time again is tiring and time-consuming. So from here on you might want to check out my [portfolio](/portfolio/) or [sketchbook](/sketchbook/), recommend this to someone else or just [say hi.](/about/) Whatever you please doing.
+<p class="closing">If you have read up to here, I want to give you my sincerest thanks for taking part with me in this design-y rant. So here's my new website with hopes of sticking in for the long haul - starting over time and time again is tiring and time-consuming. So from here on you might want to check out my <a href="/portfolio/">portfolio</a>, recommend this to someone else or just <a href="/about/">say hi.</a> Whatever you please doing.</p>

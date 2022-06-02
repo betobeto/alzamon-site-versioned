@@ -1,80 +1,15 @@
 // Alzamon.com  - core.scss
 // ============================
 
+
 // z-index variables
 
 $zIndexMain: 4;
 $zIndexRopeScroller:3;
 $zIndexFooter: 2;
 
-// bind variables to themes for switching
-// ========================================
-
-// Default theme for swapping
-:root,[data-theme="default"]{
-    --body-bg-color: rgb(255, 255, 255);
-    --body-color: rgb(27, 12, 17);
-    --body-text-color: rgb(27, 12, 17);
-    --switch-on-color: rgb(221, 24, 100);
-    --switch-off-color:rgb(139, 88, 88);
-    --toggler-color: rgb(173, 24, 86);
-    --navbar-bg-color: rgb(232, 219, 227);
-    --navbar-link-color: rgb(29, 22, 26);
-    --icon-color: rgb(221, 24, 100);
-    --jumbotron-bg-color: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 75%, rgba(207, 207, 207, 1) 92%);
-    --portfolio-masonry-bg-color: none;
-    --portfolio-masonry-bg-hover-color: rgb(255, 190, 215);
-    --portfolio-masonry-title-color: white;
-    --portfolio-masonry-category-color: rgb(65, 29, 41);
-    --portfolio-series-category-color: rgb(75, 62, 62);
-    --footer-text-color: rgb(249, 200, 219);
-    --newsletter-button-color: rgb(15, 105, 179);
-    --lg-backdrop-color: rgb(221, 193, 202);
-    --azm-logo: url('/assets/images/alzamon_logo_light.png');
-}
-
-// light theme -- toggle alternate
-[data-theme="dark"]{
-    --body-bg-color: rgb(27, 12, 17);
-    --body-color: rgb(255, 255, 255);
-    --body-text-color: rgb(255, 255, 255);
-    --switch-on-color: rgb(221, 24, 100);
-    --switch-off-color: rgb(139, 88, 88);
-    --toggler-color: rgb(175, 24, 87);
-    --navbar-bg-color: rgba(14, 3, 10, 1);
-    --navbar-link-color: rgb(163, 151, 151);
-    --icon-color: rgb(255, 255, 255);
-    --jumbotron-bg-color: linear-gradient(to bottom, rgba(41, 24, 32, 0.7) 0%, rgba(14, 3, 10, 1) 90%);
-    --portfolio-masonry-bg-color: rgb(75, 43, 53);
-    --portfolio-masonry-bg-hover-color: rgb(70, 0, 27);
-    --portfolio-masonry-title-color: white;
-    --portfolio-masonry-category-color: white;
-    --portfolio-series-category-color: rgb(163, 151, 151);
-    --footer-text-color: rgb(249, 200, 219);
-    --newsletter-button-color: rgb(15, 105, 179);
-    --lg-backdrop-color: rgb(29, 19, 22);
-    --azm-logo: url('/assets/images/alzamon_logo_dark.png');
-    }
-
-    // common color variables
-    $blockquote-bg-color: rgb(245, 212, 217);
-    $blockquote-border-color: rgb(75, 43, 53);
-
-* {
-    // color: var(--body-color);
-    // transition: all .45s ease-in;
-}
-
 body {
     position: relative;
-    // background-color: var(--body-bg-color);
-    // transition: background-color .45s ease-in;
-    h1 {
-        color: $headerColor;
-        font-size: 4rem;
-        text-align: center;
-        background-image: url('/assets/images/alzamon_logo_light.png');
-    }
     main {
         position: relative;
         z-index: $zIndexMain;
@@ -83,7 +18,7 @@ body {
 
 //for bg switcher
 .azm-main{
-    background-color: var(--body-bg-color);
+    background-color: $body-bg-color;
     transition: background-color .45s ease-in;
 }
 
@@ -100,5 +35,171 @@ body {
 .gallery {
     &-thumbnail {
         border: $headerColor 1px dotted;
+    }
+}
+
+// home elements
+// ================================================
+#azm-home-carousel{
+        background-color: $carousel-bg-color;
+        color: $carousel-text-color;
+        position: relative;
+        z-index: 1;
+        // carousel - desktop & above
+        @include respond-above(md){
+            height: 40vh;
+            min-height: 400px;
+        }
+
+        // carousel - tablets
+        @include respond-between(sm, md){
+            height: 25vh;
+            min-height: 300px;
+        }
+
+        // carousel - mobile
+        @include respond-below(xs){
+            min-height: 70vh;
+        }
+        .text-inside-container{
+            position: absolute;
+            padding: 1rem;
+            background-image: none;
+            color: $body-bg-color;
+            z-index: 2;
+                h1{
+                    text-align: initial;
+                    @include headerTextShadow;
+                    display: inline-block;
+                        @include respond-between(sm, md){
+                            font-size: 2.5rem;
+                        }
+                }
+                p{
+                    color: $body-bg-color;
+                    margin: 0.8rem auto;
+                }
+                a{
+                    text-decoration: none;
+                    &:link{
+                        color: $body-alt-color;
+                    }
+                    &:hover{
+                        color: $link-hover-color !important;
+                    }
+                    &:visited{
+                        color:darken($link-visited-color,25%);
+                    }
+                }
+            // desktop & above    
+            @include respond-above(md){
+            left: 10vw;
+            top: 5vh;
+            max-width: 45%;
+            height: 70%;
+            }
+            //tanblets
+            @include respond-between(sm, md){
+                width: 65%;
+                top: 21px;
+                left: 36px;
+            }
+            // mobile
+            @include respond-below(xs){
+                width: 85vw;
+                margin: 40px 0 0 25px;
+                background: rgba(207, 207, 207,0.3);
+            }
+        }
+    }
+
+
+// home category circles
+.categoryCircle{
+    display: block;
+    border-color: $body-alt-color;
+    border-width: 21px;
+    border-radius: 50%;
+    border-style: solid;
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto;
+    &.ccPortfolio{
+        background-image: url('/assets/images/portfolio/2014_i_roadAhead@400w.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.ccBlog{
+        // background-image: url('/assets/images/portfolio/2016_fa_caleAtkinson@400w.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+    &.ccComics{
+        background-image: url('/assets/images/portfolio/2020_i_thistooshallpass__all@400w.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    +h2+p{
+        font-style: italic;
+        color: lighten($body-text-color, 60%);
+    }
+    @include respond-between(sm, md){
+        width: 12rem;
+        height: 12rem;
+        border-width: 16px;
+    }
+}
+
+// home creative services
+
+.azm-home{
+    &-services{
+        border-radius: 1.6rem;
+        background-color: $body-alt-color;
+        h3,h4,p{
+            color: $body-bg-color !important;
+        }
+        h3{
+            @include headerTextShadow;
+            @include headerLine($body-bg-color,$body-alt-color);
+        }
+        h4{
+            text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            -webkit-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            -moz-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            -o-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            -ms-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            margin: 0.8rem 0;
+        }
+        &-link{
+            display: block;
+            margin: 0 auto;
+            width: 85%;
+            height: 140px;
+            border: 3px $body-bg-color solid;
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: hue-rotate(60deg);
+            &.i01{
+                background-image: url('/assets/images/portfolio/2015_i_charlieHebdo_spirou@400w.jpg');
+            }
+            &.i02{
+                background-image: url('/assets/images/portfolio/2016_i_christmasCardFinal@400w.jpg');
+            }
+            &.i03{
+                background-image: url('/assets/images/portfolio/2017_i_buildingBuddies@400w.jpg');
+            }
+            span{
+                position: relative;
+                left: -9999em;
+            }
+            +p{
+                @include respond-above(md){
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+            }
+        }
     }
 }
