@@ -8,14 +8,26 @@
                             <div class="col-sm-6 col-md-4 px-0">
                                 <h3>Menu</h3>
                                 <ul>
-                                    <!-- nav loop -->
-                                    {% for nav in site.data.navigation %}
-                                    {% if nav.url == page.url %}
-                                    <li class="active"><a href="{{ nav.url }}"><i class="fas fa-palette"></i> {{ nav.text }}</a></li>
-                                    {% else %}
-                                    <li class="nav-item"><a href="{{ nav.url }}"><i class="fas fa-angle-right"></i> {{ nav.text }}</a></li>
-                                    {% endif %}
+
+                                        <!-- navbar loop -->
+                                {% if site.data.navigation.primary[0] %}
+                                    {% for item in site.data.navigation.primary %}
+                                        {% if item.subfolderitems[0] %}
+                                            {% for entry in item.subfolderitems %}
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ entry.url }}"><i class="fas fa-angle-right"></i> {{ entry.name }}</a>
+                                                        {% if entry.subsubfolderitems[0] %}
+                                                            <ul>
+                                                            {% for subentry in entry.subsubfolderitems %}
+                                                                <li><a class="nav-link" href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+                                                            {% endfor %}
+                                                            </ul>
+                                                        {% endif %}
+                                                    </li> 
+                                            {% endfor %}  
+                                        {% endif %}
                                     {% endfor %}
+                                {% endif %}
                                     <!-- end navbar loop -->
                                 </ul>
                             </div>
@@ -24,8 +36,8 @@
                                 <ul>
                                         <!-- social media loop -->
                                         {% for sm in site.data.socialmedia %}
-                                            <li>
-                                                <a href="{{sm.url}}"><i class="fab {{sm.icon}}"></i>&nbsp; {{sm.text}}</a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{sm.url}}"><i class="fab {{sm.icon}}"></i>&nbsp; {{sm.text}}</a>
                                             </li>
                                         {% endfor %}
                                         <!-- end social media loop -->
@@ -34,10 +46,22 @@
                             <div class="col-md-4 px-0">
                                 <h3>Support</h3>
                                 <ul>
-                                    <li>
-                                        <a href="https://www.patreon.com/alzamon"><i class="fab fa-patreon"></i>&nbsp; Patreon</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='https://ko-fi.com/V7V1D9XTS' target='_blank'><i class="fas fa-coffee"></i>&nbsp; Ko-Fi</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.patreon.com/alzamon"><i class="fab fa-patreon"></i>&nbsp; Patreon</a>
                                     </li>
                                 </ul>
+
+                                <h3>Write</h3>
+                                    <ul>
+                                        <li> 
+                                            <a id="azmail" href=" " onclick='openMailer(this);'>
+                                                &#x62;&#x40;&#x61;&#x6c;&#x7a;&#x61;&#x6d;&#x6f;&#x6e;&#x2e;&#x61;&#x72;&#x74;
+                                            </a>
+                                        </li>
+                                    </ul>
                             </div>
                         </div>
         
@@ -45,7 +69,7 @@
         <script type="text/javascript">
             var today = new Date();
             var year = today.getFullYear();
-            document.write("<p>&copy; " + year + " alzamon.com, all rights reserved</p>");
+            document.write("<p>&copy; " + year + " Alberto Gonz&aacute;lez dba alzamon.com. All rights reserved.</p>");
         </script>
                     </div>
                 </div>

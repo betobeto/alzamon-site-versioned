@@ -34,11 +34,11 @@ ex:  --for item in illos limit:40--
 
 
 <!-- page hero -->
-<div class="jumbotron-fluid page-hero-portfolio">
+<div class="jumbotron-fluid page-hero page-hero-portfolio">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h2>Original Artwork</h2>
+            <div class="col ml-lg-5">
+                <h1>Original Artwork</h1>
                 <p class="portfolio-category-description">Illustration, picture books, character design...</p>
             </div>
         </div>
@@ -58,6 +58,7 @@ ex:  --for item in illos limit:40--
                     <li><a href="#" data-filter="*">Show All</a></li>
                     <li><a href="#" data-filter=".pmi-illustration">Illustration</a></li>
                     <li><a href="#" data-filter=".pmi-characterdesign">Character Design</a></li>
+                    <li><a href="#" data-filter=".pmi-animation">Animation</a></li>
                     <!-- <li><a href="#" data-filter=".pmi-fanart">Fan Art</a></li> -->
                 </ul> 
             </div>
@@ -74,6 +75,7 @@ ex:  --for item in illos limit:40--
                     <div class="gutter-sizer"></div>
 
                     {% assign hp = site.portfolio | where:"categories", "homepage" | sort: "sort_number" | reverse %}
+
                     {% for item in hp %}
 
                     {%- comment -%}
@@ -83,18 +85,37 @@ ex:  --for item in illos limit:40--
 
                     <!-- masonry item - define categories here -->
                     <!-- now using lightGallery to display images -->
-                    <div class="portfolio-masonry-item {% 
-                        if item.categories contains "illustration"%}pmi-illustration{% endif%}
+                    <div class="portfolio-masonry-item 
+                    {% if item.categories contains "illustration"%}pmi-illustration{% endif%}
                         {%if item.categories contains "characterdesign"%}pmi-characterdesign{%endif%}
-                        {%if item.categories contains "fanart"%}pmi-fanart{%endif%}">
-                        <a href="{{item.fullsizeimage}}" data-sub-html="<h3>{{item.pretty_title}}</h3>{{item.description}}">
-                            <div class="pm-overlay d-flex flex-column">
-                                <i class="fas fa-search"></i>
-                                <strong class="text-center">{{item.pretty_title}}</strong>
-                                <span>{{item.pretty_category}}</span>
-                            </div>
-                            <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
-                        </a>
+                        {%- comment -%}
+                        {%if item.categories contains "fanart"%}pmi-fanart{%endif%}
+                        {%- endcomment -%}
+                        {%if item.categories contains "animation"%}pmi-animation{%endif%}">
+
+                        <!-- if an item is tagged as animation use this code -->
+
+                        {%if item.categories contains "animation"%}
+                            <a data-lg-size="1280-720" data-src="//www.youtube.com/watch?v={{item.yt_video_id}}" data-poster="https://img.youtube.com/vi/{{item.yt_video_id}}/maxresdefault.jpg" data-sub-html="<h3>{{item.pretty_title}}</h3>{{item.description}}">
+                                <div class="pm-overlay d-flex flex-column">
+                                    <i class="fas fa-search"></i>
+                                    <strong class="text-center">{{item.pretty_title}}</strong>
+                                    <span>{{item.pretty_category}}</span>
+                                </div>
+                                <img src="https://img.youtube.com/vi/{{item.yt_video_id}}/maxresdefault.jpg" alt="{{item.pretty_title}}">
+                            </a>
+                        {% else %}
+                            <!-- otherwise use this code -->
+                            <a href="{{item.fullsizeimage}}" data-sub-html="<h3>{{item.pretty_title}}</h3>{{item.description}}">
+                                <div class="pm-overlay d-flex flex-column">
+                                    <i class="fas fa-search"></i>
+                                    <strong class="text-center">{{item.pretty_title}}</strong>
+                                    <span>{{item.pretty_category}}</span>
+                                </div>
+                                <img src="{{item.masonryimage}}" alt="{{item.pretty_title}}">
+                            </a>
+                        {% endif %}
+
 
                     </div>
                     <!-- /masonry item -->

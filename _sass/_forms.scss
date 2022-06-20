@@ -18,21 +18,24 @@
             background:darken($link-color,20%);
         }
     }
+    //bootstrap overrides
+    &-primary{
+        background-color:  $btn-primary-link-color;
+        min-height: 2rem;
+        border: none;
+        span{
+            color: white;
+        }
+        &:hover{
+            background-color: $link2-color;
+        }
+    }
 }
 
 //newsletter form
 
 #newsletter-signup{
-    .newsletter-form-header{
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-        h3{
-            @include headerLine($carousel-bg-color, $body-bg-color);
-        }
-    }
-    img{
+    img.newsletter-graphic{
         width: 450px;
         margin: 0 0 1rem 0;
         filter: hue-rotate(328deg) saturate(2);
@@ -43,42 +46,89 @@
     }
 
     input{
+        &[type=text],
         &[type=email]{
-            background-color: rgb(221, 221, 221);
+            background-color: lighten($link-color, 50%);
             border-color: lighten($carousel-bg-color, 20%);
             border-radius: 4px;
-            margin: 0 1rem 0 0;
-            padding: 10px;
+            padding: 5px;
+            font-size: 90%;
         }
-        &[type=submit]{
+    }
+
+    // .col-submit{
+    //     input{
+    //         &[type=submit]{
+    //             border-radius: 6px;
+    //             border-color: transparent;
+    //             background-color: $body-alt-color !important;
+    //             color: white;
+    //         }
+    //     }
+    // }
+
+    // @include respond-above(md){
+    //     form{
+    //         width: 40vw;
+    //     }
+    // }
+
+    // @include respond-below(sm){
+    //     form>.row .col:nth-of-type(1){
+    //         flex-direction: column;
+    //         align-items:center;
+    //         justify-content: space-between !important;
+    //     }
+    //     input{
+    //         &[type=text], 
+    //         &[type=email] {
+    //             margin: unset;
+    //             width: 75vw;
+    //         }
+    //         &[type=submit]{
+    //             margin: 1rem;
+    //             height: 50px;
+    //             width: 75vw;
+    //         }
+    //     }
+    // }
+}
+
+.newsletter-form-header{
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    h3{
+        @include headerLine($carousel-bg-color, $body-bg-color);
+    }
+}
+
+// Zoho Campaigns newsletter signup form
+
+.quick_form_7_css * {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word;
+    input{
+        margin: 0 0 1rem 0;
+        &[type=button]{
+            color: white;
+            background-color: $link-button-color;
+            border: none;
             border-radius: 6px;
-            background-color: $body-alt-color !important;
+        }
+        @include respond-above(sm){
+            width: 30vw;
+            max-width: 32vw;
+        }
+        @include respond-below(xs){
+            width: 86vw;
         }
     }
+}
 
-    @include respond-above(md){
-        form{
-            width: 40vw;
-        }
-    }
-
-    @include respond-below(sm){
-        form>.row .col:nth-of-type(1){
-            flex-direction: column;
-            align-items:center;
-            justify-content: space-between !important;
-        }
-        input{
-            &[type=email] {
-                margin: unset;
-                width: 75vw;
-            }
-            &[type=submit]{
-                margin: 1rem;
-                height: 50px;
-                width: 75vw;
-            }
-        }
-    }
-
+#errorMsgDiv, #unauthPageTitle{
+    display: none;
 }

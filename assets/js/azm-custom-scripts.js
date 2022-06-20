@@ -1,28 +1,53 @@
-$(document).ready(function () {
-    console.log("AZM Custom Scripts loaded");
-    
-    // ======================================
-    // LIGHTGALLERY
-    // enable lightgallery on comicspages component
-        $("#comicPages").lightGallery({
-            thumbnail:true,
-            download:false,
-            enableSwipe:true
-        }); 
 
-    // enable lightgallery on portfolio and sketchbook component
-    $("#portfolio-home, #portfolio-comics, #portfolio-grid, #sketchbook-grid").lightGallery({
+    //show-hide home icon on navbar - variables
+
+
+    document.addEventListener('scroll', function() {
+        const icon = document.getElementById("nav-item-homeicon");
+        if(window.pageYOffset > 240){
+            icon.classList.add("is-visible");
+            icon.classList.remove("is-hidden");
+        }
+        if(window.pageYOffset < 240){
+            icon.classList.remove("is-visible");
+            icon.classList.add("is-hidden");
+        }
+    });
+
+
+$(document).ready(function (){
+
+    // ======================================
+    // LIGHTGALLERY Portfolio
+
+    lightGallery(document.getElementById('portfolio-home'),{
         thumbnail:true,
         download:false,
         enableSwipe:true,
-        selector: "a"
-    }); 
+        selector: "a",
+        plugins: [lgThumbnail,lgFullscreen,lgZoom,lgVideo,lgShare],
+        youTubePlayerParams:{
+        autoplay: 1,
+        modestbranding : 1,
+        showinfo : 0,
+        controls : 1
+        },
+        licenseKey: '7A527A75-E32740D5-95C2C40C-E489ECA4'
+    });
 
+    // LIGHTGALLERY  comics
+    lightGallery(document.getElementById('portfolio-comics'),{
+        thumbnail:true,
+        download:false,
+        enableSwipe:true,
+        selector: "a",
+        plugins: [lgThumbnail,lgFullscreen,lgZoom,lgShare],
+        licenseKey: '7A527A75-E32740D5-95C2C40C-E489ECA4'
+    });
 
 
     //enable light-dark switching
     //https://codepen.io/chen1223/pen/PobxwMj
-
 
     // var azmMain = document.getElementsByClassName('azm-main')[0];
     // //bind toggler
@@ -36,7 +61,7 @@ $(document).ready(function () {
 
     // ISOTOPE 
     // set var + enable
-    var $pMasonry = $('.portfolio-masonry').imagesLoaded(
+    const $pMasonry = $('.portfolio-masonry').imagesLoaded(
         function(){
             $pMasonry.isotope({
                 // set default filter to a given category instead of default "all"
@@ -51,7 +76,7 @@ $(document).ready(function () {
         });
          // enable data filtering - top menu: selects item categories (portfolio, comics, sketchbook)
         $('.portfolio-category-selector a').click(function (e) { 
-            var filterValue = $(this).attr('data-filter');
+            let filterValue = $(this).attr('data-filter');
             $pMasonry.isotope({ filter: filterValue });
             //console.log (filterValue);
             $(this).addClass('selector-active');
@@ -65,3 +90,16 @@ $(document).ready(function () {
 
 // end
 });
+
+// on scroll, show or hide home icon
+// $(window).scroll(function(){
+//     let posY = $(this).scrollTop();
+//     if(posY > headerOffset){
+//         if(currentScroll > prevScroll){
+//                 homeIcon.fadeIn().css('border','black 1px solid');
+//             } else {
+//                 homeIcon.fadeOut();
+//             }
+//         }
+//     prevScroll - currentScroll;
+// });

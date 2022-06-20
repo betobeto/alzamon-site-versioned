@@ -25,7 +25,7 @@ Use variable to retrieve latest post published
 {% assign latest_post_image = latest_post.postimagesmall %}
 
 <!-- Home: Carousel -->
-<div id="azm-home-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+<div id="azm-home-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="7000">
     <ol class="carousel-indicators">
         <li class="active" data-target="#azm-home-carousel" data-slide-to="0" aria-current="location"></li>
         <li data-target="#azm-home-carousel" data-slide-to="1"></li>
@@ -38,16 +38,17 @@ Use variable to retrieve latest post published
 </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <h2>First Slide</h2>
+            <div>&nbsp;</div>
         </div>
         <div class="carousel-item">
-            <h2>Second Slide</h2>
+            <div>&nbsp;</div>
         </div>
         <div class="carousel-item">
-            <h2>Third Slide</h2>
+
+            <div>&nbsp;</div>
         </div>
         <div class="carousel-item">
-            <h2>Fourth Slide</h2>
+            <div>&nbsp;</div>
         </div>
       </div>
 </div>
@@ -60,19 +61,19 @@ Use variable to retrieve latest post published
 
             <a href="/portfolio/" class="categoryCircle ccPortfolio"></a>
 
-            <h2>Portfolio</h2>
+            <h2 class="my-2">Portfolio</h2>
             <p>Illustration, Picture Books, Animation, Character Design</p>
         </div>
         <div class="col-sm-12 col-md-4 text-center">
             <a href="/blog/" class="categoryCircle ccBlog" style="background-image: url({{ latest_post_image }})"></a>
-            <h2>Blog</h2>
+            <h2 class="my-2">Blog</h2>
             <p>Latest post:<br>
                 <a href="{{ latest_post.url }}">{{ latest_post.title }}</a>
                 <br><em>{{latest_post.date | date_to_string:"ordinal","US" }}</em></p>
         </div>
         <div class="col-sm-12 col-md-4 text-center">
             <a href="#" class="categoryCircle ccComics"></a>
-            <h2>Comics</h2>
+            <h2 class="my-2">Comics</h2>
             <p>Graphic Novels, One-Shots, Works in Progress</p>
         </div>
     </div>
@@ -81,31 +82,41 @@ Use variable to retrieve latest post published
 
 
 <!-- Creative services -->
-<div class="container my-3 azm-home-services">
-<div class="row mx-auto">
-    <div class="col">
-        <h3><span>How can I help? Are you...</span></h3>
-    </div>
-</div>
-    <div class="row mx-auto">
-        <div class="col-sm-12 col-md-4 text-center">
-            <h4>...a business?</h4>
-            <a href="/services/" class="azm-home-services-link i01" title="Services for Writers"><span>Services for Writers</span></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, nostrum animi quos nisi libero nesciunt quo.</p>
-        </div>
-        <div class="col-sm-12 col-md-4 text-center">           
-            <h4>...an art director?</h4>
-            <a href="/services/" class="azm-home-services-link i02" title="Services for Teachers"><span>Services for Teachers</span></a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium blanditiis magnam est voluptates reiciendis.</p>
-        </div>
-        <div class="col-sm-12 col-md-4 text-center">
-            <h4>...an author?</h4>
-            <a href="/services/" class="azm-home-services-link i03" title="Services for Artists"><span>Services for Artists</span></a>
-            <p>Sequi, voluptates ullam? Quisquam dolorum quasi consequuntur. Nisi ipsam quae non eius velit praesentium, repellat ipsa iure.</p>
-        </div>
-    </div>
-</div>
 
+
+        <div class="container my-3 azm-home-services">
+        <div class="mascot-mechanic d-none d-md-none d-lg-block"></div>
+            <div class="row mx-auto">
+                <div class="col">
+                    <h3><span>Creative Services</span></h3>
+                </div>
+            </div>
+
+            <div class="row mx-auto">
+                <div class="col col-lg-10 mx-2">
+                    <!-- service columns -->
+                    <div class="azm-service-item">
+                        <h4 class="text-center">Website Critiques</h4>
+                        <!-- <div class="azm-home-services-link i01"></div> -->
+                        <p>Is your portfolio website working for you? I offer my 25-year experience on web design and development to help you achieve your site goals.</p>
+                        <a href="/services/website-reports/" class="btn btn-primary mx-sm-3"> <span>More Info</span> </a>
+                    </div>
+
+                    <div class="azm-service-item">
+                        <h4 class="text-center">Custom Characters</h4>
+                        <!-- <div class="azm-home-services-link i02"></div> -->
+                            <p>Whether you need a new mascot for your startup, or a whole team for your next production.</p>
+                            <a href="/services/custom-character-design/" class="btn btn-primary mx-sm-3"> <span>More Info</span> </a>
+                    </div>
+
+                </div>
+
+
+
+            </div> 
+        </div>
+
+        <!-- <a href="/services-for-creatives/" class="azm-home-services-link i03" title="Services for Artists"><span>Services for Artists</span></a> -->
 
 {% include newsletter.html %}
 

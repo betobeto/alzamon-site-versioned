@@ -12,17 +12,20 @@
     $link-hover-color: mix($link-active-color, rgb(231, 158, 0),50%);
     $link-visited-color: darken($link-active-color,20%);
     $link-underline-color: $link-color;
+    $link-button-color: $link-hover-color;
 // navbar
     $navbar-bg-color: $body-bg-color;
     $navbar-link-color: $link-color;
     $navbar-link-hover-color: darken($navbar-link-color,30%);
-// headers
+// header text shadow
     $header-shadow-color: rgb(15, 22, 19);
     $header-shadow-alt-color:rgb(41, 21, 9);
 // heros
     $jumbotron-bg-color: $body-bg-color;
     $carousel-bg-color: rgb(26, 125, 143);
     $carousel-text-color: $body-bg-color;
+// forms
+    $btn-primary-link-color: rgb(92, 137, 147);
 // misc
     $icon-color: $link-color;
     $blockquote-bg-color: saturate($body-alt-color,0.5);
@@ -33,13 +36,16 @@
     $portfolio-masonry-category-color: $link2-color;
     $portfolio-series-category-color: lighten($link2-color,20%);
     $newsletter-button-color: $link-color;
-    $lg-backdrop-color: rgba(183, 153, 121, 1);
     $blogHeaderColor: $link-color;
     $blogTextColor: $body-color;
     $azm-logo: url('/assets/images/alzamon_logo_light_v3.svg');
 // footer
     $footer-text-color: rgb(255, 255, 255);
 
+
+// lightgallery
+    $lg-backdrop-color: rgba(85, 75, 65, 0.97);
+    $lg-toolbar-color: rgba(51, 90, 96, 0.8);
 
     // $switch-on-color: rgb(221, 24, 100);
     // $switch-off-color:rgb(139, 88, 88);

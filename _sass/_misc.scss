@@ -12,6 +12,15 @@
     border: limegreen 1px solid;
 }
 
+// custom container styles
+.container-fluid{
+    &-topborder{
+        border-width: 10px 0 0 0;
+        border-style: ridge;
+        border-color: $link-active-color;
+    }
+}
+
 // line separator for sections
 .separator-h{
     &:not(:last-of-type){
@@ -36,27 +45,111 @@
 
 //lightGallery extras
 
-.lg-backdrop{
-    opacity: 0.9 !important;
-    background-color: $lg-backdrop-color;
+.lg{
+    &-backdrop{
+        background-color: $lg-backdrop-color;
+    }
+    &-toolbar{
+        background: linear-gradient(to bottom, $lg-toolbar-color 0%, $lg-backdrop-color 85%);
+    }
+    &-icon{
+            color: darken(white, 20%) !important;
+    }
+    &-sub-html{
+        // background: linear-gradient(to bottom, $lg-backdrop-color 85%, $lg-toolbar-color 0%);
+        background: linear-gradient(180deg, $lg-backdrop-color 14%, $lg-toolbar-color 32%, $lg-toolbar-color 89%);
+    }
+
 }
 
 //sub page heros
 .page-hero{
+    h1{
+        color: $body-bg-color !important;
+    }
     &-portfolio{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png');
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-01-portfolio.png');
+        @include respond-between(sm, md){
+            background-size: 75%;
+        }
+        @include respond-below(xs){
+            background-size: 80%;
+        }
     }
     &-comics{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-02-comics.png');
+        @include respond-between(sm, md){
+            background-position-x: -160px;
+        }
+        @include respond-below(xs){
+            background-position-x: -1px;
+        } 
     }
     &-services{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-03-services.png');
+        @include respond-between(sm, md){
+            background-position-x: -72px;
+        }
+        @include respond-below(xs){
+            background-position-x: -16px;
+        }         
     }
     &-blog{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-04-blog.png'); 
+        @include respond-below(xs){
+            background-position-x: -64px;
+        }
     }
     &-about{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/azm-newsletter-header.png'); 
+        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-05-about.png'); 
+        @include respond-above(md){
+            background-size: 70%;
+        }
+        @include respond-between(sm, md){
+            background-size: 80%;
+            background-position-x: 150px;
+        }
+        @include respond-below(xs){
+            background-position-x: -20px;
+        }
+    
     }
 }
 
+// profile picture filtering
+.profile-picture{
+    filter: sepia(0.65);
+}
+
+// trestimonials - bloqckquote
+.row-testimonials{
+    blockquote{
+        background-color: lighten($link-color, 30%);
+        border-radius: 1.5rem;
+        padding: 1.2rem;
+        @include respond-above(md){
+            min-height: 450px;
+        }
+    }
+}
+
+// about page - social icons
+
+.about-social{
+    display: grid;
+    @include respond-above(md){
+    
+    }grid-template-columns: 20% 20% 20% 20% 20%;
+    &-item{
+        display: grid;
+        justify-content: center;
+        i{
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            @include respond-below(xs){
+                font-size: 2rem;
+            }
+        }
+    }
+}

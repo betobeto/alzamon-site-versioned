@@ -45,29 +45,19 @@
         background-size: contain;
         display: inline-block;
         height: 60px;
-        width: 180px;
+        width: 160px;
         >span {
             @include hideText;
         }
     }
     &-nav {
+        position: relative;
         // menu items list
         .nav-item {
             // each item
             .nav-link {
                 margin-right: 1rem;
                 color: $navbar-link-color;
-                // @include respond-above(md){
-                //     font-size:1.3rem;
-                // }
-                // @include respond-between(sm,md){
-                //     @media screen and (orientation:portrait){
-                //         font-size: 1.2rem;
-                //     }        
-                // }
-                // @include respond-below(sm){
-                //     font-size:1.6rem;
-                // }
                 &.social {
                     // social networks icons
                     i {
@@ -80,7 +70,10 @@
                 &:hover{
                     color: $navbar-link-hover-color;
                 }
-
+                // nav-link breakpoints
+                @include respond-below(xs){
+                    font-size: 1.4rem;
+                }
             }
             &.active {
                 .nav-link {
@@ -89,6 +82,10 @@
                     border-bottom: 4px $link-underline-color double;
                 }
             }
+            //nav-item dropdowns
+            .dropdown-item{
+                color: $link-color;
+            }    
         }
     }
     //mobile: menu icon
@@ -117,6 +114,8 @@
 // navbar icon (desktop) - show/hide on affix
 
 .nav-item-homeicon{
+    position: sticky;
+    left: -5vw;
     transition: transform 0.25s;
     // alt show-hide classes
     &.is-visible{

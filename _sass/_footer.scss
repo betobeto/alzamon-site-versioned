@@ -48,16 +48,28 @@ footer {
 
     ul {
         margin-top: 0.8rem;
-
         li {
             list-style: none;
-            height: 2rem;
             // footer links
             a{
+                padding: 0.2rem 0;
                 color: $footerLinkColor;
                 &:hover{
                     color: $link-hover-color !important;
                     text-decoration: none;
+                }
+                &+ul{
+                    left: 10px;
+                    top: -10px;
+                    display: block;
+                    padding: 0;
+                    li{
+                        font-size: smaller;
+                        padding: 0;
+                        a.nav-link{
+                            padding: unset;
+                        }
+                    }
                 }
             }
         }

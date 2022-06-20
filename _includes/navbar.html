@@ -11,7 +11,7 @@
     </div> -->
     <!-- End of controller row -->
 
-<div class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center">
+<div id="header-top" class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center">
         <a href="/"><h1 class="display-4"><span>Alzamon.com</span></h1></a>
 </div>
 
@@ -27,41 +27,58 @@
     </button>
 
     <div id="azmNav" class="collapse navbar-collapse justify-content-between">
+        <!-- start navbar list -->
         <ul class="navbar-nav mr-auto">
             <!-- home icon -->
-            <li id="nav-item-homeicon" class="nav-item nav-item-homeicon is-hidden">
+            <!-- <li id="nav-item-homeicon" class="nav-item nav-item-homeicon">
                 <a href="/" class="nav-link"><img src="/assets/images/azm-home-icon-placeholder.png" alt="Alzamon Home" srcset="">
                 </a>
-            </li>
+            </li> -->
+
             <!-- navbar loop -->
-                {% for nav in site.data.navigation %}
-                    {% if nav.url == page.url %}
-                <li class="nav-item active"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
-                    {% else %}
-                <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>   
-                    {% endif %}
+            {% if site.data.navigation.primary[0] %}
+                {% for item in site.data.navigation.primary %}
+                {% if item.subfolderitems[0] %}
+                    {% for entry in item.subfolderitems %}
+                    <li class="nav-item {% if entry.subsubfolderitems[0] %}dropdown{% endif %}">
+                        <a class="nav-link {% if entry.subsubfolderitems[0] %}dropdown-toggle{% endif %}"
+                            href="{{ entry.url }}" {% if entry.subsubfolderitems[0] %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ entry.name }}</a>
+                        {% if entry.subsubfolderitems[0] %}
+                            <div class="dropdown-menu">
+                                {% for subentry in entry.subsubfolderitems %}
+                                <a class="dropdown-item" href="{{ subentry.url }}">{{ subentry.name }}</a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                {% endif %}
                 {% endfor %}
+            {% endif %}
             <!-- end navbar loop -->
+
+
         
             <!-- social media links - tablet and above only -->
             {% for sm in site.data.socialmedia %}
-            <li class="nav-item d-none d-sm-block">
-                <a class="nav-link social" href="{{sm.url}}" target="_blank" title="{{sm.textDesc}}"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
-            </li>
+                <li class="nav-item d-none d-sm-block">
+                    <a class="nav-link social" href="{{sm.url}}" target="_blank" title="{{sm.textDesc}}"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
+                </li>
             {% endfor %}
 
         </ul>
+        <!-- /end navbar list -->
 
         <!-- social links - mobile only -->
-<ul class="nav-link-social-mobile my-2 py-3">
-        <!-- social media loop -->
-        {% for sm in site.data.socialmedia %}
-            <li>
-                <a href="{{sm.url}}" title="{{sm.text}}" target="_blank"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
-            </li>
-        {% endfor %}
-        <!-- end social media loop -->
-</ul>
+        <ul class="nav-link-social-mobile my-2 py-3">
+            <!-- social media loop -->
+            {% for sm in site.data.socialmedia %}
+                <li>
+                    <a href="{{sm.url}}" title="{{sm.text}}" target="_blank"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
+                </li>
+            {% endfor %}
+            <!-- end social media loop -->
+        </ul>
 
     </div>
 </nav>

@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    width: 85vw;
+    // width: 85vw;
     // margin: 2rem auto;
     padding: 1rem 0;
 
@@ -41,77 +41,106 @@ body {
 // home elements
 // ================================================
 #azm-home-carousel{
-        background-color: $carousel-bg-color;
-        color: $carousel-text-color;
-        position: relative;
-        z-index: 1;
-        // carousel - desktop & above
-        @include respond-above(md){
-            height: 40vh;
-            min-height: 400px;
-        }
+    background-color: $carousel-bg-color;
+    color: $carousel-text-color;
+    position: relative;
+    z-index: 1;
+    // carousel - desktop & above
+    @include respond-above(md){
+        height: 400px;
+    }
 
-        // carousel - tablets
-        @include respond-between(sm, md){
-            height: 25vh;
-            min-height: 300px;
-        }
+    // carousel - tablets
+    @include respond-between(sm, md){
+        height: 300px;
+    }
 
-        // carousel - mobile
-        @include respond-below(xs){
-            min-height: 70vh;
-        }
-        .text-inside-container{
-            position: absolute;
-            padding: 1rem;
-            background-image: none;
-            color: $body-bg-color;
-            z-index: 2;
-                h1{
-                    text-align: initial;
-                    @include headerTextShadow;
-                    display: inline-block;
-                        @include respond-between(sm, md){
-                            font-size: 2.5rem;
-                        }
-                }
-                p{
-                    color: $body-bg-color;
-                    margin: 0.8rem auto;
-                }
-                a{
-                    text-decoration: none;
-                    &:link{
-                        color: $body-alt-color;
-                    }
-                    &:hover{
-                        color: $link-hover-color !important;
-                    }
-                    &:visited{
-                        color:darken($link-visited-color,25%);
-                    }
-                }
-            // desktop & above    
-            @include respond-above(md){
-            left: 10vw;
-            top: 5vh;
-            max-width: 45%;
-            height: 70%;
+    // carousel - mobile
+    @include respond-below(xs){
+        height: 70vh;
+    }
+
+    .carousel{
+        &-inner{
+            height: inherit;
             }
-            //tanblets
-            @include respond-between(sm, md){
-                width: 65%;
-                top: 21px;
-                left: 36px;
+        &-item{
+            height: inherit;
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 100%;
+            &:nth-of-type(1){
+                background-image: url('/assets/images/carousel/01-carousel-sunset.jpg');
             }
-            // mobile
+            &:nth-of-type(2){
+                background-image: url('/assets/images/carousel/02-carousel-captain-claws.jpg');
+            }
+            &:nth-of-type(3){
+                background-image: url('/assets/images/carousel/03-carousel-kidlit4climate.jpg');
+            }
+            &:nth-of-type(4){
+                background-image: url('/assets/images/carousel/04-carousel-petitPrince.jpg');
+            }
             @include respond-below(xs){
-                width: 85vw;
-                margin: 40px 0 0 25px;
-                background: rgba(207, 207, 207,0.3);
+                background-position: 70%;
             }
         }
     }
+
+    .text-inside-container{
+        position: absolute;
+        padding: 1rem;
+        // background-color: rgba(207, 186, 164, 0.7);
+        background-color: rgba(48, 63, 68, 0.7);
+        background-image: none;
+        color: $body-bg-color;
+        z-index: 2;
+            h1{
+                text-align: initial;
+                @include headerTextShadow($header-shadow-color);
+                display: inline-block;
+                    @include respond-between(sm, md){
+                        font-size: 2.5rem;
+                    }
+            }
+            p{
+                color: $body-bg-color;
+                margin: 0.8rem auto;
+            }
+            a{
+                text-decoration: none;
+                &:link{
+                    color: $body-alt-color;
+                }
+                &:hover{
+                    color: $link-hover-color !important;
+                }
+                &:visited{
+                    color:lighten($link-visited-color,5%);
+                }
+            }
+        // desktop & above    
+        @include respond-above(md){
+            left: 140px;
+            top: 60px;
+            max-width: 45%;
+            height: 70%;
+        }
+        //tanblets
+        @include respond-between(sm, md){
+            width: 65%;
+            top: 2vh;
+            left: 8vw;
+        }
+        // mobile
+        @include respond-below(xs){
+            width: 85vw;
+            margin: 40px 0 0 8vw;
+            background-color: rgba(129, 104, 91, 0.6);
+        }
+    }
+}
 
 
 // home category circles
@@ -121,11 +150,12 @@ body {
     border-width: 21px;
     border-radius: 50%;
     border-style: solid;
-    width: 16rem;
-    height: 16rem;
+    background-size: contain;
+    width: 14rem;
+    height: 14rem;
     margin: 0 auto;
     &.ccPortfolio{
-        background-image: url('/assets/images/portfolio/2014_i_roadAhead@400w.jpg');
+        background-image: url('/assets/images/home-circlebg-portfolio.jpg');
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -135,7 +165,7 @@ body {
         background-position: center;
     } 
     &.ccComics{
-        background-image: url('/assets/images/portfolio/2020_i_thistooshallpass__all@400w.png');
+        background-image: url('/assets/images/home-circlebg-comics.jpg');
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -154,33 +184,62 @@ body {
 
 .azm-home{
     &-services{
+        position: relative;
+        z-index: 2;
         border-radius: 1.6rem;
         background-color: $body-alt-color;
         h3,h4,p{
             color: $body-bg-color !important;
         }
         h3{
-            @include headerTextShadow;
+            @include headerTextShadow($header-shadow-color);
             @include headerLine($body-bg-color,$body-alt-color);
         }
         h4{
-            text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            -webkit-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            -moz-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            -o-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            -ms-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            margin: 0.8rem 0;
+            // text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            // -webkit-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            // -moz-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            // -o-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            // -ms-text-shadow: 2px 2px 1px $header-shadow-alt-color;
+            color: lighten($link2-color,0.5) !important;
+            font-weight: 500;
+            letter-spacing: -0.07rem;
+            margin: 1.3rem 0 0.5rem;
+        }
+        p{
+            margin: 0 auto 1rem !important;
+            @include respond-above(sm){
+                width: 90%;
+            }
+        }
+
+        .row:nth-of-type(3){
+            .col{
+                display: grid;
+                grid-template-rows: auto;
+                    .azm-service-item{
+                        display: grid;
+                        text-align: center;
+                        justify-content: space-between;
+                    }
+                    @include respond-above(sm){
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    @include respond-below(xs){
+                        grid-template-columns: 1fr;
+                    }                
+
+            }
         }
         &-link{
-            display: block;
+            // custom service images
             margin: 0 auto;
-            width: 85%;
-            height: 140px;
+            width: 80%;
+            height: 120px;
             border: 3px $body-bg-color solid;
             border-radius: 16px;
             background-repeat: no-repeat;
             background-position: center;
-            filter: hue-rotate(60deg);
             &.i01{
                 background-image: url('/assets/images/portfolio/2015_i_charlieHebdo_spirou@400w.jpg');
             }
@@ -201,5 +260,27 @@ body {
                 }
             }
         }
+        .mascot-mechanic{
+            display: inline-block;
+            width: 250px;
+            height: 350px;
+            background: url('/assets/images/azm-mascot-mechanic.png') no-repeat center;
+            background-size: contain;
+            position: absolute;
+            z-index: 3;
+            left: 86%;
+            bottom: 0;
+            @include respond-below(sm){
+                display: none;
+            }
+
+            // @include respond-between(sm, md){
+            //     width: 160px;
+            //     height: 280px;
+
+            // }
+        }
     }
+
+
 }

@@ -1,17 +1,28 @@
-#- text: Home
-#  url: /
-
-- text: Portfolio
-  url: /portfolio/
-
-- text: Comics
-  url: /comics/
-
-- text: Services
-  url: /services/
-
-- text: Blog
-  url: /blog/
-
-- text: About
-  url: /about/
+primary:
+  - title: Alzamon.art Main Navigation
+    subfolderitems:
+      - name: "Home"
+        url: "/"
+        weight: 2
+      - name: "Portfolio"
+        url: "/portfolio/"
+        weight: 3
+      - name: "Comics"
+        url: "/comics/"
+        weight: 3
+      - name: "Services"
+        url: "/services/"
+        weight: 3
+        subsubfolderitems:
+          - name: "Website Analysis"
+            url: "/services/website-reports/"
+            weight: 2
+          - name: "Custom Character Design"
+            url: "/services/custom-character-design/"
+            weight: 2
+      - name: "Blog"
+        url: "/blog/"
+        weight: 2
+      - name: "About"
+        url: "/about/"
+        weight: 2

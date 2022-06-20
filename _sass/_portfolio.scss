@@ -1,41 +1,10 @@
 // AZM Portfolio Styles
 
-
 // z-index variables
 $portfolioPageBgIndex: 0;
 $portfolioPageImgIndex: 1;
 $portfolioPagePrevNextIndex: 2;
 
-// class used on <body> of portfolio pages
-// ========================================
-.portfolioPage {
-    position: relative;
-    overflow-x: hidden;
-    // @include portfolioBgGradient;
-    background-attachment: scroll;
-    // transition: background .45s ease-in;
-
-    &:before {
-        // use current portfolio piece as bg image
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: $portfolioPageBgIndex;
-        opacity: 0.05;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-attachment: fixed;
-        -ms-background-size: $portfolioPageBgSize;
-        -o-background-size: $portfolioPageBgSize;
-        -moz-background-size: $portfolioPageBgSize;
-        -webkit-background-size: $portfolioPageBgSize;
-        background-size: $portfolioPageBgSize;
-    }
-}
 
 // Set Portfolio Masonry container styles
 // =======================================
@@ -87,19 +56,19 @@ $portfolioPagePrevNextIndex: 2;
                             color: $link-color !important;
                         }
                         &.selector-active{
-                            // display: inline-flex;
-                            // background: $switch-on-color;
                             color: $link-active-color !important;
-                            // padding: 0 0.5rem;
-                            // border-radius: 8px;
-                            // -moz-border-radius: 8px;
-                            // -webkit-border-radius: 8px;
+                        }
+                        @include respond-below(xs){
+                            font-size: 80%;
+                            line-height: 0.9rem;
                         }
                     }
                     //selector: breakpoints
-                    // @include respond-below(xs){
-                    //     border-right: none !important;
-                    // }
+                    @include respond-below(xs){
+                        display: inline-flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
                 }
                 //list: breakpoints
                 @include respond-above(md){
@@ -214,7 +183,7 @@ $portfolioPagePrevNextIndex: 2;
             .pm-overlay {
                 opacity: 0.75;
                 strong{
-                    @include masonryTextShadow;
+                    @include masonryTextShadow($header-shadow-color);
                 }
                 span{
                     color: $portfolio-masonry-category-color;

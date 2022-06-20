@@ -10,7 +10,7 @@
             display: grid;
             grid-column-gap: 2rem;
             grid-row-gap: 2rem;
-            grid-template-columns: 44% 44%;
+            // grid-template-columns: 44% 44%;
             column-count: 2;
             column-fill: auto;
 
@@ -24,7 +24,7 @@
                         text-decoration: none !important;
                     }
                     h3{
-                        font-size: inherit;
+                        font-size: 120%;
                     }
                 }
             }
@@ -32,25 +32,15 @@
 
             // grid breakpoints
 
-            // @include respond-below(sm) {
-            //     grid-template-columns: 88%;
-            //     column-count: 1;
-            // }
+            @include respond-below(sm) {
+                grid-template-columns: 88%;
+                column-count: 1;
+            }
 
-            // @include respond-between(sm, md) {
-            //     grid-template-columns: 44% 44%;
-            //     column-count: 2;
-            // }
-
-            // @include respond-between(md, lg) {
-            //     grid-template-columns: 29% 29% 29%;
-            //     column-count: 3;
-            // }
-
-            // @include respond-above(lg) {
-            //     grid-template-columns: 22% 22% 22% 22%;
-            //     column-count: 4;
-            // }
+            @include respond-above(sm) {
+                grid-template-columns: 44% 44%;
+                column-count: 2;
+            }
         }
     }
 }

@@ -8,32 +8,123 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6 d-flex justify-content-center"><img src="/assets/images/azm-newsletter-header.png" alt="Newsletter Header"></img></div>
+        <div class="col-md-6 d-flex justify-content-center"><img class="newsletter-graphic" src="/assets/images/azm-newsletter-header.png" alt="Newsletter Header"></img></div>
         <div class="col-md-6">
-            <p>Get freebies, news on my latest and future work, personal trivia and more signing up to my bi-monthly newsletter. All of the gravy, none of the spam.</p>
+            <p>Get freebies, news on my latest and future work, personal trivia and more signing up to <strong>Scribbles</strong>, my somewhat bi-monthly newsletter. All of the gravy, none of the spam.</p>
 
-            <!-- newsletter form -->
-            <form action="https://buttondown.email/api/emails/embed-subscribe/alzamonart" method="post" target="popupwindow"
+            <!-- newsletter form - buttondown -->
+
+            <!-- <form action="https://buttondown.email/api/emails/embed-subscribe/alzamonart" method="post" target="popupwindow"
             onsubmit="window.open('https://buttondown.email/alzamonart', 'popupwindow')"
             class="embeddable-buttondown-form">
             <div class="row">
-                <div class="col d-flex py-2">
-                    <label for="bd-email" class="sr-only">Enter your email</label>
-                    <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
-                    <input type="submit" value="Subscribe" class="btn-dark" />
-                    <input type="hidden" name="tag" value="From Website" />
+                <div class="col col-lg-6 mb-2 d-flex flex-column">
+                    <label for="first-name" class="sr-only">Who are you?</label>
+                        <input id="first-name" type="text" name="metadata__first-name" required placeholder="Your first name here, please" />    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-md-6 d-flex flex-column">
+                    <label for="bd-email" class="sr-only">What's your email?</label>
+                    <input type="email" name="email" id="bd-email" placeholder="Then your email address here" />
+                    
+                    </div>
+                    <div class="col col-md-6 col-submit">
+                    <input type="submit" value="Subscribe Now" />
+                    <input type="hidden" name="tag" value="from_website" />
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col d-flex justify-content-center">
                     <p class="smaller">
                         <em>This newsletter service is powered by <a href="https://buttondown.email"
                                 target="_blank">Buttondown</a></em>
                     </p>
                 </div>
             </div>
-        </form>
+            </form> -->
+
+
+            <!--Zoho Campaigns Web-Optin Form Starts Here-->
+<script type="text/javascript" src="https://snwj.maillist-manage.com/js/optin.min.js" onload="setupSF('sf3zc1926915b45f5b0bf969fbc350e2c9a48c113f6c2b078b2d195d8ad1f0929f47','ZCFORMVIEW',false,'light',false,'0')"></script>
+<script type="text/javascript">
+	function runOnFormSubmit_sf3zc1926915b45f5b0bf969fbc350e2c9a48c113f6c2b078b2d195d8ad1f0929f47(th){
+		/*Before submit, if you want to trigger your event, "include your code here"*/
+	};
+</script>
+
+<div id="sf3zc1926915b45f5b0bf969fbc350e2c9a48c113f6c2b078b2d195d8ad1f0929f47" data-type="signupform">
+	<div id="customForm">
+		<div class="quick_form_7_css" name="SIGNUP_BODY">
+			<div>
+				<div style="position:relative;">
+					<div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154);  margin-top: 10px;margin-bottom:10px;word-break:break-all ">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							<tbody>
+								<tr>
+									<td width="10%">
+										<img class="successicon" src="https://snwj.maillist-manage.com/images/challangeiconenable.jpg" align="absmiddle">
+									</td>
+									<td>
+										<span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<form method="POST" id="zcampaignOptinForm" action="https://maillist-manage.com/weboptin.zc" target="_zcSignup">
+					<div id="errorMsgDiv">Please correct the marked field(s) below.</div>
+					<div class="SIGNUP_FLD">
+						<input type="text" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL" placeholder="Your Email:">
+					</div>
+					<div class="SIGNUP_FLD">
+						<input type="text" changeitem="SIGNUP_FORM_FIELD" name="LASTNAME" id="EMBED_FORM_NAME_LABEL" placeholder="And Your Name:">
+					</div>
+					<div class="SIGNUP_FLD">
+						<input type="button" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Subscribe">
+					</div>
+					<input type="hidden" id="fieldBorder" value="">
+					<input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+					<input type="hidden" id="emailReportId" name="emailReportId" value="">
+					<input type="hidden" id="formType" name="formType" value="QuickForm">
+					<input type="hidden" name="zx" id="cmpZuid" value="12589c9ad">
+					<input type="hidden" name="zcvers" value="3.0">
+					<input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+					<input type="hidden" id="mode" name="mode" value="OptinCreateView">
+					<input type="hidden" id="zcld" name="zcld" value="1d5efe525cb5ac77">
+					<input type="hidden" id="zctd" name="zctd" value="1d5efe525cb5ac6a">
+					<input type="hidden" id="document_domain" value="">
+					<input type="hidden" id="zc_Url" value="snwj.maillist-manage.com">
+					<input type="hidden" id="new_optin_response_in" value="0">
+					<input type="hidden" id="duplicate_optin_response_in" value="0">
+					<input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+					<input type="hidden" id="zc_formIx" name="zc_formIx" value="3zc1926915b45f5b0bf969fbc350e2c9a48c113f6c2b078b2d195d8ad1f0929f47">
+					<input type="hidden" id="viewFrom" value="URL_ACTION">
+					<span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
+					<span style="display: none" id="dt_FIRSTNAME">1,false,1,First Name,2</span>
+					<span style="display: none" id="dt_LASTNAME">1,false,1,Last Name,2</span>
+				</form>
+			</div>
+		</div>
+		<div id="unauthPageTitle">AZM - Newsletter Signup Form 2</div>
+	</div>
+	<img src="https://snwj.maillist-manage.com/images/spacer.gif" id="refImage" onload="referenceSetter(this)">
+</div>
+<input type="hidden" id="signupFormType" value="QuickForm_Horizontal">
+<div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
+<div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
+	<span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
+		<img src="https://snwj.maillist-manage.com/images/videoclose.png">
+	</span>
+	<div id="zcOptinSuccessPanel"></div>
+</div>
+
+<!--Zoho Campaigns Web-Optin Form Ends Here-->
+
 
         </div>
     </div>
+
 </div>

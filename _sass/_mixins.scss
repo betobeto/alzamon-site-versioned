@@ -8,12 +8,13 @@
     left: -9999em;
 }
 
-@mixin headerTextShadow{
-    text-shadow: 2px 2px 3px $header-shadow-color;
-    -webkit-text-shadow: 2px 2px 3px $header-shadow-color;
-    -moz-text-shadow: 2px 2px 3px $header-shadow-color;
-    -o-text-shadow: 2px 2px 3px $header-shadow-color;
-    -ms-text-shadow: 2px 2px 3px $header-shadow-color;
+// reusable text shadow
+@mixin headerTextShadow ($textShadowColor){
+    text-shadow: 2px 2px 2px $textShadowColor;
+    -webkit-text-shadow: 2px 2px 2px $textShadowColor;
+    -moz-text-shadow: 2px 2px 2px $textShadowColor;
+    -o-text-shadow: 2px 2px 2px $textShadowColor;
+    -ms-text-shadow: 2px 2px 2px $textShadowColor;
 }
 
 
@@ -26,12 +27,12 @@
     box-shadow: 3px 3px 5px 0px $masonryBoxShadow;
 }
 
-@mixin masonryTextShadow{
-    text-shadow: 2px 1px 2px $header-shadow-color;
-    -webkit-text-shadow: 2px 1px 2px $header-shadow-color;
-    -moz-text-shadow: 2px 1px 2px $header-shadow-color;
-    -o-text-shadow: 2px 1px 2px $header-shadow-color;
-    -ms-text-shadow: 2px 1px 2px $header-shadow-color;
+@mixin masonryTextShadow($textShadowColor){
+    text-shadow: 2px 1px 2px $textShadowColor;
+    -webkit-text-shadow: 2px 1px 2px $textShadowColor;
+    -moz-text-shadow: 2px 1px 2px $textShadowColor;
+    -o-text-shadow: 2px 1px 2px $textShadowColor;
+    -ms-text-shadow: 2px 1px 2px $textShadowColor;
 }
 
 @mixin blogBoxShadow{
@@ -142,7 +143,7 @@
     &:before{ // background line generation
         content: "";
         display: block;
-        border-top: $headerLineColor 5px solid;
+        border-top: $headerLineColor 3px solid;
         width: 96%;
         height: 1px;
         position: absolute;
@@ -163,9 +164,30 @@
 @mixin pageHero($phBgcolor,$phHeaderColor, $phBgImage){
     background: $phBgcolor url($phBgImage);
     background-repeat: no-repeat;
-    background-size: 40%;
     background-position: 100%;
-    h2, p{
+    display: flex;
+    align-items: center;
+    @include respond-above(md){
+        min-height: 250px;
+    }
+    @include respond-between(sm, md){
+        min-height: 180px;
+    }
+    @include respond-below(xs){
+        min-height: 150px;
+        background-size: 120%;
+        // background-position-x: 10%;
+    }
+    h1, p{
         color: $phHeaderColor !important;
+    }
+    h1{
+        @include headerTextShadow($header-shadow-color);
+    }
+    p{
+        margin: initial !important;
+        @include respond-above(sm){
+            font-size: larger;
+        }
     }
 }
