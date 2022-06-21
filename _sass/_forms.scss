@@ -20,7 +20,7 @@
     }
     //bootstrap overrides
     &-primary{
-        background-color:  $btn-primary-link-color;
+        background-color: $btn-primary-link-color;
         min-height: 2rem;
         border: none;
         span{
@@ -28,6 +28,28 @@
         }
         &:hover{
             background-color: $link2-color;
+        }
+        &:visited{
+            span{
+                color: white;
+            }
+            
+        }
+    }
+    &-secondary{
+        background-color: $btn-secondary-link-color;
+        min-height: 2rem;
+        border: none;
+        span{
+            color: white;
+        }
+        &:hover{
+            background-color: $link2-color;
+        }
+        &:visited{
+            span{
+                color: white;
+            }
         }
     }
 }

@@ -5,6 +5,15 @@ postimagesmall: /assets/images/blog/alzamon-art-finally-done@400w.jpg
 postimage: /assets/images/blog/alzamon-art-finally-done@1500w.jpg
 image: /assets/images/blog/alzamon-art-finally-done@400w.jpg 
 description: A post on how I, a designer and illustrator turned coder, was able to develop my alzamon.art online illustration portfolio.
+keywords:
+    - alzamon
+    - alzamonart
+    - redesign
+    - concept art
+    - web design
+    - design process
+    - customizing
+    - design by code
 ---
 
 ### Here's to new beginnings...

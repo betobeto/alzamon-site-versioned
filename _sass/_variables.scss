@@ -25,7 +25,9 @@
     $carousel-bg-color: rgb(26, 125, 143);
     $carousel-text-color: $body-bg-color;
 // forms
-    $btn-primary-link-color: rgb(92, 137, 147);
+    $btn-primary-link-color: darken( $link-active-color,20%);
+    $btn-secondary-link-color: rgb(92, 137, 147);
+    
 // misc
     $icon-color: $link-color;
     $blockquote-bg-color: saturate($body-alt-color,0.5);

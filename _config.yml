@@ -4,6 +4,32 @@
 #jekyll seo tag values
 title: Alzamon - Children's Illustration Portfolio, All-Ages Comics and Sketchbook by Alberto Gonzalez
 description: Illustration portfolio and blog focused on kids-oriented illustration, character design, all-ages comics and related subjects for entertainment and educative purposes by Costa Rica-based illustrator Alberto Gonzalez (Alzamon).
+keywords:
+  - illustration
+  - character design
+  - comics
+  - graphic novels
+  - costa rica
+  - illustrator
+  - costa rican author
+  - animation
+  - 2d animation
+  - 3d animation
+  - site critiques
+  - website analysis
+  - custom character design
+  - costa rican artist
+  - blog
+  - newsletter
+  - subscribe to newsletter
+  - creative services
+  - portfolio
+  - kids comics
+  - kids comics portfolio
+  - childrens illustration
+  - graphic novels for kids
+  - illustration portfolio
+  - character design portfolio
 author:
   name: Alzamon (Alberto Gonzalez)
   twitter: alzamonart
@@ -41,6 +67,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      title: "Alzamon — Visual Creations, Children's Illustration, Comics, Animation and Creative Services by Alberto Gonzalez"
 
 #portfolio categories
 category-list: [homepage,illustration,characterdesign,comics,sketchbook]

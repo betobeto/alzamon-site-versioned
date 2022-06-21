@@ -1,3 +1,13 @@
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ site.description }}">
+{% endif %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">
+{% else %}
+<meta name="keywords" content="{{ site.keywords | join: ', ' | escape }}">
+{% endif %}
 <!-- FB Open Graph Properties -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
@@ -14,4 +24,4 @@
 {% endif %}
 <meta property="og:image:width" content="637" />
 <meta property="og:image:height" content="403" />
-<meta name="theme-color" content="#660d36">
+<meta name="theme-color" content="#660d36" />
