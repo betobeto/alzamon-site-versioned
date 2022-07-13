@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>go.alzamon.com - Links from Alzamon / Alberto González Visual Creations</title>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,500&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,9 +19,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
     <style type="text/css">
         * {
             color: rgb(26, 76, 82);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        html{
             background-color: white;
         }
 
@@ -27,6 +38,21 @@
 
         h2,h3{
             text-align: center;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        h2:first-child{
+            font-weight: 800;
+            color: #E97825;
+        }
+
+        a:link{
+            color: #E97825;
+        }
+
+        a:visited{
+            color: #0d4644;
         }
 
         ul{
@@ -47,9 +73,8 @@
             padding: 2rem;
             width: 60vw;
             display: block;
-            font-weight: 800;
             font-size: 2rem;
-            background: rgb(199, 234, 236);
+            background: rgb(220, 240, 241);
             border-radius: 1rem;
             margin: 0 0 3rem;
         }
@@ -60,11 +85,41 @@
         }
 
             @media (max-width: 575.98px) { 
-                ul li a{
+
+
+        }
+
+        .row-head img{
+            width: 60%;
+            max-width: 400px;
+            margin: 2rem 0;
+        }
+
+        /* breakpoints - for large screens */
+        @media screen and (min-width: 992px) {
+            ul li a{
+            width: 36vw;
+            }
+        }
+
+        /* breakpoints - for smartphones */
+        @media screen and (max-width: 575.98px) { 
+            ul li a{
                 width: 86vw;
             }
 
-        }
+                img{
+                    max-width: 60vw;
+                }
+
+                .row-head img{
+                    margin: 2rem 0;
+                    max-width: 300px;
+                }
+            }
+
+
+
     </style>
 </head>
 
@@ -72,26 +127,34 @@
 
     <div class="container my-5 d-flex flex-column justify-content-center">
 
+<div class="row row-head">
+    <div class="col text-center"><img src="images/alzamon_logo_light_v3.svg" alt="Alzamon.com  - Visual Creations by Alberto Gonzalez" srcset=""></div>
+</div>
+
+
+
         <div class="row">
             <div class="col text-center">
-                <h2>Alzamon.art links!
-                    <span>(design coming soon)</span>
-                </h2>
-
+                <h2>Welcome to my links!</h2>
 
                 <ul>
-                    <li><a href="https://alzamon.art/">Alzamon.art — My official Portfolio and Blog site!</a></li>
+                    <li><a href="https://alzamon.art/"><strong>Alzamon.art</strong> — My official Portfolio and Blog site!</a></li>
                 </ul>
 
-                <h3 class="my-3">Artsy Links</h3>
+
+                <img src="images/2022-danielEliasVector-resize.png" alt="Daniel and Elias, my original characters" srcset="">
+
+                <h3 class="my-3">Find me also on:</h3>
                 <ul class="mx-0">
                     <li><a href="https://instagram.com/alzamonart/" target="_blank">Instagram</a></li>
                     <li><a href="https://www.tiktok.com/@alzamonart" target="_blank">TikTok</a></li>
                     <li><a href="https://www.behance.net/alzamon" target="_blank">Behance</a></li>
-                    <li><a href="https://www.deviantart.com/alzamonart" target="_blank">deviantart</a></li>
+                    <li><a href="https://www.deviantart.com/alzamonart" target="_blank">Deviantart</a></li>
                 </ul>
 
-                <h3 class="my-3">Rants</h3>
+                <img src="images/azm-mascot-tweeting.jpg" alt="Sure I tweet rants from time to time." srcset="">
+
+                <h3 class="my-3">See me rant on:</h3>
                 <ul class="mx-0">
                     <li><a href="https://twitter.com/alzamonart/" target="_blank">Twitter</a></li>
                     <li><a href="https://alzamon.art/blog/" target="_blank">Alzamon.art blog</a></li>
@@ -102,6 +165,11 @@
                     <li><a href="https://www.linkedin.com/in/betobeto" target="_blank">LinkedIn</a></li>
                     <li><a href="https://www.patreon.com/alzamon" target="_blank">Patreon</a></li>
                 </ul>
+
+
+                <p class="smaller">&copy; 2022 Alberto Gonzalez dba alzamon.art.<br> All Rights Reserved.</p>
+
+                <br><br>
             </div>
         </div>
     </div>
