@@ -10,7 +10,7 @@ categories:
     - illustration
 pretty_category: Illustration
 pretty_title: Kidlit 4 Climate 
-sort_number: 01
+sort_number: 30
 permalink: /portfolio/illustration/kidlit4climate
 masonryimage: /assets/images/portfolio/2019_i_kidLit4Climate@400w.jpg
 fullsizeimage: /assets/images/portfolio/2019_i_kidLit4Climate@1500w.jpg

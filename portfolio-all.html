@@ -58,7 +58,7 @@ ex:  --for item in illos limit:40--
                     <li><a href="#" data-filter="*">Show All</a></li>
                     <li><a href="#" data-filter=".pmi-illustration">Illustration</a></li>
                     <li><a href="#" data-filter=".pmi-characterdesign">Character Design</a></li>
-                    <li><a href="#" data-filter=".pmi-animation">Animation</a></li>
+                    <li><a href="#" data-filter=".pmi-3d">3D</a></li>
                     <!-- <li><a href="#" data-filter=".pmi-fanart">Fan Art</a></li> -->
                 </ul> 
             </div>
@@ -91,11 +91,11 @@ ex:  --for item in illos limit:40--
                         {%- comment -%}
                         {%if item.categories contains "fanart"%}pmi-fanart{%endif%}
                         {%- endcomment -%}
-                        {%if item.categories contains "animation"%}pmi-animation{%endif%}">
+                        {%if item.categories contains "3d"%}pmi-3d{%endif%}">
 
-                        <!-- if an item is tagged as animation use this code -->
+                        <!-- if an item is tagged as 3D/animation use this code -->
 
-                        {%if item.categories contains "animation"%}
+                        {%if item.categories contains "3d"%}
                             <a data-lg-size="1280-720" data-src="//www.youtube.com/watch?v={{item.yt_video_id}}" data-poster="https://img.youtube.com/vi/{{item.yt_video_id}}/maxresdefault.jpg" data-sub-html="<h3>{{item.pretty_title}}</h3>{{item.description}}">
                                 <div class="pm-overlay d-flex flex-column">
                                     <i class="fas fa-search"></i>
