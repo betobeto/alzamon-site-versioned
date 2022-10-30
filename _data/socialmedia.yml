@@ -18,6 +18,12 @@
   icon: fa-behance
   badge: /assets/images/azm-badge-behance.png
 
+- text: Mastodon
+  textDesc: Alzamon on Mastodon.art
+  url: https://mastodon.art/@alzamonart
+  icon: fa-mastodon
+  badge: /assets/images/azm-badge-deviantart.png
+
 - text: Twitter
   textDesc: Alzamon on Twitter (@alzamonart)
   url: https://www.twitter.com/alzamonart
