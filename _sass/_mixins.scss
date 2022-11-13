@@ -47,6 +47,15 @@
     -moz-box-shadow: 0px 4px 14px 7px $blogBoxShadowColor;
 }
 
+// border radius mixins
+//========================
+@mixin br05{
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+
+
 // portfolio mixins
 //========================
 
@@ -172,11 +181,6 @@
     }
     @include respond-between(sm, md){
         min-height: 180px;
-    }
-    @include respond-below(xs){
-        min-height: 150px;
-        background-size: 120%;
-        // background-position-x: 10%;
     }
     h1, p{
         color: $phHeaderColor !important;

@@ -47,22 +47,24 @@ body {
     z-index: 1;
     // carousel - desktop & above
     @include respond-above(md){
-        height: 400px;
+        // height: 400px;
+        height: 75vh;
     }
 
     // carousel - tablets
     @include respond-between(sm, md){
-        height: 300px;
+        // height: 300px;
+        height: 83vh;
     }
 
     // carousel - mobile
     @include respond-below(xs){
-        height: 70vh;
+        height: 90vh;
     }
 
     .carousel{
         &-inner{
-            height: inherit;
+             height: inherit;
             }
         &-item{
             height: inherit;
@@ -71,16 +73,19 @@ body {
             background-repeat: no-repeat;
             background-position: 100%;
             &:nth-of-type(1){
-                background-image: url('/assets/images/carousel/01-carousel-sunset.jpg');
+                background-image: url('/assets/images/carousel/ncr-01.jpg');
             }
             &:nth-of-type(2){
-                background-image: url('/assets/images/carousel/02-carousel-captain-claws.jpg');
+                background-image: url('/assets/images/carousel/ncr-02.jpg');
             }
             &:nth-of-type(3){
-                background-image: url('/assets/images/carousel/03-carousel-kidlit4climate.jpg');
+                background-image: url('/assets/images/carousel/ncr-03.jpg');
             }
             &:nth-of-type(4){
-                background-image: url('/assets/images/carousel/04-carousel-petitPrince.jpg');
+                background-image: url('/assets/images/carousel/ncr-04.jpg');
+            }
+            &:nth-of-type(5){
+                background-image: url('/assets/images/carousel/ncr-05.jpg');
             }
             @include respond-below(xs){
                 background-position: 70%;
@@ -90,14 +95,20 @@ body {
 
     .text-inside-container{
         position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -10%;
+        width: 60vw;
         padding: 1rem;
-        // background-color: rgba(207, 186, 164, 0.7);
-        background-color: rgba(48, 63, 68, 0.7);
-        background-image: none;
+        text-align: center;
+        background-color: rgba(48, 63, 68, 0.8);
         color: $body-bg-color;
         z-index: 2;
+        @include br05;
             h1{
-                text-align: initial;
                 @include headerTextShadow($header-shadow-color);
                 display: inline-block;
                     @include respond-between(sm, md){
@@ -120,167 +131,152 @@ body {
                     color:lighten($link-visited-color,5%);
                 }
             }
-        // desktop & above    
-        @include respond-above(md){
-            left: 140px;
-            top: 60px;
-            max-width: 45%;
-            height: 70%;
-        }
         //tanblets
         @include respond-between(sm, md){
-            width: 65%;
-            top: 2vh;
-            left: 8vw;
+            width: 75vw;
+            margin-top: -18%;
         }
-        // mobile
         @include respond-below(xs){
-            width: 85vw;
-            margin: 40px 0 0 8vw;
-            background-color: rgba(129, 104, 91, 0.6);
+            width: 80vw;
+            margin-top: -40%;
         }
+
     }
 }
 
-
-// home category circles
-.categoryCircle{
-    display: block;
-    border-color: $body-alt-color;
-    border-width: 21px;
-    border-radius: 50%;
-    border-style: solid;
-    background-size: contain;
-    width: 14rem;
-    height: 14rem;
-    margin: 0 auto;
-    &.ccPortfolio{
-        background-image: url('/assets/images/home-circlebg-portfolio.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    &.ccBlog{
-        // background-image: url('/assets/images/portfolio/2016_fa_caleAtkinson@400w.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-    } 
-    &.ccComics{
-        background-image: url('/assets/images/home-circlebg-comics.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    +h2+p{
-        font-style: italic;
-        color: lighten($body-text-color, 60%);
-    }
-    @include respond-between(sm, md){
-        width: 12rem;
-        height: 12rem;
-        border-width: 16px;
-    }
-}
-
-// home creative services
-
-.azm-home{
-    &-services{
-        position: relative;
-        z-index: 2;
-        border-radius: 1.6rem;
-        background-color: $body-alt-color;
-        h3,h4,p{
-            color: $body-bg-color !important;
-        }
-        h3{
-            @include headerTextShadow($header-shadow-color);
-            @include headerLine($body-bg-color,$body-alt-color);
-        }
-        h4{
-            // text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            // -webkit-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            // -moz-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            // -o-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            // -ms-text-shadow: 2px 2px 1px $header-shadow-alt-color;
-            color: lighten($link2-color,0.5) !important;
-            font-weight: 500;
-            letter-spacing: -0.07rem;
-            margin: 1.3rem 0 0.5rem;
-        }
-        p{
-            margin: 0 auto 1rem !important;
-            @include respond-above(sm){
-                width: 90%;
-            }
-        }
-
-        .row:nth-of-type(3){
-            .col{
-                display: grid;
-                grid-template-rows: auto;
-                    .azm-service-item{
-                        display: grid;
-                        text-align: center;
-                        justify-content: space-between;
+// home blog post
+    #azm-home-blog {
+        .row {
+            &:nth-of-type(2) {
+                div{
+                    &:nth-of-type(1) {
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        @include respond-above(md){
+                            height: 300px;
+                        }
+                        @include respond-between(sm, md){
+                            height: 200px;
+                        }
+                        @include respond-below(xs){
+                            height: 250px;
+                        }
                     }
-                    @include respond-above(sm){
-                        grid-template-columns: 1fr 1fr;
+                    &:nth-of-type(2){
+                        background-color: $body-alt-color;
+                        color: $body-bg-color;
+                        @include br05;
+                        a{
+                            color: $body-bg-color !important; 
+                        }
+                        p{
+                            &:last-of-type{
+                                font-size: smaller;
+                            }
+                        }
                     }
-                    @include respond-below(xs){
-                        grid-template-columns: 1fr;
-                    }                
-
-            }
-        }
-        &-link{
-            // custom service images
-            margin: 0 auto;
-            width: 80%;
-            height: 120px;
-            border: 3px $body-bg-color solid;
-            border-radius: 16px;
-            background-repeat: no-repeat;
-            background-position: center;
-            &.i01{
-                background-image: url('/assets/images/portfolio/2015_i_charlieHebdo_spirou@400w.jpg');
-            }
-            &.i02{
-                background-image: url('/assets/images/portfolio/2016_i_christmasCardFinal@400w.jpg');
-            }
-            &.i03{
-                background-image: url('/assets/images/portfolio/2017_i_buildingBuddies@400w.jpg');
-            }
-            span{
-                position: relative;
-                left: -9999em;
-            }
-            +p{
-                @include respond-above(md){
-                    padding-left: 1rem;
-                    padding-right: 1rem;
                 }
             }
         }
-        .mascot-mechanic{
-            display: inline-block;
-            width: 250px;
-            height: 350px;
-            background: url('/assets/images/azm-mascot-mechanic.png') no-repeat center;
-            background-size: contain;
-            position: absolute;
-            z-index: 3;
-            left: 86%;
-            bottom: 0;
-            @include respond-below(sm){
-                display: none;
-            }
-
-            // @include respond-between(sm, md){
-            //     width: 160px;
-            //     height: 280px;
-
-            // }
-        }
     }
 
+// home creative services
 
-}
+// .azm-home{
+//     &-services{
+//         position: relative;
+//         z-index: 2;
+//         border-radius: 1.6rem;
+//         background-color: $body-alt-color;
+//         h3,h4,p{
+//             color: $body-bg-color !important;
+//         }
+//         h3{
+//             @include headerTextShadow($header-shadow-color);
+//             @include headerLine($body-bg-color,$body-alt-color);
+//         }
+//         h4{
+//             color: lighten($link2-color,0.5) !important;
+//             font-weight: 500;
+//             letter-spacing: -0.07rem;
+//             margin: 1.3rem 0 0.5rem;
+//         }
+//         p{
+//             margin: 0 auto 1rem !important;
+//             @include respond-above(sm){
+//                 width: 90%;
+//             }
+//         }
+
+//         .row:nth-of-type(3){
+//             .col{
+//                 display: grid;
+//                 grid-template-rows: auto;
+//                     .azm-service-item{
+//                         display: grid;
+//                         text-align: center;
+//                         justify-content: space-between;
+//                     }
+//                     @include respond-above(sm){
+//                         grid-template-columns: 1fr 1fr;
+//                     }
+//                     @include respond-below(xs){
+//                         grid-template-columns: 1fr;
+//                     }                
+
+//             }
+//         }
+//         &-link{
+//             // custom service images
+//             margin: 0 auto;
+//             width: 80%;
+//             height: 120px;
+//             border: 3px $body-bg-color solid;
+//             border-radius: 16px;
+//             background-repeat: no-repeat;
+//             background-position: center;
+//             &.i01{
+//                 background-image: url('/assets/images/portfolio/2015_i_charlieHebdo_spirou@400w.jpg');
+//             }
+//             &.i02{
+//                 background-image: url('/assets/images/portfolio/2016_i_christmasCardFinal@400w.jpg');
+//             }
+//             &.i03{
+//                 background-image: url('/assets/images/portfolio/2017_i_buildingBuddies@400w.jpg');
+//             }
+//             span{
+//                 position: relative;
+//                 left: -9999em;
+//             }
+//             +p{
+//                 @include respond-above(md){
+//                     padding-left: 1rem;
+//                     padding-right: 1rem;
+//                 }
+//             }
+//         }
+//         .mascot-mechanic{
+//             display: inline-block;
+//             width: 250px;
+//             height: 350px;
+//             background: url('/assets/images/azm-mascot-mechanic.png') no-repeat center;
+//             background-size: contain;
+//             position: absolute;
+//             z-index: 3;
+//             left: 86%;
+//             bottom: 0;
+//             @include respond-below(sm){
+//                 display: none;
+//             }
+
+//             // @include respond-between(sm, md){
+//             //     width: 160px;
+//             //     height: 280px;
+
+//             // }
+//         }
+//     }
+
+
+// }

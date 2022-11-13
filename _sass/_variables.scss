@@ -27,7 +27,10 @@
 // forms
     $btn-primary-link-color: darken( $link-active-color,20%);
     $btn-secondary-link-color: rgb(92, 137, 147);
-    
+
+// portfolio home
+    $portfolioHome-bg-1: rgb(233,120,37);
+    $portfolioHome-bg-2: rgb(75,179,195);
 // misc
     $icon-color: $link-color;
     $blockquote-bg-color: saturate($body-alt-color,0.5);

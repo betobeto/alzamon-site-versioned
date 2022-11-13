@@ -47,7 +47,8 @@ h1, h2, h3, h4, h5, h6,
 .lg-sub-html,
 .portfolio-grid-item,
 .posts-grid span,
-#comicPages a span
+#comicPages a span,
+span
 {
     font-family: 'Open Sans', sans-serif;
 }
@@ -87,9 +88,9 @@ h1, h2, h3, h4, h5, h6,
                 &:hover{
                     color: lighten($body-alt-color,10%);
                 }
-                &:visited{
-                    color:$link-visited-color;
-                }
+                // &:visited{
+                //     color:$link-visited-color;
+                // }
             }
         @include respond-below(sm){
             h1{

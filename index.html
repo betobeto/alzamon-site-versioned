@@ -25,16 +25,17 @@ Use variable to retrieve latest post published
 {% assign latest_post_image = latest_post.postimagesmall %}
 
 <!-- Home: Carousel -->
-<div id="azm-home-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="7000">
+<div id="azm-home-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
     <ol class="carousel-indicators">
         <li class="active" data-target="#azm-home-carousel" data-slide-to="0" aria-current="location"></li>
         <li data-target="#azm-home-carousel" data-slide-to="1"></li>
         <li data-target="#azm-home-carousel" data-slide-to="2"></li>
         <li data-target="#azm-home-carousel" data-slide-to="3"></li>
+        <li data-target="#azm-home-carousel" data-slide-to="4"></li>
     </ol>
 <div class="text-inside-container">
     <h1>Creative Works for <br class="d-none d-sm-block"> the young at heart</h1>
-    <p>I am <a href="/about/">Alberto,</a> a Costa Rican Illustrator, comics and 3d artist with a focus on creating content for young, middle grade audiences. <a href="/portfolio/">These are my works.</a> Make yourself at home.</p>
+    <p>I am <a href="/about/">Alberto,</a> a Costa Rican Illustrator, comics and 3d artist with a focus on creating content for young, middle grade audiences. <a href="#portfoliolinks">These are my works.</a> Make yourself at home.</p>
 </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -44,7 +45,9 @@ Use variable to retrieve latest post published
             <div>&nbsp;</div>
         </div>
         <div class="carousel-item">
-
+            <div>&nbsp;</div>
+        </div>
+        <div class="carousel-item">
             <div>&nbsp;</div>
         </div>
         <div class="carousel-item">
@@ -53,32 +56,64 @@ Use variable to retrieve latest post published
       </div>
 </div>
 <!-- /end carousel -->
-
-<!-- Category circles -->
+<a name="portfoliolinks"></a>
+<!-- new portfolio container -->
 <div class="container my-3">
-    <div class="row">
-        <div class="col-sm-12 col-md-4 text-center">
 
-            <a href="/portfolio/" class="categoryCircle ccPortfolio"></a>
+    {% assign pf = site.portfolio | where:"categories", "homepage" %}
 
-            <h2 class="my-2">Portfolio</h2>
-            <p>Illustration, Picture Books, Animation, Character Design</p>
-        </div>
-        <div class="col-sm-12 col-md-4 text-center">
-            <a href="/blog/" class="categoryCircle ccBlog" style="background-image: url({{ latest_post_image }})"></a>
-            <h2 class="my-2">Blog</h2>
-            <p>Latest post:<br>
-                <a href="{{ latest_post.url }}">{{ latest_post.title }}</a>
-                <br><em>{{latest_post.date | date_to_string:"ordinal","US" }}</em></p>
-        </div>
-        <div class="col-sm-12 col-md-4 text-center">
-            <a href="#" class="categoryCircle ccComics"></a>
-            <h2 class="my-2">Comics</h2>
-            <p>Graphic Novels, One-Shots, Works in Progress</p>
+    {%- comment -%}
+        Now using Jekyll posts for portfolio categories... let's go simpler this time
+    {%- endcomment -%}
+
+    {% for post in site.portfolio %}
+    <div class="row portfolio-home-item mb-4">
+        <div class="col mx-0 px-0">
+            <a href="{{ post.url }}" class="px-2 py-4" style="background-image: url('{{post.postlinkimage}}');">
+                <h3>
+                    {{ post.title }}
+                </h3>
+                <span>{{ post.blurb }}</span>
+            </a>
+            </li>
         </div>
     </div>
+    {% endfor %}
+    <!-- comics link home page -->
+    <div class="row portfolio-home-item mb-4">
+        <div class="col mx-0 px-0">
+            <a href="/comics" class="px-2 py-4" style="background-image: url('/assets/images/bg-portfolio-home-05.jpg');">
+                <h3>
+                    Comics
+                </h3>
+                <span>Middle Grade sequential art works and more</span>
+            </a>
+            </li>
+        </div>
+    </div>
+
 </div>
-<!-- /end category circles -->
+
+<!-- blog container -->
+<div id="azm-home-blog" class="container">
+<div class="row">
+
+    <div class="col newsletter-form-header mb-3">
+        <h3><span>On the Blog</span></h3>
+    </div>
+
+</div>
+
+    <div class="row">
+        <div class="col-md-6" style="background-image: url({{ latest_post_image }})">
+
+        </div>
+<div class="col-md-6 py-2"> 
+        <h3><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h3>
+        <p><span>{{ latest_post.description }}</span></p>
+        <p><em>{{latest_post.date | date_to_string:"ordinal","US" }}</em></p>  </div>
+    </div>
+</div>
 
 
 <!-- Creative services include -->

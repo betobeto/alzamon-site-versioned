@@ -62,59 +62,6 @@
 
 }
 
-//sub page heros
-.page-hero{
-    h1{
-        color: $body-bg-color !important;
-    }
-    &-portfolio{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-01-portfolio.png');
-        @include respond-between(sm, md){
-            background-size: 75%;
-        }
-        @include respond-below(xs){
-            background-size: 80%;
-        }
-    }
-    &-comics{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-02-comics.png');
-        @include respond-between(sm, md){
-            background-position-x: -160px;
-        }
-        @include respond-below(xs){
-            background-position-x: -1px;
-        } 
-    }
-    &-services{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-03-services.png');
-        @include respond-between(sm, md){
-            background-position-x: -72px;
-        }
-        @include respond-below(xs){
-            background-position-x: -16px;
-        }         
-    }
-    &-blog{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-04-blog.png'); 
-        @include respond-below(xs){
-            background-position-x: -64px;
-        }
-    }
-    &-about{
-        @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-05-about.png'); 
-        @include respond-above(md){
-            background-size: 70%;
-        }
-        @include respond-between(sm, md){
-            background-size: 80%;
-            background-position-x: 150px;
-        }
-        @include respond-below(xs){
-            background-position-x: -20px;
-        }
-    
-    }
-}
 
 // profile picture filtering
 .profile-picture{

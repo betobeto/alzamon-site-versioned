@@ -30,8 +30,8 @@
   icon: fa-twitter
   badge: /assets/images/azm-badge-twitter.png
 
-- text: Deviantart
-  textDesc: Alzamon on DeviantArt
-  url: https://www.deviantart.com/alzamonart
-  icon: fa-deviantart
-  badge: /assets/images/azm-badge-deviantart.png
+#- text: Deviantart
+#  textDesc: Alzamon on DeviantArt
+#  url: https://www.deviantart.com/alzamonart
+#  icon: fa-deviantart
+#  badge: /assets/images/azm-badge-deviantart.png

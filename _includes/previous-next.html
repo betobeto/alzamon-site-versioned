@@ -5,19 +5,19 @@
 
     {% if page.previous.url %}
     <!-- Previous portfolio page -->
-        <a href="{{page.previous.url}}" class="portfolio-previous" title="{{page.previous.pretty_category}}: {{page.previous.pretty_title}}">
+        <a href="{{page.previous.url}}" class="portfolio-previous" title="{{page.previous.pretty_title}}">
         <i class="fas fa-chevron-left"></i>
-            <img src="{{page.previous.masonryimage}}" alt="{{page.previous.title}}">
-                <span class="sr-only"><strong>{{page.previous.pretty_title}}</strong> / {{page.previous.pretty_category}}</span>
+            <img src="/assets/images/icon-portfolio-previous.png" alt="{{page.previous.title}}">
+                <span>{{page.previous.pretty_title}}</span>
             </a>           
     {% endif %}
 
     <!-- next -->
     {% if page.next.url %}
-    <a href="{{page.next.url}}" class="portfolio-next" title="{{page.next.pretty_category}}: {{page.next.pretty_title}}">
-        <span class="sr-only"><strong>{{page.next.pretty_title}}</strong> / {{page.next.pretty_category}}</span>
+    <a href="{{page.next.url}}" class="portfolio-next" title="{{page.next.pretty_title}}">
+        <span>{{page.next.pretty_title}}</span>
     </span>   
-        <img src="{{page.next.masonryimage}}" alt="{{page.next.title}}">
+        <img src="/assets/images/icon-portfolio-next.png" alt="{{page.next.title}}">
     <i class="fas fa-chevron-right"></i>
     </a>
     {% endif %}
