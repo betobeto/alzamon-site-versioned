@@ -3,8 +3,6 @@
 footer {
     // actual links and copyright container
     background: linear-gradient(to bottom, rgb(26, 76, 82) 0%, $link-color 50%, $link-color 80%);
-    
-    // background-size: 70%;
     color: white;
     
     .container{
@@ -29,12 +27,20 @@ footer {
 
 // footer bg image
 .footer-background{
-    background-image: url('/assets/images/azm-bg-footer-alpha-hires.png');
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    @include respond-between(sm, md){
-        background-size: 70%;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background-image: url('/assets/images/azm-bg-footer-alpha-hires.png');
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     @include respond-below(xs){
         background-size: cover;
@@ -62,13 +68,16 @@ footer {
                     left: 10px;
                     top: -10px;
                     display: block;
-                    padding: 0;
+                    // padding: 0;
                     li{
                         font-size: smaller;
                         padding: 0;
                         a.nav-link{
                             padding: unset;
                         }
+                    }
+                    @include respond-above(md){
+                        padding: 0;
                     }
                 }
             }

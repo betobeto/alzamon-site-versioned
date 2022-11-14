@@ -30,17 +30,15 @@ images:
       image_title: Small World
     - image_url: /assets/images/portfolio/illustration/i_illustrationworkshop_wm.jpg
       image_title: Slippery Slope
-    - image_url: /assets/images/portfolio/illustration/i_kidlit4climate_wm.jpg
-      image_title: Kidlit4Climate Poster
+    - image_url: /assets/images/portfolio/illustration/i_danielsroom_wm.jpg
+      image_title: Daniel's Messy Room
     - image_url: /assets/images/portfolio/illustration/i_racefinish_wm.jpg
       image_title: The Race Finish
     - image_url: /assets/images/portfolio/illustration/i_nomoreschool_wm.jpg
       image_title: No More School!
-      image_class: fullwidth 
-    - image_url: /assets/images/portfolio/illustration/i_smallworld_wm.jpg
-      image_title: Small World
+      image_class: fullwidth
+    - image_url: /assets/images/portfolio/illustration/i_kidlit4climate_wm.jpg
+      image_title: Kidlit4Climate Poster
     - image_url: /assets/images/portfolio/illustration/i_adventureahead_wm.jpg
       image_title: Adventures Ahead
-
-
 ---
