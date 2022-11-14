@@ -70,22 +70,18 @@ defaults:
       title: "Alzamon — Visual Creations, Children's Illustration, Comics, Animation and Creative Services by Alberto Gonzalez"
 
 #portfolio categories
-category-list: [homepage,illustration,characterdesign,comics,sketchbook]
+category-list: [homepage,illustration,characterdesign,comics,fanart,sketchbook]
 
 #gather all collections under /portfolio
-#collections_dir: portfolio
+# collections_dir: portfolio
 
 collections:
   portfolio:
-    output: true
-    permalink: /:collection/:name
+    output: true 
+    permalink: "/:collection/:name/"
   comics:
     output: true
-    permalink: /:collection/:name
-  sketchbook:
-    output: true
-    permalink: pretty
-    # permalink: /portfolio/:path
+    permalink: "/:collection/:name/"
 
 # build settings
 permalink: pretty

@@ -1,5 +1,4 @@
 ---
-layout: comics
 title: Shirley (Pitch Pilot) (2017)
 # FB and Jekyll SEO Tag values
 description: A comic story project based on a real life story of a girl who wanted to make it big in soccer — and did. Currently revamping this pilot for sale to foreign markets.

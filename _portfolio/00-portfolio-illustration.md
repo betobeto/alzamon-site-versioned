@@ -3,7 +3,7 @@ layout: portfolio
 title: Illustration
 blurb: Children's Books, Games, Programs...
 # FB and Jekyll SEO Tag values
-description: Illustration samples portfolio from Alberto Gonzalez (alzamon.com)
+description: My Illustration works, with emphasis on children's books and characters, for diverse applications.
 postlinkimage: /assets/images/bg-portfolio-home-01.jpg
 # End FB and Jekyll SEO Tag values
 hero_tag: illustration

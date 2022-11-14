@@ -1,5 +1,4 @@
 ---
-layout: comics
 title: The Dreamer (Le Rêveur) (2022)
 # FB and Jekyll SEO Tag values
 description: Short story made for a regional contest by the Alliance Française from San José, Costa Rica.

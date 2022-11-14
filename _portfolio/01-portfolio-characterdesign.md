@@ -1,9 +1,10 @@
 ---
 layout: portfolio
 title: Character Design
+alt_title: Original Character Design works 
 blurb: For Comics, Children's Books, Animation...
 # FB and Jekyll SEO Tag values
-description: Character Design samples portfolio from Alberto Gonzalez (alzamon.com)
+description: Original Character Design samples, for middle grade comics and graphic novels, children's books, textbooks and other applications.
 postlinkimage: /assets/images/bg-portfolio-home-02.jpg
 # End FB and Jekyll SEO Tag values
 hero_tag: characterdesign

@@ -60,20 +60,20 @@ Use variable to retrieve latest post published
 <!-- new portfolio container -->
 <div class="container my-3">
 
-    {% assign pf = site.portfolio | where:"categories", "homepage" %}
+    {% assign pf = site.portfolio %}
 
     {%- comment -%}
         Now using Jekyll posts for portfolio categories... let's go simpler this time
     {%- endcomment -%}
 
-    {% for post in site.portfolio %}
+    {% for page in pf %}
     <div class="row portfolio-home-item mb-4">
         <div class="col mx-0 px-0">
-            <a href="{{ post.url }}" class="px-2 py-4" style="background-image: url('{{post.postlinkimage}}');">
+            <a href="{{ page.url }}.html" class="px-2 py-4" title="{{ page.description }}" style="background-image: url('{{page.postlinkimage}}');">
                 <h3>
-                    {{ post.title }}
+                    {{ page.title }}
                 </h3>
-                <span>{{ post.blurb }}</span>
+                <span>{{ page.blurb }}</span>
             </a>
             </li>
         </div>
@@ -82,7 +82,7 @@ Use variable to retrieve latest post published
     <!-- comics link home page -->
     <div class="row portfolio-home-item mb-4">
         <div class="col mx-0 px-0">
-            <a href="/comics" class="px-2 py-4" style="background-image: url('/assets/images/bg-portfolio-home-05.jpg');">
+            <a href="/comics" class="px-2 py-4" title="My examples of sequential art: Middle grade comics, graphic novels and one-shots." style="background-image: url('/assets/images/bg-portfolio-home-05.jpg');">
                 <h3>
                     Comics
                 </h3>

@@ -3,7 +3,7 @@ layout: portfolio
 title: Sketchbook
 blurb: Loose Ideas and concepts...
 # FB and Jekyll SEO Tag values
-description: Sketch drawings and concepts from Alberto Gonzalez (alzamon.com)
+description: A gathering of character designs, backgrounds and overall art still in rough form. I include this as an essential part of the artistic process.
 postlinkimage: /assets/images/bg-portfolio-home-03.jpg
 hero_tag: sketchbook
 # End FB and Jekyll SEO Tag values

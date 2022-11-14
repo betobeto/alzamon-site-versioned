@@ -1,5 +1,4 @@
 ---
-layout: comics
 title: Diversity (One Shot) (2018)
 # FB and Jekyll SEO Tag values
 description: Single page comic about dealing with LBGT diversity from a children's perspective.

@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<!-- Basic variables -->
+{% assign pf = site.portfolio %}
+
 <!-- variable to filter content from MD line breaks  -->
 {% assign pageContent = page.content | strip_newlines %}
 
@@ -31,7 +34,13 @@ layout: default
     </div>
 </div>
 
-<!-- display images -->
+<!-- display portfolio images -->
+
+<div class="row portfolio-item-blurb">
+    <div class="col">
+    <p class="text-center d-block w-75 mx-auto mt-2 mb-0">{{ page.description }}</p>
+    </div>
+</div>
 
     <div class="row portfolio-item-content my-4">
         <div class="col">

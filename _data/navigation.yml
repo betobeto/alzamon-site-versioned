@@ -9,20 +9,20 @@ primary:
         weight: 3
         subsubfolderitems:
           - name: "Illustration"
-            url: "/portfolio/illustration"
+            url: "/portfolio/illustration.html"
             weight: 2
           - name: "Character Design"
-            url: "/portfolio/character-design"
+            url: "/portfolio/character-design.html"
             weight: 2
           - name: "Sketchbook"
-            url: "/portfolio/sketchbook"
+            url: "/portfolio/sketchbook.html"
             weight: 2
           - name: "Fan Art"
-            url: "/portfolio/fan-art"
+            url: "/portfolio/fan-art.html"
             weight: 2
       - name: "Comics"
         url: "/comics/"
-        weight: 3
+        weight: 2
       - name: "Blog"
         url: "/blog/"
         weight: 2

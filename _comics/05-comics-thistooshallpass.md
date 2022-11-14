@@ -1,5 +1,4 @@
 ---
-layout: comics
 title: This too Shall Pass (One Shot) (2020)
 # FB and Jekyll SEO Tag values
 description: At the peak of the COVID-19 pandemic when many of us didn't know what was going to be of our lives, unable to get out of our homes, I made this. — Not really a comic, but the paneled arrangement and the story of each character trying to make sense of the whole situation suggested me to label it as such. 

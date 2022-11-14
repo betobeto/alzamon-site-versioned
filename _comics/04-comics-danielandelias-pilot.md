@@ -1,5 +1,4 @@
 ---
-layout: comics
 title: Daniel &amp; Elias (Pitch pilot) (2014)
 # FB and Jekyll SEO Tag values
 description: A 4-page comic pilot I created featuring my kid characters Daniel, Elias and Susana. I want to believe I have evolved in both drawing and plot making since then.

@@ -3,7 +3,7 @@ layout: portfolio
 title: Fan Art
 blurb: Because why not.
 # FB and Jekyll SEO Tag values
-description: Sketch drawings and concepts from Alberto Gonzalez (alzamon.com)
+description: Should fan art be in a portfolio or not? Some say yes, some say no. But there's no denying we all have influences. And here are some of mine.
 postlinkimage: /assets/images/bg-portfolio-home-04.jpg
 hero_tag: fanart
 # End FB and Jekyll SEO Tag values

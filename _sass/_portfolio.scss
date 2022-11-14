@@ -331,6 +331,15 @@ $portfolioPagePrevNextIndex: 2;
             }
         }
     }
+    &-blurb{
+        p{
+            font-size: 1.2rem;
+            // letter-spacing: normal;  
+            @include respond-below(xs){
+            font-size: 0.9rem;
+            }
+        }
+    }
     &-content,
     &-extras {
         h2 {
@@ -343,7 +352,8 @@ $portfolioPagePrevNextIndex: 2;
         }
 
         p {
-            margin: 1.5rem 0;
+            margin: 0 0 1.5rem 0;
+            color: $carousel-bg-color;
         }
 
         // unordered list
