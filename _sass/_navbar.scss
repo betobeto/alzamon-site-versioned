@@ -60,6 +60,8 @@
                 color: $navbar-link-color;
                 &.social {
                     // social networks icons
+                    margin-left: auto;
+                    margin-right: auto;
                     i {
                         color: $link-hover-color;
                         &:hover{
@@ -74,6 +76,14 @@
                 @include respond-below(xs){
                     font-size: 1.4rem;
                 }
+                //last item (agent access)
+                // @include respond-above(sm){
+                //     :nth-child(3){
+                //         border: red 1px dotted;
+                //         padding: 0 0 0 1rem;
+                //         margin-right: 0 !important;
+                //     }
+                // }  
             }
             &.active {
                 .nav-link {
@@ -85,7 +95,7 @@
             //nav-item dropdowns
             .dropdown-item{
                 color: $link-color;
-            }    
+            }  
         }
     }
     //mobile: menu icon

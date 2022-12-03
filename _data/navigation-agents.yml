@@ -1,0 +1,14 @@
+# agent access links display
+
+# desktop display      
+- name: "Agent Access"
+  url: "https://agents.alzamon.com/"
+  icon: fa-lock
+  breakpoint: d-none d-sm-block
+  title: Advance access to current production works (restricted to authorized users only)
+# mobile display
+- name: "Agent Access"
+  url: "https://agents.alzamon.com/"
+  icon: fa-lock
+  breakpoint: d-sm-none
+  title: Advance access to current production works (restricted to authorized users only)

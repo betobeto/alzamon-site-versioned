@@ -62,16 +62,6 @@ exclude:
   - package.json
   - README.md
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-      title: "Alzamon — Visual Creations, Children's Illustration, Comics, Animation and Creative Services by Alberto Gonzalez"
-
-#portfolio categories
-category-list: [homepage,illustration,characterdesign,comics,fanart,sketchbook]
-
 #gather all collections under /portfolio
 # collections_dir: portfolio
 
@@ -82,6 +72,32 @@ collections:
   comics:
     output: true
     permalink: "/:collection/:name/"
+  agents:
+    output: true
+    permalink: "/:collection/:name/"
+
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      title: "Alzamon — Visual Creations, Children's Illustration, Comics, Animation and Creative Services by Alberto Gonzalez"
+  - scope:
+      type: agentsItem
+    values:
+      layout: "minimal"
+      path: /assets/images/agentAccess/
+
+
+# keep these files from regenerating:
+# exclude: [/agents]
+# keep_files: [/agents]
+
+#portfolio categories
+category-list: [homepage,illustration,characterdesign,comics,fanart,sketchbook]
+
+
 
 # build settings
 permalink: pretty

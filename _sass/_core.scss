@@ -114,10 +114,16 @@ body {
                     @include respond-between(sm, md){
                         font-size: 2.5rem;
                     }
+                    @include respond-above(sm){
+                        width: 70%;
+                    }
             }
             p{
                 color: $body-bg-color;
                 margin: 0.8rem auto;
+                @include respond-above(sm){
+                    width: 86%;
+                }
             }
             a{
                 text-decoration: none;

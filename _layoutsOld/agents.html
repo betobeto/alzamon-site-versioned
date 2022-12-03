@@ -1,0 +1,32 @@
+---
+layout: minimal
+title: Alzamon.art - Agent Access
+description: Access to production stage projects for agents and publishers (Restricted access only)
+---
+
+{% assign aimg = site.data.assets-agents.imageItems %}
+{% assign adoc = site.data.assets-agents.documentItems %}
+
+
+<h1>Restricted Access area</h1>
+
+<p>Bacon ipsum dolor amet chuck turkey chicken drumstick ham kielbasa ground round. Short loin jowl picanha, chuck beef ribs ball tip capicola flank ham hock meatball shoulder. Boudin ball tip burgdoggen spare ribs tail swine hamburger. Rump meatloaf tongue, tenderloin pastrami spare ribs cupim.</p>
+
+
+<h2>Images</h2>
+
+<ul class="mx-4 my-3 list-style-none">
+
+<p>{{- page.image_path -}}</p>
+
+
+{% if aimg %}
+    {% for item in aimg %}
+            <li class="blueline d-flex flex-column justify-content-center">
+                <img src="{{- item.url | relative_url -}}" alt="{{item.title}}"><br>
+                <caption class="text-center">{{item.title}}</caption></li>
+    {% endfor %}
+{% endif%}
+</ul>
+
+<p>Pongue boudinrt ribs jerky pork chop prosciutto meatball frankfurter turducken hamburger t-bone alcatra pastrami shoulder. Pork beef chislic pork chop flank t-bone pork loin short ribs ball tip. Pastrami burgdoggen t-bone, landjaeger ball tip cow pancetta picanha doner kevin corned beef meatloaf. Beef t-bone strip steak sirloin filet mignon. Rump jerky ham hock picanha meatball turkey, corned beef pig sirloin tenderloin andouille pork loin short loin doner. Shank bacon salami short ribs strip steak brisket meatball venison landjaeger. Pancetta tri-tip beef ribs chuck porchetta.</p>

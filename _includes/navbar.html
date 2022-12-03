@@ -38,36 +38,42 @@
             <!-- navbar loop -->
             {% if site.data.navigation.primary[0] %}
                 {% for item in site.data.navigation.primary %}
-                {% if item.subfolderitems[0] %}
-                    {% for entry in item.subfolderitems %}
-                    <li class="nav-item {% if entry.subsubfolderitems[0] %}dropdown{% endif %}">
-                        <a class="nav-link {% if entry.subsubfolderitems[0] %}dropdown-toggle{% endif %}"
-                            href="{{ entry.url }}" {% if entry.subsubfolderitems[0] %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ entry.name }}</a>
-                        {% if entry.subsubfolderitems[0] %}
-                            <div class="dropdown-menu">
-                                {% for subentry in entry.subsubfolderitems %}
-                                <a class="dropdown-item" href="{{ subentry.url }}">{{ subentry.name }}</a>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </li>
-                    {% endfor %}
-                {% endif %}
+                    {% if item.subfolderitems[0] %}
+                        {% for entry in item.subfolderitems %}
+                        <li class="nav-item {% if entry.subsubfolderitems[0] %}dropdown{% endif %}">
+                            <a class="nav-link {% if entry.subsubfolderitems[0] %}dropdown-toggle{% endif %}"
+                                href="{{ entry.url }}" {% if entry.subsubfolderitems[0] %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ entry.name }}</a>
+                            {% if entry.subsubfolderitems[0] %}
+                                <div class="dropdown-menu">
+                                    {% for subentry in entry.subsubfolderitems %}
+                                    <a class="dropdown-item" href="{{ subentry.url }}">{{ subentry.name }}</a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% endif %}
                 {% endfor %}
             {% endif %}
             <!-- end navbar loop -->
 
-
-        
             <!-- social media links - tablet and above only -->
             {% for sm in site.data.socialmedia %}
-                <li class="nav-item d-none d-sm-block">
+                <li class="nav-item nav-item-social d-none d-sm-block">
                     <a class="nav-link social" href="{{sm.url}}" target="_blank" title="{{sm.textDesc}}"><i class="fab {{sm.icon}}"></i>&nbsp;</a>
                 </li>
             {% endfor %}
 
+            <!-- agent access area links -->
+            {% for item in site.data.navigation-agents %}
+                <li class="nav-item {{item.breakpoint}}">
+                    <a class="nav-link ml-sm-4 mr-sm-0" href="{{item.url}}" target="_blank" title="{{item.title}}"><i class="fa {{item.icon}}"></i>&nbsp;&nbsp;{{item.name}}</a>
+                </li>
+            {% endfor %}
+
         </ul>
-        <!-- /end navbar list -->
+
+        <!-- end navbar list -->
 
         <!-- social links - mobile only -->
         <ul class="nav-link-social-mobile my-2 py-3">
