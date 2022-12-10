@@ -8,7 +8,8 @@
 const gulp = require ('gulp'),
 imagemin = require ('gulp-imagemin'),
 imageresize = require('gulp-image-resize'),
-rename = require ('gulp-rename');
+rename = require ('gulp-rename'),
+pngQuant = require ('imagemin-pngquant');
 // concat = require ('gulp-concat'),
 // clean = require('gulp-rimraf');
 
@@ -44,9 +45,9 @@ function copyImages(done){
       .pipe(imageresize({ width: size }))
       .pipe(rename(function (path) { path.basename = `${path.basename}@${size}w`; }))
       .pipe(imagemin([
-        imagemin.gifsicle({ interlaced: true }),
+        pngQuant({ speed:1, quality:[0.95, 1] }),
+        imagemin.gifsicle({ interlaced: true, optimizationLevel: 3 }),
         imagemin.mozjpeg({ quality: 80, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
           plugins: [
             { removeViewBox: true },
