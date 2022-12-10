@@ -17,8 +17,6 @@ rename = require ('gulp-rename');
 const folder ={
     srcPortfolio: 'assets_NOEXPORT/**/*.{jpg,jpeg,gif,png}',
     distPortfolio: 'assets/images/_exported',
-    srcComics: 'assets_NOEXPORT/comics',
-    distComics: 'assets/images/comics'
 }
 
 // define archive paths
@@ -30,7 +28,7 @@ const paths ={
 //gulp task: check current path variables
 //===================================================================
 function checkPath(done) {
-    console.log(folder.srcPortfolio,folder.distPortfolio,folder.srcComics, folder.distComics);
+    console.log(folder.srcPortfolio,folder.distPortfolio);
     done();
   }
   exports.checkPath = checkPath;
@@ -40,7 +38,7 @@ function checkPath(done) {
 
 function copyImages(done){
     // define generated img sizes
-    [400,900,1500].forEach(function(size){
+    [400,1200].forEach(function(size){
       return gulp.src(paths.imgSrcPortfolio)
       // do resizing and renaming
       .pipe(imageresize({ width: size }))
