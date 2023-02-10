@@ -106,6 +106,16 @@
                     display: block;
                     margin: auto;
                 }
+                //captions
+                figure {
+                    figcaption {
+                        position: relative;
+                        margin: 1rem auto;
+                        font-size: 0.8rem;
+                        font-style: italic;
+                        text-align: center;
+                    }
+                }
             }
                 &-picture{
                     position: relative;
