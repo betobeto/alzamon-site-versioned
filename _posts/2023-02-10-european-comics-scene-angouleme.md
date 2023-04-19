@@ -26,34 +26,36 @@ According to the [French entry of the festival on Wikipedia](https://fr.wikipedi
 
 ## My Experience
 
-I have been to two editions of the Festival d’Angoulême, the first in 2016 and now in 2023. For reasons beyond any logic I had vowed myself to be back for the 50th edition, which almost ties together with my 50th birthday… yes, I’m an old geezer now and my knees croak despite having walked 10 miles a day while in Paris. Just let me be. 
+I have been to two editions of the Festival d’Angoulême, the first in 2016 and now in 2023. For reasons beyond any logic I had vowed myself to be back for the 50th edition, which almost ties together with my 50th birthday… yes, I’m an old geezer now and my knees croak despite having walked 10 miles a day while in Paris. It is what it is. 
 
 Plus, being there a second time allowed me to have a deeper, more critical look at what the festival actually means for everyone involved — villagers, authors and publishers alike.
 
-I had the perception that I saw much more people in this edition of the festival than back in 2016; after all, this was the first _“back to normal”_ edition after two straight years of Covid-19 pandemic cancellations; people are understandably eager to have in-person experiences again. Although I had my share of masks and full vaccination scheme (I was asked for evidence to travel), it wasn’t very practical to keep a mask on at all times save for the risk of gathering in closed spaces with lots of people _partout_, but if my current health is any indication, I’ve had no side effects exposing myself to thousands of people everywhere.
+I had the perception that I saw much more people in this edition of the festival than back in 2016; after all, this was the first _“back to normal”_ edition after two straight years of Covid-19 pandemic cancellations; people are understandably eager to have in-person experiences again. Although I had my share of masks and full vaccination scheme (I was asked for evidence to travel), it wasn’t very practical to keep a mask on at all times save for the risk of gathering in closed spaces with lots of people _partout_, but I’m glad to confirm weeks later I’m still healthy and able.
 
-Accommodation for the festival  isn’t exactly abundant, besides a few French hotel chains which unsurprisingly jack up prices for the festival dates, the other option available (and which I’ve used) is **Airbnb**, as some villagers have wised up to the demand and offer their homes for lodging. I’ve felt personally lucky with my choices — for the price of a single hotel night, I booked an Airbnb for 4 nights with an awesome host couple, on a shared property with some other comics fans from around the world — a great way to find like-minded new friends.
+
+Accommodation for the festival isn’t exactly abundant, besides a few French hotel chains which unsurprisingly jack up prices for the festival dates, the other option available (and which I’ve used) is **Airbnb**, as some villagers have wised up to the demand and offer their homes for lodging. I’ve felt personally lucky with my choices — for the price of a single hotel night, I booked an Airbnb for 4 nights with an awesome host couple, on a shared property with some other comics fans from around the world — a great way to find like-minded new friends.
 
 ## L’Accreditation
+
 
 <figure>
     <img src="/assets/images/blog/angouleme2023/PXL_20230208_223859357.jpg" alt="My Author Accreditation Badge">
     <figcaption>The accreditation badge I was given as a registered author to access the Festival's professional spaces.</figcaption>
 </figure>
 
-Once you are done with your accommodation and if you are a creative professional (author, publisher… you get it), you should go pick up your professional accreditation badge as such at the town’s _Hotel de Ville_ (City Hall). For this, you should have registered as such on the site previously, which I didn’t do (so, don’t be like me; I still managed to do as I brought in my portfolio and pitch packages… same as six years earlier. Things are much more organized now). 
+Once you are done with your accommodation and if you are a creative professional (author, publisher… you get it), you should go pick up your professional accreditation badge as such at the town’s _Hotel de Ville_ (City Hall). For this, you [should have registered as such on the site](https://www.bdangoulemepro.com/en) previously, which I didn’t do.... So, don’t be like me. I still, however, managed to register at the front desk as I brought in my portfolio and pitch packages… same as six years earlier. Things are much more organized now. 
 
 Basically, you **WANT** to have this verification badge. Not only because it helps cutting through the **LONG** lines of general public’s access by using alternate entrances to all pavilions, but also because of the access it gives to professional spaces not available to the general public, like the _“Marche International des Droits”_ (International Rights Publishing Market) where publishers and distributors come to close deals. I mistakenly thought it could be a place to show your portfolio to prospective agents and editors: it isn’t. Selling book rights and distributions to international markets is the main purpose here and these people are, well, from a different breed. 
 
 
-
 ## The Hubs
 
-The Festival’s main activities, while actually spread all over the village, concentrate mainly on five very defined hubs; **Le Monde des Bulles** (literally, World of comic balloons) selling books from the largest commercial publishing houses; **Le Quartier Jeunesse** (Children’s Quarter), at the same building space that houses the city’s **Musée De la Bande Dessinée** (a museum with permanent and temporary exhibitions in comics), **Le Nouveau Monde** (The New World) with emphasis on alternative comics and small press releases, the **Place du 9ème Art** next to the town’s market gathering sellers of comics’ collectibles, and last but not definitely not least, **Manga City** (“Quartier Asie” in former editions) which has grown up so big that there was no longer space in the old town area to house it, so it was located on a big warehouse near the town’s train station.
+The Festival’s main activities, while actually spread all over the village, concentrate mainly on five very defined hubs; **Le Monde des Bulles** (literally, World of comic balloons) selling books from the largest commercial publishing houses; **Le Quartier Jeunesse** (Children’s Quarter), at the same building space that houses the city’s **Musée De la Bande Dessinée** (a museum with permanent and temporary exhibitions in comics), **Le Nouveau Monde** (The New World) with emphasis on alternative comics and small press releases, the **Place du 9ème Art** next to the town’s market gathering sellers of comics’ collectibles, and last but not definitely not least, **Manga City** (_“Quartier Asie”_ or Asian Quarter in former editions) which has grown up so big that there was no longer space in the old town area to house it, so it was located on a big warehouse near the town’s train station.
 
 Angoulême’s theater and museum also host special guest talks, spectacles and exhibitions on the subject of comics at this time.
 
 ### Le Monde Des Bulles
+
 
 <figure>
     <img src="/assets/images/blog/angouleme2023/bdangouleme-2023-02-08-13h24mb.jpg" alt="The Monde Des Bulles Pavilion">
@@ -70,9 +72,15 @@ This structure houses the largest and most profitable comics publishing houses i
 </figure>
 
 <figure>
-    <img src="/assets/images/blog/angouleme2023/bdangouleme-20230126_15.jpg" alt="The author with Spanish comics artist Jose Luis Munuera">
+    <img src="/assets/images/blog/angouleme2023/bdangouleme-20230126_15.jpg" alt="The author with revered comics artist Jose Luis Munuera from Spain">
     <figcaption>...and eventually, if you're patient, you'll get what you want. Here's me with amazing Spanish author <a href="https://www.lambiek.net/artists/m/munuera_jl.htm">Jose Luis Munuera.</a> Wish I had more time to chat.</figcaption>
 </figure>
+
+<figure>
+    <img src="/assets/images/blog/angouleme2023/angouleme-dedicaces.jpg" alt="Showcase of comic books with sdrawn dedications">
+    <figcaption>Some of the "dedicated" books by favorite authors I've gathered across the years.</figcaption>
+</figure>
+
 
 The allure of the festival for many coming up is not just to purchase a BD hardcover album (short for _bande dessinée_ and the standard 48-page book format) but also to have it with a drawing and signature from his or her author — a **_dédicace_**, or French for "dedication". The culture of _dédicaces_ is so ingrained in the festival that the largest houses’ stands feature a built-in _espace de dédicace_ to house artists, complete with appearance schedules. And many, me included, are willing to wait hours in line, in super crowded spaces (an uneasy thought in these not-quite-post-pandemic times), to have their favorite artist cherish their book with a personalized touch. From time to time there has been some talk about making the _dédicaces_ a paid extra in light of the sheer volume of people wanting them, but for the moment that’s not happened. (Only books bought in place qualify for it, though).
 
@@ -93,7 +101,7 @@ As you might imagine, it is a moment when artists get the rock star treatment an
 </figure>
 
 
-Crossing the Charente River over a pedestrian bridge you get to a gathering of former spirit warehouses _(Quai de la Charente)_  which today houses Angoulême’s **Musee de la BD** and the **Quartier Jeunesse** or Children’s quarter which, as you may guess, hosts kid-friendly exhibitions and activities. A nationwide comics contest among France’s school students has its annual exhibition here. Expect it to be flooded with school groups and families at all times, while pretending to be all comics scholar and stuff about your favorite kid’s comics artists while surrounded by French-speaking tiny and not so tiny, energetic tots in all directions. But if you have a problem with children, then why try your hand at kid’s comics to start? ;)
+Crossing the Charente River over a pedestrian bridge you get to a gathering of former spirit warehouses _(Quai de la Charente)_  which today houses Angoulême’s **Musee de la BD** and the **Quartier Jeunesse** or Children’s quarter which, as you may guess, hosts kid-friendly exhibitions and activities. A nationwide comics contest among France’s school students has its annual exhibition here. Expect it to be flooded with school groups and families at all times, while pretending to be all comics scholar and stuff about your favorite kid’s comics artists while surrounded by French-speaking tiny and not so tiny, energetic tots in all directions. But if you have a problem with children, then why bother with kids' comics for a start? ;)
 
 
 <figure>
@@ -122,8 +130,13 @@ If you are familiar with alternative press events like the [Small Press Expo](ht
     <figcaption>During the festival, special comics-themed buses make free rides around the main town's circuit attractions. Something very welcome after walking up and down the hilly center for hours — but beware: these get quite packed every time.</figcaption>
 </figure>
 
-
 ### Le Place Du 9ème Art
+
+<figure>
+    <img src="/assets/images/blog/angouleme2023/bdangouleme-9emeart.jpg" alt="Place du 9eme Art Pavillion">
+    <figcaption>On the "ninth art" pavilion you can find lots of European comics merchandise, from second hand albums to truly exotic original drawings and reproductions.</figcaption>
+</figure>
+
 
 The term _“ninth art”_ related to comics is —how else— [a Franco-Belgian fabrication](https://www.pipelinecomics.com/beginning-bd-ninth-art/), and therefore quite at home here. Anyway, what this place is about is comics art and their merchants offering them for sale, from second-hand albums you can get for 6 euros up to very _(very, very!)_ expensive originals if you (and your wallet) are so inclined. Some artists also show up here from time to time.
 
@@ -135,7 +148,7 @@ The term _“ninth art”_ related to comics is —how else— [a Franco-Belgian
 </figure>
 
 
-It would be absolutely unfair to skip mentioning what is definitely the biggest growing segment of the festival, so big it has already gone past available space in the city center. A pavilion adjacent to a big warehouse featuring an “urban”, gritty market space with a full skateboard ramp (!!) named **Alligator 57**, _Manga City_ is all what you would expect from the name; manga publishers, sellers of toys and tchotchkes, special delegates (Taiwan and Hong Kong had very interesting, dedicated stands this year) and even some cosplayers, although quite few compared to your average U.S. comic con. This place just bursted at the seams with people of all ages, so much so I was denied a second time pass, VIP acreditation notwithstanding, because of some spices in glass containers I had bought in my way… which weren’t even looked at the first time around. So much for security — anyway, more people, more problems. But I did get in to see, and even took home this copy of [Cat Mask Boy by Linus Liu,](https://www.news.gov.hk/eng/2022/08/20220805/20220805_144633_213.html?type=ticker) a Hong Kongese novel author for me. Now that’s some manga I can relate to.
+It would be absolutely unfair to skip mentioning what is definitely the biggest growing segment of the festival, so big it has already gone past available space in the city center. A pavilion adjacent to a big warehouse featuring an “urban”, gritty market space with a full skateboard ramp (!!) named **Alligator 57**, _Manga City_ is all what you would expect from the name; manga publishers, sellers of toys and tchotchkes, special delegates (Taiwan and Hong Kong had very interesting, dedicated stands this year) and even some cosplayers, although quite few compared to your average U.S. comic con. This place just bursted at the seams with people of all ages, so much so I was denied a second time pass (VIP acreditation notwithstanding) because of some glass containers I had bought in my way… which weren’t even looked at the first time around. Anyway, more people, more problems... But I did get in to see, and even took home this copy of [Cat Mask Boy by Linus Liu,](https://www.news.gov.hk/eng/2022/08/20220805/20220805_144633_213.html?type=ticker) a Hong Kongese novel author for me. Now that’s some manga I can relate to.
 
 
 <figure>
@@ -167,7 +180,7 @@ The city’s museum which normally houses a permanent collection of fossils and 
 
 ### Worth going?
 
-How much do you like, or are curious about European (and Asian) comics? Enough to withstand crossing the Atlantic in the dead of winter? Enough to take back your rusty school French and re-learn it to read these works in their original language? (So I did)... For me, a big part of its allure in it is that there is really something for everyone and that all age groups and markets can coexist peacefully — something we still don’t see enough in our shores. With the exception of events like [Baltimore’s Comic Con](https://baltimorecomiccon.com/) where there is a big and strategic kids’ comics section, the vast majority of comics events skew towards adult offerings — after all, they are the ones with the money. But in doing so we risk losing a new generation of readers that can sustain the comics market in the forthcoming decades. There, I see something we can learn from the Europeans — that comics, as an accessible form of art and entertainment, belong to anyone and everyone, and are ingrained in our culture in more ways than we think. And in any case, exposing yourself to different world views and conceptions of what sequential art is and should be can only make your appreciation and culture richer.
+How much do you like, or are curious about European (and Asian) comics? Enough to withstand crossing the Atlantic in the dead of winter? Enough to take back your rusty school French and re-learn it to read these works in their original language? (So I did)... For me, a big part of its allure in it is that there is really something for everyone and that all age groups and markets can coexist peacefully — something we still don’t see enough in our shores. With the exception of events like [Baltimore’s Comic Con](https://baltimorecomiccon.com/) where there is a big and strategic kids’ comics section, the vast majority of comics events skew towards teenage to adult offerings — the audience with money in their hands, a no-brainer. But in doing so we risk losing a new generation of readers that can sustain the comics market in the forthcoming decades. There, I see something we can learn from the Europeans — that comics, as an accessible form of art and entertainment, belong to anyone and everyone, and are ingrained in our culture in more ways than we think. And in any case, exposing yourself to different world views and conceptions of what sequential art is and should be can only make your appreciation and culture richer.
 
 <a name="01"></a>
 
@@ -175,7 +188,7 @@ How much do you like, or are curious about European (and Asian) comics? Enough t
 
 <figure>
     <img src="/assets/images/blog/angouleme2023/bdangouleme-20230128_09b.jpg" alt="Holding metal balloon saying 'To Believe' in French">
-    <figcaption>"To Believe"... because why not?</figcaption>
+    <figcaption>"To Create"... because that's what we do, right?</figcaption>
 </figure>
 
 ***
