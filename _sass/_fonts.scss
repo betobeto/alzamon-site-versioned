@@ -32,7 +32,7 @@ h4, h5, h6{
     font-weight: 500;
 }
 
-p, strong, ul, ol, li, figcaption, .btn{
+p, strong, ul, ol, li, figcaption, .btn, input{
     font-family: 'Open Sans', sans-serif;
     color: $body-text-color;
     letter-spacing: -0.05rem;
@@ -80,7 +80,7 @@ span
                 margin: 0;
             }
             p{
-                margin: 1rem 0;  
+                margin: 0.5rem 0;  
             }
             a{
                 color: $link-color;

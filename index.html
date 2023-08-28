@@ -5,10 +5,65 @@ title: Children's Illustration & Comics Portfolio by Alberto Gonzalez
 description: Portfolio of Costa Rican artist and author Alberto Gonzalez (Alzamon) - Children's illustration, graphic novels, character design.
 image: /assets/images/ogimage-alzamonart.jpg
 # End FB and Jekyll SEO Tag values
+# ***********************
+#add 3 images by category
+# ***********************
+illustrationThumbs:
+  - image_url: /assets/images/portfolio/illustration/Illustration_2023_rainforest_fullsize.jpg
+    image_thumb: /assets/images/portfolio/illustration/Illustration_2023_rainforest_thumb.jpg
+    image_title: Rainforest Guardians Illustration
+  - image_url: /assets/images/portfolio/illustration/illustration_2020_righttune_fullsize.jpg
+    image_thumb: /assets/images/portfolio/illustration/illustration_2020_rightttune_thumb.jpg
+    image_title: Right on Tune Illustration
+  - image_url: /assets/images/portfolio/illustration/illustration_2023_summerfun_fullsize.jpg
+    image_thumb: /assets/images/portfolio/illustration/illustration_2023_summerfun_thumb.png
+    image_title: Summer Fun!
+  - image_url: /assets/images/portfolio/illustration/i_adventureahead_wm2022_11_12_1500.jpg
+    image_thumb: /assets/images/portfolio/illustration/thumb/i_adventureahead_wm2022_11_12_thumb.jpg
+    image_title: Adventures Ahead!
+characterdesignThumbs:
+  - image_url: /assets/images/portfolio/characterdesign/cd_mds_shirley_2022_11_13_1500.jpg
+    image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_mds_shirley_2022_11_13_thumb.jpg
+    image_title: Character Design - Shirley
+  - image_url: /assets/images/portfolio/characterdesign/cd_mds_elias_2022_11_12_1500.jpg
+    image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_mds_elias_2022_11_12_thumb.jpg
+    image_title: Character Design - Elias Model Sheet
+  - image_url: /assets/images/portfolio/characterdesign/cd_captain_2020_03_02_1500.jpg
+    image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_captain_2020_03_02_thumb.jpg
+    image_title: Character Design - Captain Claws
+  - image_url: /assets/images/portfolio/characterdesign/cd_pranksters_2020_05_19_1500.png
+    image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_pranksters_2020_05_19_thumb.png
+    image_title: Little Pranksters
+sketchbookThumbs:
+  - image_url: /assets/images/portfolio/sketchbook/2019_sk_inktober04_1500.jpeg
+    image_thumb: /assets/images/portfolio/sketchbook/thumb/2019_sk_inktober04_thumb.jpeg
+    image_title: Inktober - Freeze
+  - image_url: /assets/images/portfolio/sketchbook/sketchbook_sample03.jpg
+    image_thumb: /assets/images/portfolio/sketchbook/thumb/sketchbook_sample03_thumb.jpg
+    image_title: Sketchbook sample 3
+  - image_url: /assets/images/portfolio/sketchbook/sketchbook_sample01.jpg
+    image_thumb: /assets/images/portfolio/sketchbook/thumb/sketchbook_sample01_thumb.jpg
+    image_title: Sketchbook Sample 1
+  - image_url:  /assets/images/portfolio/sketchbook/sketchbook_sample04.jpg
+    image_thumb: /assets/images/portfolio/sketchbook/thumb/sketchbook_sample04_thumb.jpg
+    image_title: Sketchbook Sample 4
+fanartThumbs:
+  - image_url: /assets/images/portfolio/fanart/fanart_2022_influences_fullsize.jpg
+    image_thumb: /assets/images/portfolio/fanart/fanart_2022_influences_thumb.jpg
+    image_title: Influences
+  - image_url: /assets/images/portfolio/fanart/fanart_2023_calvinhobbes_fullsize.jpg
+    image_thumb: /assets/images/portfolio/fanart/fanart_2023_calvinhobbes_thumb.jpg
+    image_title: Calvin & Hobbes
+  - image_url: /assets/images/portfolio/fanart/2020_i_myNeighborTotoro@1500w.jpg
+    image_thumb: /assets/images/portfolio/fanart/thumb/2020_i_myNeighborTotoro@1500w_thumb.jpg
+    image_title: Totoro
+  - image_url: /assets/images/portfolio/fanart/fa-spirou-fantasio.jpg
+    image_thumb: /assets/images/portfolio/fanart/thumb/fa-spirou-fantasio_thumb.jpg
+    image_title: Spirou & Fantasio
 ---
 
 {% comment %}
-=======================================================================
+======================================================================
 Portfolio page: set source variable and conditions on Assign tag below
 =======================================================================
 
@@ -56,6 +111,99 @@ Use variable to retrieve latest post published
       </div>
 </div>
 <!-- /end carousel -->
+
+<!-- new portfolio sample grid -->
+
+
+<div id="portfolio-content" class="container">
+    <!-- Illustration -->
+    <div class="row my-2">
+        <div class="col">
+            <h3 class="headline-01"><span>Illustration</span></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col py-0"><span class="d-block text-center mb-3"><em>Select any image for expanded view</em></span></div>
+    </div>
+    <div class="row portfolio-item-content">
+        <div class="col-12 col-lg-10">
+            <ul>
+                {% for item in page.illustrationThumbs %}
+                <li><a class="lglink" href="{{item.image_url}}"><img src="{{item.image_thumb}}"
+                            alt="{{item.image_title}}" srcset=""></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 portfolio-item-seemore"><a href="/portfolio/illustration/"><span>See More <i class="fas fa-arrow-right"></i></span></a></div>
+    </div>
+
+    <!-- Character Design -->
+    <div class="row my-2">
+        <div class="col">
+            <h3 class="headline-02"><span>Character Design</span></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col py-0"><span class="d-block text-center mb-3"><em>Select any image for expanded view</em></span></div>
+    </div>
+    <div class="row portfolio-item-content">
+        <div class="col-12 col-lg-10">
+            <ul>
+                {% for item in page.characterdesignThumbs %}
+                <li><a class="lglink" href="{{item.image_url}}"><img src="{{item.image_thumb}}"
+                            alt="{{item.image_title}}" srcset=""></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 portfolio-item-seemore"><a href="/portfolio/characterdesign/" ><span>See More <i class="fas fa-arrow-right"></i></span></a></div>
+    </div>
+
+    <!-- Sketchbook -->
+    <div class="row my-2">
+        <div class="col">
+            <h3 class="headline-01"><span>Sketchbook</span></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col py-0"><span class="d-block text-center mb-3"><em>Select any image for expanded view</em></span></div>
+    </div>
+    <div class="row portfolio-item-content">
+        <div class="col-12 col-lg-10">
+            <ul>
+                {% for item in page.sketchbookThumbs %}
+                <li><a class="lglink" href="{{item.image_url}}"><img src="{{item.image_thumb}}"
+                            alt="{{item.image_title}}" srcset=""></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 portfolio-item-seemore"><a href="/portfolio/sketchbook/" ><span>See More <i class="fas fa-arrow-right"></i></span></a></div>
+    </div>
+
+    <!-- Fan Art -->
+    <div class="row my-2">
+        <div class="col">
+            <h3 class="headline-02"><span>Fan Art</span></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col py-0"><span class="d-block text-center mb-3"><em>Select any image for expanded view</em></span></div>
+    </div>
+    <div class="row portfolio-item-content">
+        <div class="col-12 col-lg-10">
+            <ul>
+                {% for item in page.fanartThumbs %}
+                <li><a class="lglink" href="{{item.image_url}}"><img src="{{item.image_thumb}}"
+                            alt="{{item.image_title}}" srcset=""></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 portfolio-item-seemore"><a href="/portfolio/fanart/" ><span>See More <i class="fas fa-arrow-right"></i></span></a></div>
+    </div>
+
+</div>
+
+
+
 <a name="portfoliolinks"></a>
 <!-- new portfolio container -->
 <div class="container my-3">
@@ -66,19 +214,6 @@ Use variable to retrieve latest post published
         Now using Jekyll posts for portfolio categories... let's go simpler this time
     {%- endcomment -%}
 
-    {% for page in pf %}
-    <div class="row portfolio-home-item mb-4">
-        <div class="col mx-0 px-0">
-            <a href="{{ page.url }}.html" class="px-2 py-4" title="{{ page.description }}" style="background-image: url('{{page.postlinkimage}}');">
-                <h3>
-                    {{ page.title }}
-                </h3>
-                <span>{{ page.blurb }}</span>
-            </a>
-            </li>
-        </div>
-    </div>
-    {% endfor %}
     <!-- comics link home page -->
     <div class="row portfolio-home-item mb-4">
         <div class="col mx-0 px-0">

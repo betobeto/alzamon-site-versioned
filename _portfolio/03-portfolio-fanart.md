@@ -1,11 +1,11 @@
 ---
 layout: portfolio
-title: Fan Art
+title: Fan Art, middle grade works illlustration portfolio by Alzamon - Alberto Gonzalez
 blurb: Because why not.
 # FB and Jekyll SEO Tag values
-description: Should fan art be in a portfolio or not? Some say yes, some say no. But there's no denying we all have influences. And here are some of mine.
+description: Select any image for expanded view
 postlinkimage: /assets/images/bg-portfolio-home-04.jpg
-hero_tag: fanart
+slug: fanart
 # End FB and Jekyll SEO Tag values
 categories: 
     - homepage
@@ -13,26 +13,40 @@ categories:
 pretty_category: Fan Art
 pretty_title: Fan Art
 sort_number: 2
-permalink: /portfolio/fan-art
+permalink: /portfolio/:slug
 images:
-    - image_url: /assets/images/portfolio/fanart/fa-influences-nowm.jpg
+    - image_url: /assets/images/portfolio/fanart/fanart_2022_influences_fullsize.jpg
+      image_thumb: /assets/images/portfolio/fanart/fanart_2022_influences_thumb.jpg
       image_title: Not all main influences of mine are here, but tried to include most of them. How many do you identify?
       image_class: fullwidth
     - image_url: /assets/images/portfolio/fanart/fa-spirou-fantasio.jpg
+      image_thumb: /assets/images/portfolio/fanart/thumb/fa-spirou-fantasio_thumb.jpg
       image_title: Spirou & Fantasio, after Franquin
     - image_url: /assets/images/portfolio/fanart/fa-elmicro.jpg
+      image_thumb: /assets/images/portfolio/fanart/thumb/fa-elmicro_thumb.jpg
       image_title: El Micro, by Ricardo Garc&iacute;a
-    - image_url: /assets/images/portfolio/fanart/2020_i_myNeighborTotoro@1500w.jpg
-      image_title: After Studio Ghibli's My Neighbor Totoro  
     - image_url: /assets/images/portfolio/fanart/2017_fa_navis_munuera@1500w.jpg
+      image_thumb: /assets/images/portfolio/fanart/thumb/2017_fa_navis_munuera@1500w_thumb.jpg
       image_title: Navis, by Jose Luis Munuera
     - image_url: /assets/images/portfolio/fanart/2018_fa_bouleBillRockwell@1500w.jpg
+      image_thumb: /assets/images/portfolio/fanart/thumb/2018_fa_bouleBillRockwell@1500w_thumb.jpg
       image_title: No Swimming, after Jean Roba / Norman Rockwell
+    - image_url: /assets/images/portfolio/fanart/fanart_2023_calvinhobbes_fullsize.jpg
+      image_thumb: /assets/images/portfolio/fanart/fanart_2023_calvinhobbes_thumb.jpg
+      image_title: Calvin & Hobbes after Bill Watterson
+    - image_url: /assets/images/portfolio/fanart/fanart_2023_crabgrass_fullsize.jpg
+      image_thumb: /assets/images/portfolio/fanart/fanart_2023_crabgrass_thumb.jpg
+      image_title: Crabgrass by Tahuid Bondia
+    - image_url: /assets/images/portfolio/fanart/2020_i_myNeighborTotoro@1500w.jpg
+      image_thumb: /assets/images/portfolio/fanart/thumb/2020_i_myNeighborTotoro@1500w_thumb.jpg
+      image_title: After Studio Ghibli's My Neighbor Totoro  
+      # image_class: fullwidth
     - image_url: /assets/images/portfolio/fanart/2019_fa_laRibambelle@1500w.png
+      image_thumb: /assets/images/portfolio/fanart/thumb/2019_fa_laRibambelle@1500w_thumb.png
       image_title: La Ribambelle, after Jean Roba
-    - image_url: /assets/images/portfolio/fanart/2019_fa_calvinAndHobbes@1500w.jpg
-      image_title: Calvin & Hobbes, after Bill Watterson 
     - image_url: /assets/images/portfolio/fanart/2019_fa_phineasAndFerb@1500w.jpg
-      image_title: Disney XD's Phineas & Ferb   
+      image_thumb: /assets/images/portfolio/fanart/thumb/2019_fa_phineasAndFerb@1500w_thumb.jpg
+      image_title: Disney XD's Phineas & Ferb
+      # image_class: fullwidth   
 
 ---

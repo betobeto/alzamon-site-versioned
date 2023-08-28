@@ -47,19 +47,17 @@ body {
     z-index: 1;
     // carousel - desktop & above
     @include respond-above(md){
-        // height: 400px;
-        height: 75vh;
+        height: 400px;
     }
 
     // carousel - tablets
     @include respond-between(sm, md){
-        // height: 300px;
-        height: 83vh;
+        height: 350px;
     }
 
     // carousel - mobile
     @include respond-below(xs){
-        height: 90vh;
+        height: 500px;
     }
 
     .carousel{
@@ -92,7 +90,6 @@ body {
             }
         }
     }
-
     .text-inside-container{
         position: absolute;
         left: 0;
@@ -101,7 +98,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         margin-top: -10%;
-        width: 60vw;
+        width: 75vw;
         padding: 1rem;
         text-align: center;
         background-color: rgba(48, 63, 68, 0.8);
@@ -139,14 +136,25 @@ body {
             }
         //tanblets
         @include respond-between(sm, md){
-            width: 75vw;
-            margin-top: -18%;
+            width: 80vw;
+            margin-top: -130px;
         }
         @include respond-below(xs){
             width: 80vw;
-            margin-top: -40%;
+            margin-top: -200px;
         }
 
+    }
+}
+
+// Line headers
+.headline {
+    &-01 {
+        @include headerLine($headline-color-01, $body-bg-color);
+    }
+
+    &-02 {
+        @include headerLine($headline-color-02, $body-bg-color);
     }
 }
 

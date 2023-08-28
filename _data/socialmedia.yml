@@ -1,37 +1,42 @@
 # Alzamon Social Media links
 
 - text: Instagram
-  textDesc: Alzamon on Instagram (@alzamonart)
+  textDesc: Alzamon on Instagram
   url: https://www.instagram.com/alzamonart
   icon: fa-instagram
-  badge: /assets/images/azm-badge-instagram.png
 
-- text: Mastodon
-  textDesc: Alzamon on Mastodon.art
-  url: https://mastodon.art/@alzamonart
-  icon: fa-mastodon
+- text: Threads
+  textDesc: Alzamon on Threads
+  url: https://www.threads.net/alzamonart
+  icon: fa-threads
+
+- text: Pinterest
+  textDesc: Alzamon on Pinterest
+  url: https://pin.it/29cJOYx
+  icon: fa-pinterest-p
   badge: /assets/images/azm-badge-deviantart.png
 
 - text: LinkedIn
   textDesc: Alzamon on LinkedIn
   url: https://www.linkedin.com/in/betobeto
   icon: fa-linkedin
-  badge: /assets/images/azm-badge-deviantart.png
 
 - text: Behance
   textDesc: Alzamon on Behance
   url: https://www.behance.net/alzamon
   icon: fa-behance
-  badge: /assets/images/azm-badge-behance.png
+
+# - text: Mastodon
+#   textDesc: Alzamon on Mastodon.art
+#   url: https://mastodon.art/@alzamonart
+#   icon: fa-mastodon
 
 #- text: Twitter
 #  textDesc: Alzamon on Twitter (@alzamonart)
 #  url: https://www.twitter.com/alzamonart
 #  icon: fa-twitter
-#  badge: /assets/images/azm-badge-twitter.png
 
 #- text: Deviantart
 #  textDesc: Alzamon on DeviantArt
 #  url: https://www.deviantart.com/alzamonart
 #  icon: fa-deviantart
-#  badge: /assets/images/azm-badge-deviantart.png

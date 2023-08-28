@@ -17,6 +17,9 @@
     $navbar-bg-color: $body-bg-color;
     $navbar-link-color: $link-color;
     $navbar-link-hover-color: darken($navbar-link-color,30%);
+// headlines
+    $headline-color-01: rgb(233,120,37);
+    $headline-color-02: rgb(26, 125, 143);
 // header text shadow
     $header-shadow-color: rgb(15, 22, 19);
     $header-shadow-alt-color:rgb(41, 21, 9);
@@ -46,28 +49,11 @@
     $azm-logo: url('/assets/images/alzamon_logo_light_v3.svg');
 // footer
     $footer-text-color: rgb(255, 255, 255);
-
-
 // lightgallery
     $lg-backdrop-color: rgba(85, 75, 65, 0.97);
     $lg-toolbar-color: rgba(51, 90, 96, 0.8);
 
-    // $switch-on-color: rgb(221, 24, 100);
-    // $switch-off-color:rgb(139, 88, 88);
-    // $toggler-color: rgb(173, 24, 86);
-
-
-
-//Bootstrap: override defaults
-// ===================================
-// $body-default-bg: rgb(27, 12, 17);
-// $body-light-bg: rgb(255, 255, 255);
-// $body-default-color: rgb(255, 255, 255);
-// $body-light-color: rgb(255, 255, 255);
-// $theme-colors: ("primary": rgb(75, 68, 67),
-//     "secondary": rgb(13, 57, 34),
-//     "danger": rgb(216, 106, 124));
-
+    
 // custom color variables
 // ===================================
 
@@ -81,6 +67,7 @@ $btnDarkColor: darken($link-color,40%);
 $btnDarkColorHover: lighten($link-color,20%);
 $jtGradientStartColor:rgba(41, 24, 32, 0.85);
 $jtGradientEndColor: rgba(14, 3, 10, 1);
+
 
 // Navbar Variables
 //====================================
@@ -111,3 +98,4 @@ $portfolioItemBgColor: rgb(75, 43, 53);
 $portfolioItemLinkColor: $link-color;
 $portfolioHeaderColor: $link-color;
 $portfolioHeaderCategoryColor: rgba(189, 189, 189, 0.9);
+$portfolioThumbShadowColor: rgb(74, 109, 119);

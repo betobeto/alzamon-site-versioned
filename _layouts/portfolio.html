@@ -12,11 +12,11 @@ layout: default
 <!-- 11/10/2022 - Changing Portfolio to simpler posts structure now -->
 
 <!-- page hero -->
-<div class="jumbotron-fluid page-hero page-hero-{{page.hero_tag}}">
+<div class="jumbotron-fluid page-hero page-hero-{{page.slug}}">
     <div class="container">
         <div class="row">
             <div class="col ml-lg-5">
-                <h1>{{page.title}}</h1>
+                <h1>{{page.pretty_title}}</h1>
                 <p class="portfolio-category-description">{{page.blurb}}</p>
             </div>
         </div>
@@ -25,7 +25,7 @@ layout: default
 <!-- end page hero -->
 
 
-<div id="portfolio-item" class="container">
+<div id="portfolio-content" class="container">
 
     <!-- previous, next -->
 <div class="row">
@@ -44,65 +44,27 @@ layout: default
 
     <div class="row portfolio-item-content my-4">
         <div class="col">
-            <ul>
+            <!-- Isotope tag -->
+            <div class="portfolio-items">
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
                 {% for image in page.images %}
-                    <li {% if image.image_class %} class="fullwidth" {% endif %}>
-                        <p class="mt-4">{{image.image_title}}</p>
-                        <img class="lozad" data-placeholder-background="#ee9757" data-src="{{image.image_url}}" alt="{{image.image_title}}"></img>
-                    
-                    </li>
+                        <!-- {% if image.image_class %} class="fullwidth" {% endif %} -->
+                        <!-- <p class="mt-4">{{image.image_title}}</p> -->
+                        <!-- <img class="lozad" data-placeholder-background="#ee9757" data-src="{{image.image_url}}" alt="{{image.image_title}}"></img> -->
+                        <a class="lglink {% if image.image_class %}lglink--width2{% endif %}" href="{{image.image_url}}">
+                            <img src="{{image.image_thumb}}" alt="{{image.image_title}}">
+                        </a>
                 {% endfor %}
-            </ul>
+                </div>
 
         </div>
     </div>
-
-
-<!-- Start additional images -->
-<!-- to enable section remove the comment/endcomment Liquid tags around the code -->
-
-{% comment %}
-{% if page.extraimages %}
-<div class="row portfolio-item-extras">
-    <div class="col">
-        <h2>Related images</h2>
-    </div>
+    {% if page.categories contains "sketchbook"%}
+<div class="row">
+    <div class="col text-center"><p>More sketches, updated continously, can be found on my <a href="https://go.alzamon.com/" target="_blank">social media profiles.</a></p></div>
 </div>
-<div class="row d-flex my-4">
-    <!-- adjust col-md value according to number of present extraimages -->
-    {% for item in page.extraimages %}
-        <div class="col{% if forloop.length == 1 %}-md-6 offset-md-3 d-flex justify-content-center{% elsif forloop.length == 2 %}-md-4 d-flex justify-content-center{%elsif forloop.length == 3%}-md-4 d-flex justify-content-center{%elsif forloop.length > 3%}-md-3 d-flex justify-content-center{% endif %}">
-            <img src="{{item}}" alt="Image">
-        </div>     
-    {% endfor %}
-</div>
-{% include row-separator.html %}
-{% endif %}
-{% endcomment %}
-
-<!-- /end additional images -->
-
-<!-- previous-next former placeholder -->
-
-<!-- Links to other categories -->
-
-{%- comment -%}
-    <div class="row my-4">
-        <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <p><a href="{{site.url}}/illustration">Illustration</a></p>
-        </div>
-        <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <p><a href="{{site.url}}/characterdesign">Character Design</a></p>
-        </div>
-        <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <p><a href="{{site.url}}/comics">Comics</a></p>
-        </div>
-        <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <p><a href="{{site.url}}/sketchbook">Sketchbook</a></p>
-        </div>
-    </div>
-{%- endcomment -%}
-
+    {% endif%}
 
 </div>
 

@@ -8,7 +8,7 @@ function decode(a) {
   })
 }; 
 function openMailer(element) {
-var y = decode("znvygb:orgb@nymnzba.pbz?fhowrpg=Nymnzba: rznvy vadhver");
+var y = decode("znvygb:orgb@nymnzba.pbz?fhowrpg=[sebz nymnzba.neg] Rznvy vadhver");
 element.setAttribute("href", y);
 element.setAttribute("onclick", "");
 element.setAttribute("target", "_blank");

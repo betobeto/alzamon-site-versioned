@@ -5,7 +5,7 @@
 
     {% if page.previous.url %}
     <!-- Previous portfolio page -->
-        <a href="{{page.previous.url}}.html" class="portfolio-previous" title="{{page.previous.pretty_title}}">
+        <a href="{{page.previous.url}}" class="portfolio-previous" title="{{page.previous.pretty_title}}">
         <i class="fas fa-chevron-left"></i>
             <img src="/assets/images/icon-portfolio-previous.png" alt="{{page.previous.title}}">
                 <span>{{page.previous.pretty_title}}</span>
@@ -14,7 +14,7 @@
 
     <!-- next -->
     {% if page.next.url %}
-    <a href="{{page.next.url}}.html" class="portfolio-next" title="{{page.next.pretty_title}}">
+    <a href="{{page.next.url}}" class="portfolio-next" title="{{page.next.pretty_title}}">
         <span>{{page.next.pretty_title}}</span>
     </span>   
         <img src="/assets/images/icon-portfolio-next.png" alt="{{page.next.title}}">

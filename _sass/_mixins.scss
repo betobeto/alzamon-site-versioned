@@ -74,6 +74,10 @@
     }
 }
 
+@mixin portfolioThumbShadow{
+    box-shadow: 4px 5px 8px 0px $portfolioThumbShadowColor;
+}
+
 // overlay for portfolio masonry hovers
 @mixin portfolioMasonryOverlay{
     display: flex;
@@ -161,6 +165,7 @@
     }
     span{
         background: $headerBgColor;
+        color: $headerLineColor;
         padding: 0 20px;
         position: relative;
         z-index: 3;
@@ -176,9 +181,9 @@
     background-position: 100%;
     display: flex;
     align-items: center;
-    @include respond-above(md){
-        min-height: 250px;
-    }
+    // @include respond-above(md){
+    //     min-height: 250px;
+    // }
     @include respond-between(sm, md){
         min-height: 180px;
     }

@@ -97,26 +97,6 @@ $portfolioPagePrevNextIndex: 2;
             background-size: cover;
         }
     }
-
-    // &-comics{
-    //     @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-02-comics.png');
-    //     @include respond-between(sm, md){
-    //         background-position-x: -160px;
-    //     }
-    //     @include respond-below(xs){
-    //         background-position-x: -1px;
-    //     } 
-    // }
-    // &-services{
-    //     @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-03-services.png');
-    //     @include respond-between(sm, md){
-    //         background-position-x: -72px;
-    //     }
-    //     @include respond-below(xs){
-    //         background-position-x: -16px;
-    //     }         
-    // }
-
     &-blog{
         @include pageHero($body-alt-color,$body-bg-color,'/assets/images/subheaders/shbg-04-blog.png'); 
         @include respond-below(xs){
@@ -139,7 +119,6 @@ $portfolioPagePrevNextIndex: 2;
     }
 
 }
-
 
 // Set Portfolio Masonry container styles
 // =======================================
@@ -222,71 +201,56 @@ $portfolioPagePrevNextIndex: 2;
         }
     }
 
-
-    &-masonry{
-        &-item{
-            background: $portfolio-masonry-bg-color;
-            transition: background-color .45s ease-in;
-        p {
-            margin: 0.4rem 0 0 0;
-            color: $portfolio-masonry-title-color;
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-size: 0.8rem;
-            text-align: center;
-
-            strong {
-                font-family: 'Open Sans Condensed', sans-serif;
-                color: $portfolioItemLinkColor;
-                letter-spacing: -0.03rem;
+    //new Isotope targets
+    &-items {
+        .grid-sizer,
+        .lglink {
+            // CSS hack for Isotope masonry script
+            @include respond-above(md) {
+                width: 30%;
+            }
+            @include respond-below(md) {
+                width: 47%;
             }
         }
-
-            // portfolio masonry item breakpoints
-
-            @include respond-above(lg){
-            width:23.5%;
-            margin-bottom:2%;
-            }
-            @include respond-between(md,lg){
-            //ipad Pro +
-            width:31%;
-            margin-bottom: 3%;
-            }
-            @include respond-between(sm,md){
-            //ipad
-                width:46.5%;
-                margin-bottom: 6%;
-            }
-            @include respond-below(sm){
-                margin-bottom:16px;
-            }
-        }
-        .grid-sizer{ // CSS hack for Isotope masonry script
-            @include respond-above(lg){
-                width:23.5%;
-            }
-            @include respond-between(md,lg){
-                width: 31%;
-            }
-            @include respond-between(sm,md){
-                width:48%;
-            }
+        .gutter-sizer {
+            //CSS hack for Isotope vertical spacing
+            width: 4%;
         }
 
-        .gutter-sizer{ //CSS hack for Isotope vertical spacing
-            @include respond-above(lg){
-                width:1.95%;
+        .lglink {
+            // each portfolio item
+            display: inline-block;
+            img{
+                @include portfolioThumbShadow;
             }
-            @include respond-between(md,lg){
-                width: 2.9%;
+            @include respond-above(md) {
+                padding-bottom: 24px;
             }
-            @include respond-between(sm,md){
-                width:3.5%;
+            @include respond-between(sm, md) {
+                padding-bottom: 18px;
+            }
+            @include respond-below(sm) {
+                padding-bottom: 14px;
+            }
+            &--width2 {
+                @include respond-above(md) {
+                    width: 64%;
+                    img{
+                        // 2 columns for landscape pictures
+                        width: 100%;
+                    }
+                }
+                @include respond-below(md) {
+                    width: 99%;
+                    img{
+                        width: inherit;
+                    }
+                }
             }
         }
     }
 }
-
 
 // Portfolio Item Page Styles
 // ===================================
@@ -298,48 +262,46 @@ $portfolioPagePrevNextIndex: 2;
             color:$portfolio-series-category-color;
         }
     }
-
-    // Portfolio item - Main Image
-    img{
-        @include masonryBoxShadow;
-        position: relative;
-        z-index: $portfolioPageImgIndex;
-        width: clamp(600px, 96%, 1200px);
-    }
 }
 
 // Portfolio Item Content (Markdown)
 // ===================================
 .portfolio-item {
-    &-previousNext{
+    &-previousNext {
         display: flex;
         width: 100%;
         justify-content: space-between;
         border-bottom: $body-alt-color 4px solid;
         padding-bottom: 0.7rem;
-        a{  
+
+        a {
             display: flex;
             align-items: center;
             max-height: 50px;
-            img{
+
+            img {
                 width: 48px !important;
                 height: 48px !important;
                 box-shadow: none !important;
             }
-            span{
+
+            span {
                 font-size: smaller;
             }
         }
     }
-    &-blurb{
-        p{
+
+    &-blurb {
+        p {
             font-size: 1.2rem;
+
             // letter-spacing: normal;  
-            @include respond-below(xs){
-            font-size: 0.9rem;
+            @include respond-below(xs) {
+                font-size: 0.9rem;
             }
         }
     }
+
     &-content,
     &-extras {
         h2 {
@@ -358,60 +320,78 @@ $portfolioPagePrevNextIndex: 2;
 
         // unordered list
         // Portfolio Responsive grid
-        ul{
+
+        ul {
             list-style: none;
             display: grid;
             padding: 0;
             gap: 1.2rem;
             grid-template-columns: repeat(auto-fit, 26rem);
             grid-auto-flow: dense;
-            @include respond-above(lg){
-                grid-template-columns: 1fr 1fr;
+
+            @include respond-above(lg) {
+                grid-template-columns: repeat(4, 1fr);
                 // grid-template-areas: "landscape landscape" ". .";
             }
-            @include respond-below(lg){
+
+            @include respond-between(sm, lg) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include respond-below(xs) {
                 grid-template-columns: 1fr;
             }
-            li{
+
+            li {
+                place-self: center;
+
                 // https://css-tricks.com/expandable-sections-within-a-css-grid/
-                &.fullwidth{
+                &.fullwidth {
                     grid-column: 1 / -1;
-                    img{
+
+                    img {
                         margin: 0 auto;
                     }
                 }
             }
         }
+    }
 
-
-        // ordered list (grid)
-        ol {
-            // for Markdown images
-            // border: fuchsia 1px dotted;
-            margin: 0;
-            padding: 0;
+    //home "see more" link
+    &-seemore {
+        a {
             display: grid;
-            grid-template-columns: 32% 32% 32%;
-            // grid-row: 100vw;
-            grid-row-gap: 1rem;
-            justify-content: space-between;
+            width: 100%;
+            border-width: 6px;
+            border-style: solid;
+            border-color: orange;
+            border-radius: 18px;
 
-            li {
-                list-style: none inside;
+            span {
                 place-self: center;
             }
-
-            @include respond-between(sm, md) {
-                grid-template-columns: 48% 48%;
-                grid-row-gap: 2rem;
+            &:hover{
+                text-decoration: none;
             }
 
-            @include respond-below(sm) {
-                grid-template-columns: 100%;
-                grid-row-gap: 1.8rem;
+            @include respond-above(md) {
+                height: 80px;
+            }
+            @include respond-between(sm, md){
+                border-radius: 12px;
+                height: 60px;
+                margin: 1rem 0;
+            }
+            @include respond-below(xs){
+                border-radius: 8px;
+                height: 50px;
+                margin: 0.8rem 0;
             }
         }
-
+        @include respond-above(md){
+        display: flex;
+        place-items: center;
+        }
     }
 }
 

@@ -4,11 +4,11 @@
 
     document.addEventListener('scroll', function() {
         const icon = document.getElementById("nav-item-homeicon");
-        if(window.pageYOffset > 240){
+        if(window.scrollY > 240){
             icon.classList.add("is-visible");
             icon.classList.remove("is-hidden");
         }
-        if(window.pageYOffset < 240){
+        if(window.scrollY < 240){
             icon.classList.remove("is-visible");
             icon.classList.add("is-hidden");
         }
@@ -20,11 +20,11 @@ $(document).ready(function (){
     // ======================================
     // LIGHTGALLERY Portfolio
 
-    lightGallery(document.getElementById('portfolio-home'),{
+    lightGallery(document.getElementById('portfolio-content'),{
         thumbnail:true,
         download:false,
         enableSwipe:true,
-        selector: "a",
+        selector: ".lglink",
         plugins: [lgThumbnail,lgFullscreen,lgZoom,lgVideo,lgShare],
         youTubePlayerParams:{
         autoplay: 1,
@@ -35,7 +35,8 @@ $(document).ready(function (){
         licenseKey: '7A527A75-E32740D5-95C2C40C-E489ECA4'
     });
 
-    // LIGHTGALLERY  comics
+    // LIGHTGALLERY comics
+
     lightGallery(document.getElementById('portfolio-comics'),{
         thumbnail:true,
         download:false,
@@ -59,14 +60,13 @@ $(document).ready(function (){
     // });
 
 
-    // ISOTOPE 
-    // set var + enable
-    const $pMasonry = $('.portfolio-masonry').imagesLoaded(
+    // Enable Isotope 
+
+    // set target
+    const $pMasonry = $('.portfolio-items').imagesLoaded(
         function(){
             $pMasonry.isotope({
-                // set default filter to a given category instead of default "all"
-                //filter: '.pmi-illustration',
-                itemSelector: '.portfolio-masonry-item',
+                itemSelector: '.lglink',
                 percentPosition:true,
                 masonry: {
                     // use outer width of grid-sizer for columnWidth and gutter-sizer for vertical spacing
@@ -74,18 +74,20 @@ $(document).ready(function (){
                         gutter: '.gutter-sizer'
             }
         });
+
          // enable data filtering - top menu: selects item categories (portfolio, comics, sketchbook)
-        $('.portfolio-category-selector a').click(function (e) { 
-            let filterValue = $(this).attr('data-filter');
-            $pMasonry.isotope({ filter: filterValue });
-            //console.log (filterValue);
-            $(this).addClass('selector-active');
-            e.preventDefault();
-        });
-        $('.portfolio-category-selector a').blur(function (e) { 
-            $(this).removeClass('selector-active');
-            e.preventDefault();
-        });
+
+        // $('.portfolio-category-selector a').click(function (e) { 
+        //     let filterValue = $(this).attr('data-filter');
+        //     $pMasonry.isotope({ filter: filterValue });
+        //     //console.log (filterValue);
+        //     $(this).addClass('selector-active');
+        //     e.preventDefault();
+        // });
+        // $('.portfolio-category-selector a').blur(function (e) { 
+        //     $(this).removeClass('selector-active');
+        //     e.preventDefault();
+        // });
     });
 
 // end

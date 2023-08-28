@@ -12,6 +12,16 @@
     border: limegreen 1px solid;
 }
 
+// all purpose separator line
+.lineseparator{
+    border-color: $headline-color-01;
+    border-width: 2px 0 0 0;
+    border-style: dotted;
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+}
+
 // custom container styles
 .container-fluid{
     &-topborder{
