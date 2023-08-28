@@ -3,5 +3,9 @@ assets_NOEXPORT
 _site/
 .sass-cache/
 .jekyll-cache/
+<<<<<<< HEAD
 .jekyll-metadata
 assets/.DS_Store
+=======
+.jekyll-metadata
+>>>>>>> origin/master

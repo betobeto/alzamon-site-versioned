@@ -11,7 +11,11 @@
     </div> -->
     <!-- End of controller row -->
 
+<<<<<<< HEAD
 <div id="header-top" class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center">
+=======
+<div class="jumbotron jumbotron-bg jumbotron-fluid d-flex justify-content-center">
+>>>>>>> origin/master
         <a href="/"><h1 class="display-4"><span>Alzamon.com</span></h1></a>
 </div>
 
@@ -29,6 +33,7 @@
     <div id="azmNav" class="collapse navbar-collapse justify-content-between">
         <!-- start navbar list -->
         <ul class="navbar-nav mr-auto">
+<<<<<<< HEAD
             <!-- home icon -->
             <!-- <li id="nav-item-homeicon" class="nav-item nav-item-homeicon">
                 <a href="/" class="nav-link"><img src="/assets/images/azm-home-icon-placeholder.png" alt="Alzamon Home" srcset="">
@@ -57,6 +62,18 @@
             {% endif %}
             <!-- end navbar loop -->
 
+=======
+            <!-- nav loop -->
+    {% for nav in site.data.navigation %}
+        {% if nav.url == page.url %}
+    <li class="nav-item active"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
+        {% else %}
+    <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>   
+        {% endif %}
+    {% endfor %}
+    <!-- end navbar loop -->
+        
+>>>>>>> origin/master
             <!-- social media links - tablet and above only -->
             {% for sm in site.data.socialmedia %}
                 <li class="nav-item nav-item-social d-none d-sm-block">
