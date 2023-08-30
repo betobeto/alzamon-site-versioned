@@ -29,8 +29,8 @@ images:
     - image_url: /assets/images/portfolio/characterdesign/cd_mds_shirley_2022_11_13_1500.jpg
       image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_mds_shirley_2022_11_13_thumb.jpg
       image_title: Shirley - Original Character Model Sheet    
-    - image_url: /assets/images/portfolio/characterdesign/cd_petitprince_2020_05_19_1500.jpg
-      image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_petitprince_2020_05_19_thumb.jpg
+    - image_url: /assets/images/portfolio/characterdesign/chardesign_2017_petitprince_fullsize.jpg
+      image_thumb: /assets/images/portfolio/characterdesign/chardesign_2017_petitprince_thumb.jpg
       image_title: Petit Prince
     - image_url: /assets/images/portfolio/characterdesign/cd_aniellisteningto2017_05_02_1500.jpg
       image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_aniellisteningto2017_05_02_thumb.jpg
@@ -38,10 +38,10 @@ images:
     - image_url: /assets/images/portfolio/characterdesign/cd_pranksters_2020_05_19_1500.png
       image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_pranksters_2020_05_19_thumb.png
       image_title: Little Pransters
-    - image_url: /assets/images/portfolio/characterdesign/cd_captain_2020_03_02_1500.jpg
-      image_thumb: /assets/images/portfolio/characterdesign/thumb/cd_captain_2020_03_02_thumb.jpg
+    - image_url: /assets/images/portfolio/characterdesign/chardesign_2019_captainclaws_fullsize.jpg
+      image_thumb: /assets/images/portfolio/characterdesign/chardesign_2019_captainclaws_thumb.jpg
       image_title: Captain Claws
-      image_class: fullwidth
+    # image_class: fullwidth
     # - image_url: /
     #   image_thumb: /
     #   image_title:    

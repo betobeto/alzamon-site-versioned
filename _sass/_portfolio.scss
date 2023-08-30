@@ -357,21 +357,31 @@ $portfolioPagePrevNextIndex: 2;
         }
     }
 
+    &-content{
+        .lglink{
+            img{
+                @include portfolioThumbShadow;
+            }
+        }
+    }
+
     //home "see more" link
     &-seemore {
         a {
             display: grid;
             width: 100%;
-            border-width: 6px;
+            border-width: 3px;
             border-style: solid;
-            border-color: orange;
+            border-color: $headline-color-01;
             border-radius: 18px;
+            background-color: lighten($link-hover-color, 40%);
 
             span {
                 place-self: center;
             }
             &:hover{
                 text-decoration: none;
+                border-color: $headline-color-02;
             }
 
             @include respond-above(md) {
