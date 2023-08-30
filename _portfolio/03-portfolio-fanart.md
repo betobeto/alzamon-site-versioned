@@ -13,7 +13,7 @@ categories:
 pretty_category: Fan Art
 pretty_title: Fan Art
 sort_number: 2
-permalink: /portfolio/:slug
+permalink: /portfolio/:slug/
 images:
     - image_url: /assets/images/portfolio/fanart/fanart_2022_influences_fullsize.jpg
       image_thumb: /assets/images/portfolio/fanart/fanart_2022_influences_thumb.jpg

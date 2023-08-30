@@ -12,7 +12,7 @@ categories:
 pretty_category: Sketchbook
 pretty_title: Sketchbook
 sort_number: 2
-permalink: /portfolio/:slug
+permalink: /portfolio/:slug/
 images:
     - image_url: /assets/images/portfolio/sketchbook/sketchbook_sample04.jpg
       image_thumb: /assets/images/portfolio/sketchbook/thumb/sketchbook_sample04_thumb.jpg
