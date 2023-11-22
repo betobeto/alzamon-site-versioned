@@ -31,7 +31,7 @@ images:
     #   image_class: width2
     - image_url: /assets/images/portfolio/illustration/illustration_2023_schoolprank_fullsize.jpg
       image_thumb: /assets/images/portfolio/illustration/illustration_2023_schoolprank_thumb.jpg
-      image_title: School Prankster
+      image_title: School Pranksters
     - image_url: /assets/images/portfolio/illustration/illustration_2023_summerfun_fullsize.jpg
       image_thumb: /assets/images/portfolio/illustration/illustration_2023_summerfun_thumb.png
       image_title: Summer Fun
