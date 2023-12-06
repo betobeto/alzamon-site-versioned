@@ -15,10 +15,14 @@ pretty_title: Illustration
 sort_number: 0
 permalink: /portfolio/:slug/
 images:
+    - image_url: /assets/images/portfolio/illustration/Illustration_2023_noschool_fullsize.jpg
+      image_thumb: /assets/images/portfolio/illustration/illustration_2023_noschool_fullsize.jpg
+      image_title: No More School! (2023 rework of 2012 art)
+      image_class: width2
     - image_url: /assets/images/portfolio/illustration/Illustration_2023_rainforest_fullsize.jpg
       image_thumb: /assets/images/portfolio/illustration/illustration_2023_rainforest_thumb.jpg
       image_title: Rainforest Guardians
-      image_class: width2
+      # image_class: width2
     - image_url: /assets/images/portfolio/illustration/illustration_2014_smallworld_fullsize.jpg
       image_thumb: /assets/images/portfolio/illustration/illustration_2014_smallworld_thumb.jpg
       image_title: Small World
@@ -38,9 +42,6 @@ images:
     - image_url: /assets/images/portfolio/illustration/illustration_2019_idWorkshop01_fullsize.jpg
       image_thumb: /assets/images/portfolio/illustration/illustration_2019_idWorkshop01_thumb.jpg
       image_title: Slippery Slope (The Illustration Department Workshop course)
-    - image_url: /assets/images/portfolio/illustration/Illustration_2023_noschool_fullsize.jpg
-      image_thumb: /assets/images/portfolio/illustration/illustration_2023_noschool_thumb.jpg
-      image_title: No More School! (2023 rework of 2012 art)
     - image_url: /assets/images/portfolio/illustration/illustration_2019_kidlitclimate_fullsize.jpg
       image_thumb: /assets/images/portfolio/illustration/illustration_2019_kidlitclimate_thumb.jpg
       image_title: Illustration for Kidlit4Climate event

@@ -43,16 +43,19 @@ body {
 #azm-home-carousel{
     background-color: $carousel-bg-color;
     color: $carousel-text-color;
-    position: relative;
-    z-index: 1;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     // carousel - desktop & above
     @include respond-above(md){
-        height: 400px;
+        height: 650px;
     }
 
     // carousel - tablets
     @include respond-between(sm, md){
-        height: 350px;
+        height: 400px;
     }
 
     // carousel - mobile
@@ -71,19 +74,22 @@ body {
             background-repeat: no-repeat;
             background-position: center;
             &:nth-of-type(1){
-                background-image: url('/assets/images/carousel/ncr-01.jpg');
+                background-image: url('/assets/images/carousel/carousel-2024-01.jpg');
             }
             &:nth-of-type(2){
-                background-image: url('/assets/images/carousel/ncr-02.jpg');
+                background-image: url('/assets/images/carousel/carousel-2024-02.jpg');
             }
             &:nth-of-type(3){
-                background-image: url('/assets/images/carousel/ncr-03.jpg');
+                background-image: url('/assets/images/carousel/carousel-2024-03.jpg');
             }
             &:nth-of-type(4){
-                background-image: url('/assets/images/carousel/ncr-04.jpg');
+                background-image: url('/assets/images/carousel/carousel-2024-04.jpg');
             }
             &:nth-of-type(5){
-                background-image: url('/assets/images/carousel/ncr-05.jpg');
+                background-image: url('/assets/images/carousel/carousel-2024-05.jpg');
+            }
+            &:nth-of-type(6){
+                background-image: url('/assets/images/carousel/carousel-2024-06.jpg');
             }
             @include respond-below(xs){
                 background-position: 70%;
@@ -94,11 +100,8 @@ body {
         position: absolute;
         left: 0;
         right: 0;
-        top: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: -10%;
-        width: 75vw;
+        margin: auto;
+        width: 86vw;
         padding: 1rem;
         text-align: center;
         background-color: rgba(48, 63, 68, 0.8);
@@ -111,8 +114,8 @@ body {
                     @include respond-between(sm, md){
                         font-size: 2.5rem;
                     }
-                    @include respond-above(sm){
-                        width: 70%;
+                    @include respond-below(xs){
+                        font-size: 2.2rem;
                     }
             }
             p{
@@ -125,23 +128,25 @@ body {
             a{
                 text-decoration: none;
                 &:link{
-                    color: $body-alt-color;
+                    color: lighten($body-alt-color, 10%);
                 }
                 &:hover{
-                    color: $link-hover-color !important;
+                    color: $link-color !important;
+                    text-decoration: underline;
                 }
                 &:visited{
-                    color:lighten($link-visited-color,5%);
+                    color: $link-visited-color;
                 }
             }
-        //tanblets
+        //tablets
+        @include respond-above(md){
+            // top: 32%;
+        }
         @include respond-between(sm, md){
             width: 80vw;
-            margin-top: -130px;
         }
         @include respond-below(xs){
             width: 80vw;
-            margin-top: -200px;
         }
 
     }
