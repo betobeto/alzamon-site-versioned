@@ -1,51 +1,20 @@
-<!-- Buttondown newsletter integration -->
+<!-- newsletter integration -->
 
 <div id="newsletter-signup" class="container py-3">
     <div class="row">
         <div class="col newsletter-form-header">
-            <h3><span>Newsletter / Boletín</span></h3>
+            <h3><span>Newsletter</span></h3>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-6 d-flex justify-content-center"><img class="newsletter-graphic" src="/assets/images/azm-newsletter-header.png" alt="Newsletter Header"></img></div>
-        <div class="col-md-6">
-            <p>Keep in touch with what I'm doing and thinking by subscribing to my bilingual <em>(English/Español)</em> <strong>Life's A Draw | La Vida en Dibujos</strong> monthly newsletter. What are you waiting for?</p>
-
-            <!-- newsletter form - buttondown -->
-
-            <form action="https://buttondown.email/api/emails/embed-subscribe/alzamonart" method="post" target="popupwindow"
-            onsubmit="window.open('https://buttondown.email/alzamonart', 'popupwindow')"
-            class="embeddable-buttondown-form">
-            <!-- <div class="row">
-                <div class="col col-lg-6 mb-2 d-flex flex-column">
-                    <label for="first-name" class="sr-only"><span>Name</span></label>
-                        <input id="first-name" type="text" name="metadata__first-name" required placeholder="Your name" />    
-                </div>
-            </div> -->
-
-            <div class="row">
-                <div class="col col-md-6 d-flex flex-column mb-3 mb-sm-0">
-                    <label for="bd-email" class="sr-only">Enter your email:</label>
-                    <input type="email" name="email" id="bd-email" placeholder="your_email@adress.com" />
-                    
-                    </div>
-                    <div class="col col-md-6 col-submit">
-                    <input type="submit" value="Subscribe Now" />
-					<input type="hidden" name="embed" value="1" />
-                    <input type="hidden" name="tag" value="from_website" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <p class="smaller">
-                        <em>This newsletter service is powered by the nice folks at <a href="https://buttondown.email"
-                                target="_blank">Buttondown</a></em>
-                    </p>
-                </div>
-            </div>
-            </form>
+        <div class="col-md-4 d-flex flex-column justify-content-center">
+            <p class="text-center">Subscribe for free below. Easy peasy.</p>
+                <!-- newsletter form - substack -->
+                <iframe src="https://alzamon.substack.com/embed" width="480" height="320" style="background:white;" frameborder="0" scrolling="no"></iframe>
         </div>
+        <div class="col-md-8 d-flex justify-content-center"><img class="newsletter-graphic" src="/assets/images/azm-newsletter-header.png" alt="Newsletter Header"></img></div>
+
     </div>
 
 </div>

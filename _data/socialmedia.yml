@@ -10,11 +10,17 @@
   url: https://www.threads.net/alzamonart
   icon: fa-threads
 
-- text: Pinterest
-  textDesc: Alzamon on Pinterest
-  url: https://pin.it/29cJOYx
-  icon: fa-pinterest-p
-  badge: /assets/images/azm-badge-deviantart.png
+- text: Patreon
+  textDesc: Alzamon on Patreon
+  url: https://patreon.com/alzamon
+  icon: fa-patreon
+
+
+# - text: Pinterest
+#   textDesc: Alzamon on Pinterest
+#   url: https://pin.it/29cJOYx
+#   icon: fa-pinterest-p
+#   badge: /assets/images/azm-badge-deviantart.png
 
 - text: LinkedIn
   textDesc: Alzamon on LinkedIn

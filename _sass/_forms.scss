@@ -58,33 +58,38 @@
 
 #newsletter-signup{
     img.newsletter-graphic{
-        width: 450px;
-        margin: 0 0 1rem 0;
+        margin: 1rem 0 0;
         filter: hue-rotate(328deg) saturate(2);
         height: max-content;
+        @include respond-above(sm){
+            width: 80%;
+        }
+        @include respond-below(sm){
+            width: auto;
+        }
     }
     a{
         color: $newsletter-button-color;
     }
 
-    input{
-        &[type=text],
-        &[type=email]{
-            background-color: lighten($link-color, 50%);
-            border-color: lighten($carousel-bg-color, 20%);
-            border-radius: 4px;
-            padding: 5px;
-            font-size: 90%;
-        }
-        &[type=submit]{
-            background-color: $portfolioHome-bg-1;
-            color: white;
-            border-width: 0;
-            border-radius: 4px;
-            padding: 5px 24px;
-            font-size: 90%;
-        }
-    }
+    // input{
+    //     &[type=text],
+    //     &[type=email]{
+    //         background-color: lighten($link-color, 50%);
+    //         border-color: lighten($carousel-bg-color, 20%);
+    //         border-radius: 4px;
+    //         padding: 5px;
+    //         font-size: 90%;
+    //     }
+    //     &[type=submit]{
+    //         background-color: $portfolioHome-bg-1;
+    //         color: white;
+    //         border-width: 0;
+    //         border-radius: 4px;
+    //         padding: 5px 24px;
+    //         font-size: 90%;
+    //     }
+    // }
 
     // .col-submit{
     //     input{
@@ -124,6 +129,14 @@
     // }
 }
 
+
+// Substack iFrame
+
+    iframe[src*="alzamon"] {
+            width: 100% !important;
+        }
+
+
 .newsletter-form-header{
     // display: flex;
     // flex-direction: column;
@@ -131,31 +144,6 @@
     // justify-content: center;
     h3{
         @include headerLine($carousel-bg-color, $body-bg-color);
-    }
-}
-
-// Zoho Campaigns newsletter signup form
-
-.quick_form_7_css * {
-    -webkit-box-sizing: border-box !important;
-    -moz-box-sizing: border-box !important;
-    box-sizing: border-box !important;
-    overflow-wrap: break-word;
-    input{
-        margin: 0 0 1rem 0;
-        &[type=button]{
-            color: white;
-            background-color: $link-button-color;
-            border: none;
-            border-radius: 6px;
-        }
-        @include respond-above(sm){
-            width: 30vw;
-            max-width: 32vw;
-        }
-        @include respond-below(xs){
-            width: 86vw;
-        }
     }
 }
 
