@@ -23,9 +23,10 @@ body {
 }
 
 .container {
-    // width: 85vw;
-    // margin: 2rem auto;
     padding: 1rem 0;
+    @include respond-above(md){
+        width: 49vw;
+    }
 
     @include respond-below(md) {
         width: 86vw;

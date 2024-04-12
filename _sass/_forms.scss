@@ -61,9 +61,9 @@
         margin: 1rem 0 0;
         filter: hue-rotate(328deg) saturate(2);
         height: max-content;
-        @include respond-above(sm){
-            width: 80%;
-        }
+        // @include respond-above(sm){
+        //     width: 80%;
+        // }
         @include respond-below(sm){
             width: auto;
         }

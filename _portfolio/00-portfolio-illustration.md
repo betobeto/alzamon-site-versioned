@@ -16,7 +16,7 @@ sort_number: 0
 permalink: /portfolio/:slug/
 images:
     - image_url: /assets/images/portfolio/illustration/Illustration_2023_noschool_fullsize.jpg
-      image_thumb: /assets/images/portfolio/illustration/illustration_2023_noschool_fullsize.jpg
+      image_thumb: /assets/images/portfolio/illustration/Illustration_2023_noschool_fullsize.jpg
       image_title: No More School! (2023 rework of 2012 art)
       image_class: width2
     - image_url: /assets/images/portfolio/illustration/Illustration_2023_rainforest_fullsize.jpg

@@ -53,6 +53,17 @@
     }
 }
 
+// misc image resizer
+
+.img-dyn-width{
+    @include respond-above(sm){
+    width: 50%;
+    }
+    @include respond-below(xs){
+    width: auto;
+    }
+}
+
 //lightGallery extras
 
 .lg{
