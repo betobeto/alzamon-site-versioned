@@ -3,10 +3,10 @@
 // body
     $body-bg-color: rgb(255, 255, 255);
     $body-color: rgb(30, 21, 14);
-    $body-alt-color: rgb(238, 151, 87);
+    $body-alt-color: rgb(238, 151, 87); //#ee9757;
     $body-text-color: rgb(0, 0, 0);
 // links
-    $link-color: rgb(57, 158, 172);
+    $link-color: rgb(57, 158, 172); //#399eac;
     $link2-color: rgb(26, 76, 82);
     $link-active-color: rgb(238, 151, 87);
     $link-hover-color: mix($link-active-color, rgb(231, 158, 0),50%);
@@ -19,7 +19,7 @@
     $navbar-link-hover-color: darken($navbar-link-color,30%);
 // headlines
     $headline-color-01: rgb(233,120,37);
-    $headline-color-02: rgb(26, 125, 143);
+    $headline-color-02: rgb(26, 125, 143); //#1a7d8f;
 // header text shadow
     $header-shadow-color: rgb(15, 22, 19);
     $header-shadow-alt-color:rgb(41, 21, 9);

@@ -55,9 +55,27 @@
 
 // misc image resizer
 
-.img-dyn-width{
+.img-s-50{
     @include respond-above(sm){
     width: 50%;
+    }
+    @include respond-below(xs){
+    width: auto;
+    }
+}
+
+.img-s-35{
+    @include respond-above(sm){
+    width: 35%;
+    }
+    @include respond-below(xs){
+    width: auto;
+    }
+}
+
+.img-s-25{
+    @include respond-above(sm){
+    width: 25%;
     }
     @include respond-below(xs){
     width: auto;
@@ -89,7 +107,7 @@
     filter: sepia(0.65);
 }
 
-// trestimonials - bloqckquote
+// trestimonials - blockquote
 .row-testimonials{
     blockquote{
         background-color: lighten($link-color, 30%);
