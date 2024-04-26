@@ -218,10 +218,13 @@ $portfolioPagePrevNextIndex: 2;
         }
 
         .lglink {
-            // each portfolio item
-            display: inline-block;
+            // centering each portfolio item
+            display: flex;
+            justify-content: center;
+            // border: green 1px dotted;
             img{
                 @include portfolioThumbShadow;
+                width: 100%;
             }
             @include respond-above(md) {
                 padding-bottom: 24px;
@@ -269,14 +272,19 @@ $portfolioPagePrevNextIndex: 2;
     &-previousNext {
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-around;
         border-bottom: $body-alt-color 4px solid;
-        padding-bottom: 0.7rem;
 
         a {
             display: flex;
             align-items: center;
             max-height: 50px;
+            color:  $link-active-color;
+            font-weight: bold;
+            &:hover{
+                color: $headline-color-02;
+                text-decoration: none;
+            }
 
             img {
                 width: 48px !important;

@@ -5,6 +5,11 @@
   url: https://www.instagram.com/alzamonart
   icon: fa-instagram
 
+- text: Bluesky
+  textDesc: Alzamon on Bluesky
+  url: https://bsky.app/profile/alzamon.art
+  icon: fa-bluesky
+
 - text: Threads
   textDesc: Alzamon on Threads
   url: https://www.threads.net/alzamonart
@@ -27,10 +32,10 @@
   url: https://www.linkedin.com/in/betobeto
   icon: fa-linkedin
 
-- text: Behance
-  textDesc: Alzamon on Behance
-  url: https://www.behance.net/alzamon
-  icon: fa-behance
+# - text: Behance
+#   textDesc: Alzamon on Behance
+#   url: https://www.behance.net/alzamon
+#   icon: fa-behance
 
 # - text: Mastodon
 #   textDesc: Alzamon on Mastodon.art

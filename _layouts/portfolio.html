@@ -5,6 +5,11 @@ layout: default
 <!-- Basic variables -->
 {% assign pf = site.portfolio %}
 
+{% assign pfimg_01 = site.data.portfolio-files.images_illustration %}
+{% assign pfimg_02 = site.data.portfolio-files.images_characterdesign %}
+{% assign pfimg_03 = site.data.portfolio-files.images_sketchbook %}
+{% assign pfimg_04 = site.data.portfolio-files.images_fanart %}
+
 <!-- variable to filter content from MD line breaks  -->
 {% assign pageContent = page.content | strip_newlines %}
 
@@ -25,7 +30,7 @@ layout: default
 <!-- end page hero -->
 
 
-<div id="portfolio-content" class="container">
+<div id="portfolio-content" class="container-fluid">
 
     <!-- previous, next -->
 <div class="row">
@@ -38,7 +43,7 @@ layout: default
 
 <div class="row portfolio-item-blurb">
     <div class="col">
-    <p class="text-center d-block w-75 mx-auto mt-2 mb-0">{{ page.description }}</p>
+    <p class="text-center d-block w-75 mx-auto mt-2 mb-0"><em class="smaller">{{ page.description }}</em></p>
     </div>
 </div>
 
@@ -48,14 +53,33 @@ layout: default
             <div class="portfolio-items">
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
-                {% for image in page.images %}
-                        <!-- {% if image.image_class %} class="fullwidth" {% endif %} -->
-                        <!-- <p class="mt-4">{{image.image_title}}</p> -->
-                        <!-- <img class="lozad" data-placeholder-background="#ee9757" data-src="{{image.image_url}}" alt="{{image.image_title}}"></img> -->
+
+            {% if page.sort_number == 0 %}
+                {% for image in pfimg_01 %}
                         <a class="lglink {% if image.image_class %}lglink--width2{% endif %}" href="{{image.image_url}}">
                             <img src="{{image.image_thumb}}" alt="{{image.image_title}}">
                         </a>
                 {% endfor %}
+            {% elsif page.sort_number == 1 %}
+                {% for image in pfimg_02 %}
+                <a class="lglink {% if image.image_class %}lglink--width2{% endif %}" href="{{image.image_url}}">
+                    <img src="{{image.image_thumb}}" alt="{{image.image_title}}">
+                </a>
+                {% endfor %}    
+            {% elsif page.sort_number == 2 %}
+                {% for image in pfimg_03 %}
+                <a class="lglink {% if image.image_class %}lglink--width2{% endif %}" href="{{image.image_url}}">
+                    <img src="{{image.image_thumb}}" alt="{{image.image_title}}">
+                </a>
+                {% endfor %}   
+            {% elsif page.sort_number == 3 %}
+                {% for image in pfimg_04 %}
+                <a class="lglink {% if image.image_class %}lglink--width2{% endif %}" href="{{image.image_url}}">
+                    <img src="{{image.image_thumb}}" alt="{{image.image_title}}">
+                </a>
+                {% endfor %}            
+            {% endif %}
+
                 </div>
 
         </div>

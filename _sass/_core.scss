@@ -35,7 +35,7 @@ body {
 
 .gallery {
     &-thumbnail {
-        border: $headerColor 1px dotted;
+        // border: $headerColor 1px dotted;
     }
 }
 
@@ -51,17 +51,18 @@ body {
     align-items: center;
     // carousel - desktop & above
     @include respond-above(md){
-        height: 650px;
+        // height: 650px;
+        height: 300px;
     }
 
     // carousel - tablets
     @include respond-between(sm, md){
-        height: 400px;
+        height: 270px;
     }
 
     // carousel - mobile
     @include respond-below(xs){
-        height: 500px;
+        height: 400px;
     }
 
     .carousel{
@@ -75,22 +76,22 @@ body {
             background-repeat: no-repeat;
             background-position: center;
             &:nth-of-type(1){
-                background-image: url('/assets/images/carousel/carousel-2024-01.jpg');
+                background-image: url('/assets/images/carousel/azm_carousel_2024_01.jpg');
             }
             &:nth-of-type(2){
-                background-image: url('/assets/images/carousel/carousel-2024-02.jpg');
+                background-image: url('/assets/images/carousel/azm_carousel_2024_02.jpg');
             }
             &:nth-of-type(3){
-                background-image: url('/assets/images/carousel/carousel-2024-03.jpg');
+                background-image: url('/assets/images/carousel/azm_carousel_2024_03.jpg');
             }
             &:nth-of-type(4){
-                background-image: url('/assets/images/carousel/carousel-2024-04.jpg');
+                background-image: url('/assets/images/carousel/azm_carousel_2024_04.jpg');
             }
             &:nth-of-type(5){
-                background-image: url('/assets/images/carousel/carousel-2024-05.jpg');
+                background-image: url('/assets/images/carousel/azm_carousel_2024_05.jpg');
             }
             &:nth-of-type(6){
-                background-image: url('/assets/images/carousel/carousel-2024-06.jpg');
+                background-image: url('/assets/images/carousel/azm_carousel_2024_06.jpg');
             }
             @include respond-below(xs){
                 background-position: 70%;
@@ -105,7 +106,8 @@ body {
         width: 86vw;
         padding: 1rem;
         text-align: center;
-        background-color: rgba(48, 63, 68, 0.8);
+        //background-color: rgba(250, 147, 45, 0.8);
+        background-color: rgba(0, 178, 175, 0.8);
         color: $body-bg-color;
         z-index: 2;
         @include br05;
@@ -113,14 +115,15 @@ body {
                 @include headerTextShadow($header-shadow-color);
                 display: inline-block;
                     @include respond-between(sm, md){
-                        font-size: 2.5rem;
+                        font-size: 1.8rem;
                     }
                     @include respond-below(xs){
-                        font-size: 2.2rem;
+                        font-size: 2rem;
                     }
             }
             p{
                 color: $body-bg-color;
+                text-shadow: 1.7px 1.5px 0px rgba(0,0,0,0.7);
                 margin: 0.8rem auto;
                 @include respond-above(sm){
                     width: 86%;
@@ -129,14 +132,17 @@ body {
             a{
                 text-decoration: none;
                 &:link{
-                    color: lighten($body-alt-color, 10%);
+                    color: darken($link-color, 18%);
+                    background-color: rgb(233, 211, 138);
+                    padding: 0 0.5rem;
+                    text-shadow: none;
                 }
                 &:hover{
                     color: $link-color !important;
-                    text-decoration: underline;
+                    text-decoration: none;
                 }
                 &:visited{
-                    color: $link-visited-color;
+                    color: lighten($body-color, 0.3);
                 }
             }
         //tablets
